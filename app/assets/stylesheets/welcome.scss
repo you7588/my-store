@@ -4,8 +4,8 @@
 
 /*===== 1.网站头贴 ====*/
 .intro{
-    height: 520px;
-    background-image: url('http://ww4.sinaimg.cn/large/006tNc79gy1ffsuoypc5qj31kw0vtkjl.jpg');
+    height: 50em;
+    background-image: url('http://ww2.sinaimg.cn/large/006tNbRwly1ffop4373gwj31kw0w0kjo.jpg');
     background-size: cover;
   }
 
@@ -32,39 +32,10 @@
 }
 /*===== end 1.网站头贴 ====*/
 
-/*===== 2.热销产品 ====*/
-.hot-sale{
-.box{
-  text-align: center;
-  margin-top: 45px;
-  img {
-    width: 240px;
-    margin: -15px 20px 5px 20px;
-  }
-}
-.category-list{
-  text-align: center;
-  h3{
-    color: #5bb3a0;
-    margin-top: 15px;
-    margin-bottom: 8px;
-    font-size: 16px;
-    letter-spacing: 1px;
-  }
-}
-.category-list:hover{
-  h3{
-    color: #FA9181;
-  }
-}
-}
-/*===== end 2.热销产品 ====*/
-
-/*===== 3.服务优势 ====*/
+/*===== 2.服务优势 ====*/
 .our-service{
   text-align: center;
   background-size: cover;
-  background-color: #5bb3a0;
   padding-left: 50px;
   padding-right: 50px;
 
@@ -83,12 +54,11 @@
       margin: 25px 20px 40px 20px;
   }
 }
-/*===== end 3.服务优势 ====*/
+/*===== end 2.服务优势 ====*/
 
-/*===== 4.卖队友 ====*/
+/*===== 3.铁粉说 ====*/
 .showing{
-    padding-bottom: 150px;
-    padding-top: 100px;
+  background-color: #EFEFEF;
     p{
       color: black;
       letter-spacing: 1px;
@@ -135,37 +105,15 @@
   position: relative;
   top: 30px;
   left: -50px;
-  color: #e8e8e8;
+  color: black;
   font-size: 7rem;
 }
 #myCarousel .right span {
   position: relative;
   top: 30px;
   right: -20px;
-  color: #e8e8e8;
+  color: black;
   font-size: 7rem;
 }
 
-/*===== end 4.卖队友 ====*/
-
-
-/*===== 5.我们的铁粉说 ====*/
-.feedback{
-  background-color: #5bb3a0;
-
-  .do-box{
-    img{
-      margin-top: 35px;
-      margin-bottom: -35px;
-      width: 180px;
-    }
-  }
-
-  .do-box p {
-      color: #666;
-      letter-spacing: 1px;
-      line-height: 22px;
-      margin: 25px 20px 40px 20px;
-  }
-}
-/*=== end 5.铁粉说 ====*/
+/*===== end 3.铁粉说 ====*/
