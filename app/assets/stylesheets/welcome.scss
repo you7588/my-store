@@ -8,6 +8,18 @@
   fill: #fff;
 }
 
+.decor-bottom-1 {
+  height: 6em;
+  margin-bottom: -25px;
+  fill: white;
+  stroke: #57b4a0;
+}
+.decor-bottom-2 {
+  height: 6em;
+  margin-top: -84px;
+  fill: white;
+}
+
 
 /*===== 1.网站头贴 ====*/
 .intro{
@@ -64,8 +76,17 @@
 /*===== end 2.服务优势 ====*/
 
 /*===== 3.铁粉说 ====*/
+.basic {
+  background-image: url('http://ww2.sinaimg.cn/large/006tNc79ly1fft5szsahwj30sg0iymz0.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+
+
+}
+
 .showing{
-  background-color: #EFEFEF;
+
     p{
       color: black;
       letter-spacing: 1px;
