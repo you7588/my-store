@@ -17,3 +17,38 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "font-awesome";
+
+
+.navbar-default {
+   background-color: #5bb3a0;  //导航栏背景颜色
+   border-color: #5bb3a0; //边框色
+   margin: 0;
+}
+
+.footer {
+   background-color: #5bb3a0;
+}
+
+
+//*****common*****//
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+section{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+
+.section-title {
+    color: #666;
+    margin-top: 35px;
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+    font-size: 30px;
+    font-family: STHeiti Light;
+}
+
+/*===== common ====*/

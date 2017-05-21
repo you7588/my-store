@@ -1,1 +1,189 @@
-<h1>Hello World!</h1>
+<!--======== 1. 网站头图 =========-->
+<section id="my-page" class="intro" >
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-10 col-centered text-center ">
+        <div class="intro-content">
+          <h1>让你的生活变得更有趣</h1>
+          <a class="btn-lg lp-b-btn" href="/products">立刻选购</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--======== end 1. 网站头图 =========-->
+
+<!--======== 2.热销产品 =========-->
+<section id="hot-sale" class="hot-sale">
+  <div class="container-fluid">
+    <div class="col-md-10 col-centered text-center">
+      <div class="row">
+        <div class="row">
+          <div class="col-md-4 category-list">
+            <div class="box">
+              <%= image_tag("level-11.png") %>
+            </div>
+            <div><h3>编程门外汉</h3></div>
+          </div>
+          <div class="col-md-4 category-list">
+            <div class="box">
+              <%= image_tag("level-11.png") %>
+            </div>
+            <div><h3>编程门外汉</h3></div>
+          </div>
+          <div class="col-md-4 category-list">
+            <div class="box">
+              <%= image_tag("level-11.png") %>
+            </div>
+            <div><h3>编程门外汉</h3></div>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-md-4 category-list">
+            <div class="box">
+              <%= image_tag("level-11.png") %>
+            </div>
+            <div><h3>编程门外汉</h3></div>
+          </div>
+          <div class="col-md-4 category-list">
+            <div class="box">
+              <%= image_tag("level-11.png") %>
+            </div>
+            <div><h3>编程门外汉</h3></div>
+          </div>
+          <div class="col-md-4 category-list">
+            <div class="box">
+              <%= image_tag("level-11.png") %>
+            </div>
+            <div><h3>编程门外汉</h3></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--======== end 2.热销产品  =========-->
+
+<!--======== 3. 服务优势 =========-->
+<section id="our-service" class="our-service ">
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 service col-centered text-center">
+      <h2 class="section-title">服务优势</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="do-box">
+            <%= image_tag("dingwei-1.png") %>
+            <p>根据自己的能力级别去选择岗位，拨开薪资之谜，从本质上选工作。为你缩小找工作的范围。</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="do-box">
+            <%= image_tag("dingwei-1.png") %>
+            <p>根据自己的能力级别去选择岗位，拨开薪资之谜，从本质上选工作。为你缩小找工作的范围。</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="do-box">
+            <%= image_tag("dingwei-1.png") %>
+            <p>根据自己的能力级别去选择岗位，拨开薪资之谜，从本质上选工作。为你缩小找工作的范围。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<!--======== end 3.服务优势 =========-->
+
+<!--======== 4.卖队友 =========-->
+<section id="showing" class="showing">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-10 col-centered text-center">
+        <h2 class="section-title">卖队友啦</h2>
+                   <div class="container-fluid">
+                     <div class="row">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#myCarousel" data-slide-to="1"></li>
+                      <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner" role="listbox">
+                        <div class="item active">
+                          <img src='<%= image_url 'person-1.png' %>' >
+                          <div class="carousel-caption">
+                            <p>我在xxx这个公司的xxx岗位里面工作了3年，这是一个挑战性很大的岗位，有时候会加班，但是学到了很多东西，让我快速成长。这三年里获得了。。。。
+                            <strong><br/><br/>Kevin,介面设计师 ,xxx在职人员</strong></p>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <img src='<%= image_url 'person-5.png' %>'>
+                          <div class="carousel-caption">
+                            <p>我在xxx这个公司的xxx岗位里面工作了5年，这是一个挑战性很大的岗位，偶尔会加班，但是学到了很多东西，让我快速成长。这五年里收获了。。。。
+                            <strong><br/><br/>Mary,项目经理 ,xxx在职人员</strong></p>
+                          </div>
+                        </div>
+                        <div class="item">
+                          <img src='<%= image_url 'person-6.png' %>'>
+                          <div class="carousel-caption">
+                            <p>我在xxx这个公司的xxx岗位里面工作了7年，这是一个挑战性很大的岗位，有时候会加班，但是学到了很多东西，让我快速成长。这七年里学到了。。。。
+                            <strong><br/><br/>lily,制作人,xxx公司任职</strong></p>
+                          </div>
+                        </div>
+
+                    </div>
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                      <span class="fa fa-angle-left" aria-hidden="true"></span></a>
+                      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="fa fa-angle-right" aria-hidden="true"></span></a>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  </div>
+                </div>
+          </section>
+<!--======== end 4.卖队友 =========-->
+
+
+<!--======== 5.我们的铁粉说 =========-->
+<section id="feedback" class="feedback">
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-10 service col-centered text-center">
+      <h2 class="section-title">我们的铁粉说</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="do-box">
+            <%= image_tag("dingwei-1.png") %>
+            <p>根据自己的能力级别去选择岗位，拨开薪资之谜，从本质上选工作。为你缩小找工作的范围。</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="do-box">
+            <%= image_tag("dingwei-1.png") %>
+            <p>根据自己的能力级别去选择岗位，拨开薪资之谜，从本质上选工作。为你缩小找工作的范围。</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="do-box">
+            <%= image_tag("dingwei-1.png") %>
+            <p>根据自己的能力级别去选择岗位，拨开薪资之谜，从本质上选工作。为你缩小找工作的范围。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!--======== end 5.我们的铁粉说 =========-->
+
+
+<!--======== end 5.我们的铁粉说 =========-->
