@@ -5,19 +5,13 @@
 .decor-top {
   height: 6em;
   margin-top: -84px;
-  fill: #fff;
+  fill: #F5F5F5;
 }
 
 .decor-bottom-1 {
-  height: 6em;
-  margin-bottom: -25px;
-  fill: white;
-  stroke: #57b4a0;
-}
-.decor-bottom-2 {
-  height: 6em;
-  margin-top: -84px;
-  fill: white;
+  height: 7em;
+  margin-bottom: -7em;
+  fill: #F5F5F5;
 }
 
 
@@ -26,18 +20,19 @@
     height: 50em;
     background-image: url('http://ww2.sinaimg.cn/large/006tNbRwly1ffop4373gwj31kw0w0kjo.jpg');
     background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+
   }
 
 .intro-content > h1 {
-    color: #fff;
-    font-size: 55px;
+    color: white;
+    font-size: 65px;
     letter-spacing: 2px;
-    margin-top: 20px;
+    margin-top: 120px;
     margin-bottom: 10px;
-    text-transform: capitalize;
     word-spacing: 6px;
-    font-family: STHeiti Light;
-    font-weight: bold;
 }
 
 .intro-content > p {
@@ -52,41 +47,27 @@
 /*===== end 1.网站头贴 ====*/
 
 /*===== 2.服务优势 ====*/
-.our-service{
+.our-service {
+  background-color: #F5F5F5;
   text-align: center;
-  background-size: cover;
-  padding-left: 50px;
-  padding-right: 50px;
-
-  .do-box{
-    img{
-      margin-top: 35px;
-      margin-bottom: -35px;
-      width: 180px;
-    }
+  a {
+    text-decoration:none;
+    color: #002E2E;
   }
 
-  .do-box p {
-      color: #666;
-      letter-spacing: 1px;
-      line-height: 22px;
-      margin: 25px 20px 40px 20px;
+  img {
+    width: 300px;
   }
+
 }
 /*===== end 2.服务优势 ====*/
 
 /*===== 3.铁粉说 ====*/
-.basic {
+.showing{
   background-image: url('http://ww2.sinaimg.cn/large/006tNc79ly1fft5szsahwj30sg0iymz0.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-
-
-}
-
-.showing{
-
     p{
       color: black;
       letter-spacing: 1px;
