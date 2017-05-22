@@ -23,7 +23,6 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: center;
-
   }
 
 .intro-content > h1 {
@@ -50,6 +49,7 @@
 .our-service {
   background-color: #F5F5F5;
   text-align: center;
+  height: 20em;
   a {
     text-decoration:none;
     color: #002E2E;
@@ -64,10 +64,11 @@
 
 /*===== 3.铁粉说 ====*/
 .showing{
-  background-image: url('http://ww2.sinaimg.cn/large/006tNc79ly1fft5szsahwj30sg0iymz0.jpg');
+  background-image: url('http://ww1.sinaimg.cn/large/006tKfTcgy1ffu4hckrlfj30zk0k00tt.jpg');
   background-size: cover;
   background-attachment: fixed;
-  background-repeat: no-repeat;
+  background-position: center;
+  height: 40em;
     p{
       color: black;
       letter-spacing: 1px;
