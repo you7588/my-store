@@ -71,6 +71,8 @@
 </div> -->
 <!--======== 海报锯齿 =========-->
 
+
+
 <!--================================  2. 课程块 =================================-->
 <div class="fw">
   <div class="container-fluid col-md-12 col-centered text-center">
@@ -140,7 +142,45 @@
 <!--======== 海报波浪 =========-->
 
 <!--========================================== 3.产品块 ===========================================-->
-<div class="pr">
+  <div class="container-fluid col-md-10 col-centered text-center">
+<div class="row">
+  <% @products.each do |product| %>
+    <div class="col-xs-6 col-md-3">
+      <% if  @products.present? %>
+      <% @products.order('created_at DESC').each do |product| %>
+      <% if  true == product.categories.eql?("科技众筹产品")%>
+      <li>
+        <%= link_to product_path(product) do %>
+        <% if product.image.present? %>
+        <span class="thumb"><%= image_tag(product.image.thumb.url)%></span>
+        <% else %>
+        <span class="thumb"><%=image_tag("http://placehold.it/200x200&text=No Pic", width="50") %>
+        </span>
+        <% end %>
+        <%= product.title %> ￥ <%= product.price %>
+        <% end %>
+      </li>
+      <% end %>
+      <% end %>
+      <% end %>
+
+      <!-- <%= link_to product_path(product) do %>
+        <% if product.image.present? %>
+          <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
+        <% else %>
+          <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+        <% end %>
+      <% end %>
+      <%= product.title %> ￥ <%= product.price %> -->
+    </div>
+  <% end %>
+</div>
+
+</div>
+
+
+
+<!-- <div class="pr">
   <div class="container-fluid col-md-10 col-centered text-center">
     <div class="row">
         <h2 class="section-title">我们的产品</h2>
@@ -167,7 +207,8 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
+
   <!--==================================== end 3.产品块 ===================================-->
 
 
