@@ -216,11 +216,10 @@
    margin: 0 auto;
  }
 
- .section{
-     padding-top: 80px;
-     padding-bottom: 90px;
- }
-
+ // .section{
+ //     padding-top: 80px;
+ //     padding-bottom: 90px;
+ // }
 
  .section-title {
      color: #666;
@@ -228,6 +227,7 @@
      margin-bottom: 1em;
      letter-spacing: 3px;
      font-size: 30px;
+     text-align: center;
      font-family: STHeiti Light;
  }
 
@@ -237,6 +237,7 @@
      margin-bottom: 1em;
      letter-spacing: 0.1em;
      font-size: 1.7em;
+     text-align: center;
  }
 
  .fenge {
