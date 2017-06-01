@@ -78,7 +78,7 @@
   <div class="col-md-10 col-md-offset-1">
     <h2 class="section-title">课程</h2>
     <% @products.each do |product| %>
-
+    <% if product.category.name == "课程"%>
     <div class="col-md-4">
       <div class="polaroid">
         <h2 class="section-title-2"><%= product.title %></h2>
@@ -92,7 +92,7 @@
         <p><%= product.description %></p>
       </div>
     </div>
-
+    <% end %>
     <% end %>
   </div>
   <!-- 波浪纹 -->
@@ -133,7 +133,7 @@
   <div class="col-md-10 col-md-offset-1" align="center">
     <h2 class="section-title">我们的产品</h2>
     <% @products.each do |product| %>
-
+    <% if product.category.name == "产品"%>
     <div class="col-md-4">
       <div class="boxx">
         <%= link_to product_path(product) do %>
@@ -149,7 +149,7 @@
         <a href="#" class="btn btn-block btn-warning">了解更多</a>
       </div>
     </div>
-
+    <% end %>
     <% end %>
   </div>
 </div>
