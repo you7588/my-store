@@ -135,6 +135,7 @@
   <div class="col-md-10 col-md-offset-1" align="center">
     <h2 class="section-title">我们的产品</h2>
     <% @products.each do |product| %>
+    <% if product.category.name.present? %>
     <% if product.category.name == "产品"%>
     <div class="col-md-4">
       <div class="boxx">
@@ -151,6 +152,7 @@
         <a href="#" class="btn btn-block btn-warning">了解更多</a>
       </div>
     </div>
+    <% end %>
     <% end %>
     <% end %>
   </div>
