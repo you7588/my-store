@@ -61,11 +61,9 @@ ActiveRecord::Schema.define(version: 20170526130730) do
     t.text     "description"
     t.integer  "quantity"
     t.integer  "price"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
     t.string   "image"
-    t.string   "categories"
-    t.integer  "stars_number"
     t.integer  "category_id"
   end
 
