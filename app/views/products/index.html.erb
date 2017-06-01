@@ -78,6 +78,7 @@
   <div class="col-md-10 col-md-offset-1">
     <h2 class="section-title">课程</h2>
     <% @products.each do |product| %>
+    <% if product.category.name.present? %>
     <% if product.category.name == "课程"%>
     <div class="col-md-4">
       <div class="polaroid">
@@ -92,6 +93,7 @@
         <p><%= product.description %></p>
       </div>
     </div>
+    <% end %>
     <% end %>
     <% end %>
   </div>
