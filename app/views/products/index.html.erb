@@ -74,11 +74,11 @@
 
 
 <!--================================  2. 课程块 =================================-->
-<div class="row kc" >
+<section id="kc" class="kc">
+<div class="row" >
   <div class="col-md-10 col-md-offset-1">
     <h2 class="section-title">课程</h2>
     <% @products.each do |product| %>
-    <% if product.category_id.present? %>
     <% if product.category.name == "课程"%>
     <div class="col-md-4">
       <div class="polaroid">
@@ -103,6 +103,7 @@
    </svg>
  </div>
 </div>
+</section>
 <!--================================ end 2. 课程块  =================================-->
 
 <!--======== 海报波浪 =========-->
@@ -129,12 +130,11 @@
 
 <!--===========分类下拉选项=========-->
 <!--========================================== 3.产品块 ===========================================-->
-
+<section id="pr" class="pr">
 <div class="row pr" id="pr">
   <div class="col-md-10 col-md-offset-1" align="center">
     <h2 class="section-title">我们的产品</h2>
     <% @products.each do |product| %>
-
     <% if product.category.name == "产品"%>
     <div class="col-md-4">
       <div class="boxx">
@@ -153,9 +153,9 @@
     </div>
     <% end %>
     <% end %>
-
   </div>
 </div>
+</section>
   <!--==================================== end 3.产品块 ===================================-->
 
 
@@ -176,7 +176,7 @@
 
 <!--======================================== 4.摄影区 =========================================-->
 
-
+<section id="ph" class="ph">
 <div class="row ph">
   <div class="col-md-10 col-md-offset-1" align="center">
       <h2 class="section-title">Show我的队友</h2>
@@ -193,6 +193,7 @@
       </div>
   </div>
 </div>
+</section>
 <!--======================================== end 4.摄影区 =========================================-->
 
 <!--=================== end 分割图 ==================-->
