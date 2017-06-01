@@ -145,7 +145,6 @@
 }
 .navbar-default .navbar-brand {
   color: #e2e5d8; //标题字体颜色
-
   padding: 10px 15px; //上下10px，左右15px
   line-height: 30px; //文字行高
 }
@@ -169,15 +168,15 @@
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #1fe9ec;
-  background-color: #FFE0B2;
+  color: #e2e5d8;
+  background-color: transparent;
 
 }
 
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:focus,
 .navbar-default .navbar-nav > .open > a:hover {
-  background-color: #000000; // email-注册-登陆的位置点击为黑色块
+  // background-color: #000000; // email-注册-登陆的位置点击为黑色块
   color: #ff79ab; //email点击后的颜色显示-桃红色
 
 }
@@ -209,18 +208,16 @@
 
  //*****footer*****//
 
-
  //*****common*****//
  .col-centered {
    float: none;
    margin: 0 auto;
  }
 
- .section{
-     padding-top: 80px;
-     padding-bottom: 90px;
- }
-
+ // .section{
+ //     padding-top: 80px;
+ //     padding-bottom: 90px;
+ // }
 
  .section-title {
      color: #666;
@@ -228,6 +225,7 @@
      margin-bottom: 1em;
      letter-spacing: 3px;
      font-size: 30px;
+     text-align: center;
      font-family: STHeiti Light;
  }
 
@@ -237,6 +235,7 @@
      margin-bottom: 1em;
      letter-spacing: 0.1em;
      font-size: 1.7em;
+     text-align: center;
  }
 
  .fenge {

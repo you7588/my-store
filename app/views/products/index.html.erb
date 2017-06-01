@@ -74,63 +74,36 @@
 
 
 <!--================================  2. 课程块 =================================-->
-<div class="fw">
-  <div class="container-fluid col-md-12 col-centered text-center">
-    <div class="row ">
-      <h2 class="section-title">课程</h2>
-       <div class="col-md-10 col-md-offset-1">
-        <div class="col-md-4">
-              <div class="polaroid2">
-                <div align="center">
-                  <h2 class="section-title-2">拉胚课程</h2>
-                  <img class="small3" src="https://ws4.sinaimg.cn/large/006tNc79gy1ffuhx8n0tpj30b408c0v6.jpg" alt="llogo">
-                </div>
-                  <div class="container12">
-                    <p>带你零基础学拉胚技巧，培养平静的心境
-                      <br>脱离城市工作中快节奏的压力</p>
-                  </div>
-              </div>
-        </div>
-        <div class="col-md-4">
-              <div class="polaroid2">
-                <div align="center">
-                  <h2 class="section-title-2">工艺学习</h2>
-                  <img class="small3" src="https://ws2.sinaimg.cn/large/006tKfTcgy1ffxfcgbin2j30b408c0vm.jpg" alt="llogo">
-                </div>
-                  <div class="container12">
-                    <p>认识工艺制作流程，快速上手实用技巧提升创作能力。
-                    <br>学会如何在原型上进行雕刻，有哪些工具可以使用。
-                    <br>学会如何砌造属于你的作品</p>
-                  </div>
-              </div>
-        </div>
-        <div class="col-md-4">
-              <div class="polaroid2">
-                <div align="center">
-                  <div align="center">
-                    <h3 class="section-title-2">创作实践</h3>
-                    <img class="small3" src="https://ws2.sinaimg.cn/large/006tKfTcgy1ffxfa8x52fj30b408cwg1.jpg" alt="llogo">
-                  </div>
-                </div>
-                  <div class="container12">
-                    <p>帮助你发挥想象力，创造出自己都不敢想象的作品
-                    <br>灵感来自于实践，耍泥能让你创意源源不断</p>
-                  </div>
-              </div>
-        </div>
+<section id="kc" class="kc">
+<div class="row" >
+  <div class="col-md-10 col-md-offset-1">
+    <h2 class="section-title">课程</h2>
+    <% @products.each do |product| %>
+    <% if product.category.name == "课程"%>
+    <div class="col-md-4">
+      <div class="polaroid">
+        <h2 class="section-title-2"><%= product.title %></h2>
+        <%= link_to product_path(product) do %>
+        <% if product.image.present? %>
+        <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
+        <% else %>
+        <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
+        <% end %>
+        <% end %>
+        <p><%= product.description %></p>
       </div>
     </div>
+    <% end %>
+    <% end %>
   </div>
   <!-- 波浪纹 -->
-  <div class="decor-top3">
+   <div class="decor-top3">
    <svg class="decor-p" height="100%" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" >
      <path d="M-5 100 Q 0 20 5 100 Z M0 100 Q 5 0 10 100 M5 100 Q 10 30 15 100 M10 100 Q 15 10 20 100 M15 100 Q 20 30 25 100 M20 100 Q 25 -10 30 100 M25 100 Q 30 10 35 100 M30 100 Q 35 30 40 100 M35 100 Q 40 10 45 100 M40 100 Q 45 50 50 100 M45 100 Q 50 20 55 100 M50 100 Q 55 40 60 100 M55 100 Q 60 60 65 100 M60 100 Q 65 50 70 100 M65 100 Q 70 20 75 100 M70 100 Q 75 45 80 100 M75 100 Q 80 30 85 100 M80 100 Q 85 20 90 100 M85 100 Q 90 50 95 100 M90 100 Q 95 25 100 100 M95 100 Q 100 15 105 100 Z" stroke-width="0"></path>
    </svg>
-  </div>
-  <!-- 波浪纹 -->
+ </div>
 </div>
-
-
+</section>
 <!--================================ end 2. 课程块  =================================-->
 
 <!--======== 海报波浪 =========-->
@@ -141,74 +114,49 @@
 </div> -->
 <!--======== 海报波浪 =========-->
 
+<!--===========分类下拉选项=========-->
+<!-- <ul class="row">
+  <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">分类<span class="caret"></span></a>
+      <ul class="dropdown-menu" role="menu">
+        <% Category.all.each do |category| %>
+        <li>
+          <%= link_to category.name, products_path(category: category.name), class: "link" %>
+        </li>
+        <% end %>
+      </ul>
+  </li>
+</ul> -->
+
+<!--===========分类下拉选项=========-->
 <!--========================================== 3.产品块 ===========================================-->
-  <div class="container-fluid col-md-10 col-centered text-center">
-<div class="row">
-  <% @products.each do |product| %>
-    <div class="col-xs-6 col-md-3">
-      <% if  @products.present? %>
-      <% @products.order('created_at DESC').each do |product| %>
-      <% if  true == product.categories.eql?("科技众筹产品")%>
-      <li>
+
+<section id="pr" class="pr">
+<div class="row pr" id="pr">
+  <div class="col-md-10 col-md-offset-1" align="center">
+    <h2 class="section-title">我们的产品</h2>
+    <% @products.each do |product| %>
+    <% if product.category.name == "产品"%>
+    <div class="col-md-4">
+      <div class="boxx">
         <%= link_to product_path(product) do %>
         <% if product.image.present? %>
-        <span class="thumb"><%= image_tag(product.image.thumb.url)%></span>
+        <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
         <% else %>
-        <span class="thumb"><%=image_tag("http://placehold.it/200x200&text=No Pic", width="50") %>
-        </span>
+        <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
         <% end %>
-        <%= product.title %> ￥ <%= product.price %>
         <% end %>
-      </li>
-      <% end %>
-      <% end %>
-      <% end %>
-
-      <!-- <%= link_to product_path(product) do %>
-        <% if product.image.present? %>
-          <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
-        <% else %>
-          <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
-        <% end %>
-      <% end %>
-      <%= product.title %> ￥ <%= product.price %> -->
-    </div>
-  <% end %>
-</div>
-
-</div>
-
-
-
-<!-- <div class="pr">
-  <div class="container-fluid col-md-10 col-centered text-center">
-    <div class="row">
-        <h2 class="section-title">我们的产品</h2>
-        <div align="center">
-          <% @products.each do |product| %>
-            <div class="col-md-4">
-                  <div class="boxx">
-                      <div class="boxx-contentx">
-                          <%= link_to product_path(product) do %>
-                            <% if product.image.present? %>
-                              <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
-                            <% else %>
-                              <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
-                            <% end %>
-                          <% end %>
-                          <div class="container11">
-                            <%= product.title %> ￥ <%= product.price %>
-                          </div>
-                          <a href="#" class="btn btn-block btn-warning">了解更多</a>
-                      </div>
-                  </div>
-            </div>
-          <% end %>
+        <div class="boxx-title">
+          <%= product.title %> ￥ <%= product.price %>
         </div>
+        <a href="#" class="btn btn-block btn-warning">了解更多</a>
       </div>
     </div>
-  </div> -->
-
+    <% end %>
+    <% end %>
+  </div>
+</div>
+</section>
   <!--==================================== end 3.产品块 ===================================-->
 
 
@@ -228,9 +176,10 @@
 <!--=================== end 分割图 ==================-->
 
 <!--======================================== 4.摄影区 =========================================-->
-<div class="ph">
-  <div class="container-fluid col-md-12 col-centered text-center">
-    <div class="row">
+
+<section id="ph" class="ph">
+<div class="row ph">
+  <div class="col-md-10 col-md-offset-1" align="center">
       <h2 class="section-title">Show我的队友</h2>
       <p>关于队友的更多作品请关注下一版的更新</p>
       <div class="container1">
@@ -243,9 +192,9 @@
           <figure><img src="https://ws4.sinaimg.cn/large/006tKfTcgy1ffxfj6scv7j31kw0w0drg.jpg" alt="" width="120%" height="120%"></figure>
         </div>
       </div>
-    </div>
   </div>
 </div>
+</section>
 <!--======================================== end 4.摄影区 =========================================-->
 
 <!--=================== end 分割图 ==================-->
