@@ -95,7 +95,6 @@
     </div>
     <% end %>
     <% end %>
-    <% end %>
   </div>
   <!-- 波浪纹 -->
    <div class="decor-top3">
@@ -135,7 +134,7 @@
   <div class="col-md-10 col-md-offset-1" align="center">
     <h2 class="section-title">我们的产品</h2>
     <% @products.each do |product| %>
-    <% if product.category_id.present? %>
+
     <% if product.category.name == "产品"%>
     <div class="col-md-4">
       <div class="boxx">
@@ -154,7 +153,7 @@
     </div>
     <% end %>
     <% end %>
-    <% end %>
+
   </div>
 </div>
   <!--==================================== end 3.产品块 ===================================-->
