@@ -10,6 +10,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    padding-top: 15em;
 }
 
 .index-menu {                                 //菜单栏的设置
@@ -41,7 +42,67 @@
     background-image: url('https://ws3.sinaimg.cn/large/006tKfTcgy1fg6veftr6vj31hc12ddpf.jpg');
   }
 
+  .box {
+    background:#fff;
+    transition:all 0.2s ease;
+    border:2px dashed #dadada;
+    margin-top: 10px;
+    box-sizing: border-box;
+    background-clip: padding-box;
+    padding:0 20px 20px 20px;
+    min-height: 50em;
+    padding: 3em 0.7em;
+    border-radius: 1em;
+    box-shadow: 0.4em 0.3em 0.3em #666;
+    width: auto;
+  }
 
+  .box:hover {
+    border:0.2em solid #525C7A;
+  }
+  .box .box-content {
+    padding: 16px;
+    border-radius: 0 0 2px 2px;
+    background-clip: padding-box;
+    box-sizing: border-box;
+  }
+  .box .box-content p {
+    color:#666;
+    text-transform:none;
+  }
+  .tag-title {
+      color: #666;
+      font-size: 1.5em;
+      text-transform: uppercase;
+    }
+  .box .small{
+    width: 80%;
+  }
+
+  .button1{
+    -webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    display: block;
+    margin: 10px auto;
+    max-width: 8em;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 15px;
+    padding: 10px;
+    color: rgba(250, 250, 250, 0.6);
+    box-shadow: rgba(250, 250, 250, 0.6) 0 0px 0px 2px inset;
+    // font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+  }
+  .button1:hover,
+  .button1:focus {
+    color: rgba(255, 84, 0, 1);
+    box-shadow: rgba(255, 84, 0, 0.5) 0 0px 0px 4em inset;
+    text-decoration: none;
+  }
 
 /*=================================== 3.产品 ================================*/
 .product{
@@ -51,25 +112,55 @@
   .boxx {
     background:#fff;
     transition:all 0.2s ease;
-    border:2px dashed #dadada;
+    // border:2px dashed #dadada;
     margin-top: 10px;
     box-sizing: border-box;
     background-clip: padding-box;
-    min-height:340px;
-    align: center;
-    padding: 0.8em 0.7em;
-    border-radius: 0 0 2px 2px;
+    min-height: 30em;
+    // align: center;
+    padding: 3em 0.7em;
+    border-radius: 1em;
+    box-shadow: 0.4em 0.3em 0.3em #666;
+    width:80%;
   }
 
   .boxx:hover {
-    border:6px solid #525C7A;
+    border:0.2em solid #525C7A;
   }
 
-  .boxx .boxx-title {
-      color: #666;
-      font-size: 1.2em;
+  .boxx-title {
+    padding: 1.5em;
+      color: white;
+      font-size: 1.5em;
       text-transform: uppercase;
     }
+
+    //==========按钮
+.button2{
+  -webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+  -moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+  -ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+  -o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+  transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+  display: block;
+  margin: 10px auto;
+  max-width: 8em;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 15px;
+  padding: 10px;
+  color: rgba(250, 250, 250, 0.6);
+  box-shadow: rgba(250, 250, 250, 0.6) 0 0px 0px 2px inset;
+  // font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+}
+.button2:hover,
+.button2:focus {
+  color: rgba(255, 84, 0, 1);
+  box-shadow: rgba(255, 84, 0, 0.5) 0 0px 0px 4em inset;
+  text-decoration: none;
+}
+//===================按钮
 
  /*=================================== 4.摄影 ===============================*/
 .photo{

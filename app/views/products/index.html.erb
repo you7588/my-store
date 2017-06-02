@@ -5,28 +5,34 @@
     <div class="row">
       <div class="col-md-10 col-centered text-center ">
       </div>
-
     </div>
 </section>
-
 
 
 <!--================================== 2.铁粉说 ==============================-->
 <section id="a2" class="a say">
-    <div class="row">
-      <div class="col-md-10 col-centered text-center">
-
-      </div>
+  <div class="row">
+    <div class="col-md-3 col-md-offset-5 text-center">
+        <div class="box">
+          <div class="box-content">
+            <img class="small" src="https://ws2.sinaimg.cn/large/006tKfTcgy1fg76slgeyoj30wc116jv2.jpg" alt="llogo">
+            <h2 class="tag-title">粉丝说</h2>
+            <hr/>
+            <p>做陶艺是一个锻炼耐心，培养心境事情，学会了道，也学会了术。更陶冶了情操！</p>
+            <div class="button2">
+              <a href="feedbacks">到碗里去</a>
+            </div>
+          </div>
+        </div>
     </div>
+  </div>
+</div>
 </section>
-
-
 
 <!--==================================3.产品 =================================-->
 <section id="a3" class="a product">
   <div class="row">
     <div class="col-md-12" align="center">
-      <h2 class="section-title">我们的产品</h2>
       <% @products.each do |product| %>
       <div class="col-md-3">
         <div class="boxx">
@@ -37,11 +43,14 @@
           <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
           <% end %>
           <% end %>
-          <div class="boxx-title">
-            <%= product.title %> ￥ <%= product.price %>
-          </div>
         </div>
-          <a href="#" class="btn btn-block btn-warning">了解更多</a>
+
+        <div class="boxx-title">
+          <%= product.title %> ￥ <%= product.price %>
+        </div>
+          <div class="button2">
+            <%= link_to "到碗里来", product_path(product) %>
+          </div>
       </div>
       <% end %>
     </div>
@@ -51,12 +60,10 @@
 <!--================================ 4. 摄影 =================================-->
 <section id="a4" class="a photo">
     <div class="row wm">
-      <div class="col-md-10  col-centered text-center">
+      <div class="col-md-12  col-centered text-center">
       </div>
     </div>
 </section>
-
-
 
 <!--================================= 菜单栏 =================================-->
 
