@@ -10,6 +10,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    padding-top: 15em;
 }
 
 .index-menu {                                 //菜单栏的设置
@@ -41,7 +42,42 @@
     background-image: url('https://ws3.sinaimg.cn/large/006tKfTcgy1fg6veftr6vj31hc12ddpf.jpg');
   }
 
+  .box {
+    background:#fff;
+    transition:all 0.2s ease;
+    border:2px dashed #dadada;
+    margin-top: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-clip: padding-box;
+    padding:0 20px 20px 20px;
+    min-height:340px;
+  }
 
+  .box:hover {
+    border:2px solid #525C7A;
+  }
+
+  .box span.box-title {
+      color: #fff;
+      font-size: 24px;
+      font-weight: 300;
+      text-transform: uppercase;
+  }
+
+  .box .box-content {
+    padding: 16px;
+    border-radius: 0 0 2px 2px;
+    background-clip: padding-box;
+    box-sizing: border-box;
+  }
+  .box .box-content p {
+    color:#515c66;
+    text-transform:none;
+  }
+  .box .small{
+    width: 300px;
+  }
 
 /*=================================== 3.产品 ================================*/
 .product{
