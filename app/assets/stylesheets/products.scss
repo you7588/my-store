@@ -48,6 +48,28 @@
     background-image: url('https://ws2.sinaimg.cn/large/006tNbRwgy1fg6ve7t1q9j31hc12dag9.jpg');
   }
 
+  .boxx {
+    background:#fff;
+    transition:all 0.2s ease;
+    border:2px dashed #dadada;
+    margin-top: 10px;
+    box-sizing: border-box;
+    background-clip: padding-box;
+    min-height:340px;
+    align: center;
+    padding: 0.8em 0.7em;
+    border-radius: 0 0 2px 2px;
+  }
+
+  .boxx:hover {
+    border:6px solid #525C7A;
+  }
+
+  .boxx .boxx-title {
+      color: #666;
+      font-size: 1.2em;
+      text-transform: uppercase;
+    }
 
  /*=================================== 4.摄影 ===============================*/
 .photo{
