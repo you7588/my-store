@@ -18,29 +18,6 @@
  @import "font-awesome";
 
 
-
-
- //=============================================海报上的字体
- .intro-content > h1 {
-     color: white;
-     font-size: 85px;
-     letter-spacing: 2px;
-     font-family: 'Clicker Script', cursive;
-     color: #ffffff;
-     margin: 2.6em 0 0.2em 0;
- }
-
- .intro-content > p {
-     color: #fff;
-     font-size: 2.5em;
-     letter-spacing: 0.1em;
-     margin-top: 1em;
-     text-align: center;
- }
- //=============================================海报上的字体
-
-
-
  //=====================================登入弹窗
   .loginmodal-container {
     padding: 20px;
@@ -96,21 +73,43 @@
    box-sizing: border-box;
    -moz-box-sizing: border-box;
  }
- //=====================================登入弹窗
+
 
 
  //=====================================navbar
  .navbar-default {
-    background-color: #2B322F;  //navbar背景颜色
-    border-color: #2B322F; //边框色
+    background-color: white;  //navbar背景颜色
+    border-color: white; //边框色
     margin-bottom: 0; //底部 margin 不撑开距离
+    height: 52px;
+    padding: 0 52px;
+    font-size: 13px;
+    line-height: 52px;
+    color: #4e4e4e;
+    font-family: Century Gothic, Arial;
+    position: fixed;
+    width: 100%;
 }
 
-.navbar-brand > img {
+.navbar-brand {                     //logo的设置
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 52px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 52px;
+  color: #afafaf;
+  text-align: center;
+  text-transform: uppercase;
+
+img {
     display: inline-block; //图片和链接文字显示在同一行
     margin-right: 10px; //图片和链接文字拉开一点距离
     width: 32px; //定制图片宽度
     height: 32px; //定制图片高度
+}
 }
 
 @media (min-width: 768px) {
@@ -156,9 +155,20 @@
 
 }
 
- //=====================================navbar
+
+
+
+
+
+
+
+
+
+
 
  //*****footer*****//
+
+ 
  .footer-default {
     background-color: #2B322F;
     height: 400px;
@@ -182,48 +192,3 @@
  }
 
  //*****footer*****//
-
- //*****common*****//
- .col-centered {
-   float: none;
-   margin: 0 auto;
- }
-
- // .section{
- //     padding-top: 80px;
- //     padding-bottom: 90px;
- // }
-
- .section-title {
-     color: #666;
-     margin-top: 1em;
-     margin-bottom: 1em;
-     letter-spacing: 3px;
-     font-size: 30px;
-     text-align: center;
-     font-family: STHeiti Light;
- }
-
- .section-title-2 {
-     color: #666;
-     margin-top: 1em;
-     margin-bottom: 1em;
-     letter-spacing: 0.1em;
-     font-size: 1.7em;
-     text-align: center;
- }
-
- .fenge {
-   height: 1.5px;
-   background-color: #999;
- }
-
- p {
-   color: #666;
-   letter-spacing: 1px;
-   line-height: 22px;
-   margin: 25px 20px 40px 20px;
- }
-
-
- /*===== common ====*/
