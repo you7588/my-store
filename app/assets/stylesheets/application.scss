@@ -79,13 +79,12 @@
  //=====================================navbar
  .navbar-default {
     background-color: white;  //navbar背景颜色
-    border-color: white; //边框色
+    background-color: rgba(255,255,255,0.8);
     margin-bottom: 0; //底部 margin 不撑开距离
     height: 52px;
     padding: 0 52px;
     font-size: 13px;
     line-height: 52px;
-    color: #4e4e4e;
     font-family: Century Gothic, Arial;
     position: fixed;
     width: 100%;
@@ -100,9 +99,8 @@
   font-weight: bold;
   font-size: 14px;
   line-height: 52px;
-  color: #afafaf;
+  color: #999;
   text-align: center;
-  text-transform: uppercase;
 
 img {
     display: inline-block; //图片和链接文字显示在同一行
@@ -118,7 +116,7 @@ img {
 }
 }
 .navbar-default .navbar-brand {
-  color: #e2e5d8; //标题字体颜色
+  color: #999; //标题字体颜色
   padding: 10px 15px; //上下10px，左右15px
   line-height: 30px; //文字行高
 }
@@ -130,7 +128,7 @@ img {
 }
 
  .navbar-default .navbar-nav > li > a{
-  color: #e2e5d8; //注册登录（显示的颜色）-yellow
+  color: #999; //注册登录（显示的颜色）-yellow
 
 }
 
@@ -142,7 +140,7 @@ img {
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #e2e5d8;
+  color: #999;
   background-color: transparent;
 
 }
@@ -168,27 +166,31 @@ img {
 
  //*****footer*****//
 
- 
  .footer-default {
-    background-color: #2B322F;
-    height: 400px;
-    p {
-      color: #fff;
-      margin-top: 40px;
-      letter-spacing: 2px;
-    }
-    .logo {
-      margin-top: 180px;
-      margin-bottom: 40px;
-      img{
-      margin-left: 25px ;
-      width: 55px;
-      }
-    }
-    .glyphicon-chevron-up {
-      margin-bottom: -60px;
-      color: #fff;
-    }
+   background-color: white;
+   background-color: rgba(255,255,255,0.8);
+   width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    height: 58px;
+    padding: 0 52px;
+    font-size: 14px;
+    line-height: 58px;
+    color: #999;
+    font-family: HelveticaNeue, Arial;
+
+    // .logo {
+    //   padding-left: 17px;
+    //   line-height: 16px;
+    //   height: 16px;
+    //   border: none;
+    //   position: relative;
+    //   img{
+    //   width: 25px;
+    //   }
+    // }
  }
 
  //*****footer*****//
