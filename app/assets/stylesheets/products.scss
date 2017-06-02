@@ -1,3 +1,108 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/*===== 1.网站头贴 ====*/
+
+.welcome-top{
+    background-color: #f6f3e1;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: -1.4em;
+}
+
+.carousel-caption {
+  padding: 0;
+  // margin: 2px -120px 10px 0;
+}
+
+.carousel-control {
+  text-shadow: 0 0 0 #999;
+  width: 0;
+  height: 0;
+}
+.carousel-control span:hover {
+  color: #2dbe60;
+}
+#myCarousel {
+  margin: 20px auto 20px auto;
+  width: 100%;
+}
+.carousel-inner img {
+  background: cover;
+  position: center;
+}
+.carousel-indicators li {
+  background-color: #fa9e81;
+  border: none;
+}
+.carousel-indicators .active {
+  background-color: #e8e8e8;
+}
+.carousel-indicators {
+  bottom: 2em;
+}
+// #myCarousel .left span {
+//   position: relative;
+//   color: #e8e8e8;
+//   font-size: 7em;
+//   top: 1.7em;
+// }
+// #myCarousel .right span {
+//   position: relative;
+//   color: #e8e8e8;
+//   font-size: 7em;
+//   top: 1.7em;
+// }
+.intro-content02 > h1 {                     //海报01字体
+    color: white;
+    font-size: 85px;
+    letter-spacing: 1px;
+    font-family: 'Clicker Script', cursive;
+    color: #ffffff;
+    margin: 1em 0 1em 0;
+}
+
+.intro-content02 > p {
+    color: #fff;
+    font-size: 2em;
+    letter-spacing: 0.5em;
+    margin-top: 2em;
+    text-align: center;
+}
+
+.intro-content03 > h1 {                     //海报02字体
+    color: white;
+    font-size: 85px;
+    letter-spacing: 1px;
+    font-family: 'Clicker Script', cursive;
+    color: #ffffff;
+    margin: 1em 0 1em 0;
+}
+
+.intro-content03 > p {
+    color: #fff;
+    font-size: 2em;
+    letter-spacing: 0em;
+    margin-top: 2em;
+    text-align: center;
+}
+
+.intro-content04 > h1 {                     //海报01字体
+    color: white;
+    font-size: 65px;
+    letter-spacing: 1px;
+    font-family: 'Clicker Script', cursive;
+    color: #ffffff;
+    margin: 1em 0 1em 0;
+}
+
+.intro-content04 > p {
+    color: #fff;
+    font-size: 1.5em;
+//     letter-spacing: 0.5em;
+    margin-top: 1em;
+//     text-align: center;
+}
+/*============================= end 1.网站头贴 ============================*/
