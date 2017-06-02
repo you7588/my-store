@@ -25,7 +25,7 @@
 <!--==================================3.产品 =================================-->
 <section id="a3" class="a product">
   <div class="row">
-    <div class="col-md-10 col-md-offset-1" align="center">
+    <div class="col-md-12" align="center">
       <h2 class="section-title">我们的产品</h2>
       <% @products.each do |product| %>
       <div class="col-md-3">
@@ -40,8 +40,8 @@
           <div class="boxx-title">
             <%= product.title %> ￥ <%= product.price %>
           </div>
-          <a href="#" class="btn btn-block btn-warning">了解更多</a>
         </div>
+          <a href="#" class="btn btn-block btn-warning">了解更多</a>
       </div>
       <% end %>
     </div>
