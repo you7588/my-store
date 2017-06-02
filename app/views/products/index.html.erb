@@ -42,11 +42,14 @@
           <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
           <% end %>
           <% end %>
-          <div class="boxx-title">
-            <%= product.title %> ￥ <%= product.price %>
-          </div>
         </div>
-          <a href="#" class="btn btn-block btn-warning">了解更多</a>
+
+        <div class="boxx-title">
+          <%= product.title %> ￥ <%= product.price %>
+        </div>
+          <div class="button1">
+            <%= link_to "到碗里来", product_path(product) %>
+          </div>
       </div>
       <% end %>
     </div>
