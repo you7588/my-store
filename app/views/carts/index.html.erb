@@ -1,14 +1,12 @@
-<div class="row">
-  <div class="col-md-12">
-
-    <%= link_to("清空购物车", clean_carts_path ,
+<div class="row carts">
+  <div class="col-md-10 col-md-offset-1 carts-box text-center">
+    <!-- <%= link_to("清空购物车", clean_carts_path ,
                 method: :delete , class: "pull-right",
                 style: "text-decoration: underline;",
-                data: { confirm: "你确定要清空整个购物车吗？"} )%>
+                data: { confirm: "你确定要清空整个购物车吗？"} )%> -->
 
     <h2>购物车</h2>
-
-    <table class="table table-bordered">
+    <table class="table" align="center">
       <thead>
         <tr>
           <th colspan="2">商品资讯</th>
@@ -19,7 +17,6 @@
       </thead>
 
       <tbody>
-
         <% current_cart.cart_items.each do |cart_item| %>
         <tr>
           <td>
@@ -50,12 +47,9 @@
           </td>
         </tr>
         <% end %>
-
       </tbody>
     </table>
-
-    <br>
-
+    <hr>
     <div class="total clearfix">
       <span class="pull-right">
         <span>
