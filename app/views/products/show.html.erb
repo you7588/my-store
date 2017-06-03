@@ -1,42 +1,113 @@
-  <div class="container">
-<!--======== 1. 网站头图 =========-->
-<section id="product-page" class="product-intro" >
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-10 col-centered text-center ">
-        <div class="content">
-          <h1>HOW TO brand yourself AS AN ARTIST</h1>
+<div class="product-page">
+  <div class="product-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="product-image">
+            <% if @product.image.present? %>
+            <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
+            <% else %>
+            <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
+            <% end %>
+          </div>
+        </div>
+        <div class="col-md-5 col-md-offset-1">
+          <div class="pay-area text-center">
+            <h1 class="product-name"><%= @product.title %></h1>
+            <h5 class="tagline"><%= @product.description %></h5>
+            <h4 class="product-price">￥</h4>
+            <div class="tagline">
+              本期剩余名额 :
+              <span><%= @product.quantity == 0 ? '已报满' : @product.quantity %></span>
+            </div>
+            <span>
+              <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-warning ") %>
+            </span>
+            <button type="submit" name="commit" value="order_now" class="btn btn-danger <%= @product.quantity == 0 ? 'disabled' : '' %>">
+              立刻下单
+            </button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</section>
-<!--======== end 1. 网站头图 =========-->
-<hr>
-    <h2> <%= @product.title %> </h2>
-<hr>
-<div class="row">
-  <div class="col-md-6">
-    <% if @product.image.present? %>
-      <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
-    <% else %>
-      <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
-    <% end %>
-  </div>
-  <div class="col-md-6">
-    <div style="height:100px;">
-      <p style="width:10em;"><%= @product.description %></p>
-    </div>
-    <div class="product-price"> ￥ <%= @product.price %> </div>
-    <div> 数量 : <%= @product.quantity %> </div>
 
-    <div class="pull-right">
-      <% if @product.quantity.present? && @product.quantity > 0  %>
-      <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-danger btn-lg") %>
-      <% else %>
-      已销售一空，无法购买
-      <% end %>
-    </div>
+<div class="profile-page">
+  <div class="container">
+    <div class="row">
+      <div class="profile-tabs">
+        <!--==小目录==-->
+        <ul class="nav nav-pills nav-pills-info" role="tablist">
+          <li class="active">
+            <a href="#intro" role="tab" data-toggle="tab">
+              <i class="material-icons">dashboard</i>
+              活动介绍
+            </a>
+          </li>
+          <li>
+            <a href="#catalog" role="tab" data-toggle="tab">
+              <i class="material-icons">schedule</i>
+              目录
+            </a>
+          </li>
+          <li>
+            <a href="#teacher" role="tab" data-toggle="tab">
+              <i class="material-icons">list</i>
+              讲师
+            </a>
+          </li>
+        </ul>
+
+        <!--==下半部分的具体内容==-->
+
+        <div class="tab-content gallery">
+
+          <!-- 课程介绍 -->
+
+          <div class="tab-pane active" id="intro">
+            <div class="section">
+              <div class="container ">
+                <div class="row">
+                  <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 text-left">
+                    <h2><%= @product.title %></h2>
+                    <h4 class="text"><%= @product.description %></h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 课程目录 -->
+          <div class="tab-pane" id="catalog">
+            <div class="section">
+              <div class="container ">
+                <div class="row">
+                  <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 text-center">
+                    <h2><%= @product.title %></h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                    <!-- 讲师介绍 -->
+                    <div class="tab-pane" id="teacher">
+                      <div class="profile">
+                        <div class="avatar" style="margin-top: 150px;">
+                          <img src="http://ooz9ucbbf.bkt.clouddn.com/%E6%88%91%EF%BC%88%E6%AD%A3%E6%96%B9%E5%BD%A2%EF%BC%892.jpg" alt="千古流传" class="img-circle img-responsive img-raised">
+                        </div>
+                        <div class="name">
+                          <h3 class="title">千古刘传</h3>
+                          <h6>Designer</h6>
+                        </div>
+                      </div>
+                      <div class="container">
+                        <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 text-center">
+                          <h5 class="text">创业者，3年营销策划，脑洞文案。玩过乐队写过歌。跆拳道黑带一段|教练，健身成瘾者。追求认知升级，自创认知学习法。创业，为了财富自由。写字，为了思想自由。健身，为了身体自由。以上，写于离开疯人院前_(:3 」∠)_</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
   </div>
-</div>
 </div>
