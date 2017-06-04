@@ -1,0 +1,72 @@
+<div class="col-md-4 col-md-offset-4">
+  <%= simple_form_for([@product, @product.reviews.build]) do |f|%>
+    <div class="productDetail-evaluation ">
+      <div class="intro-text-count clearfix ">
+        <div >陶艺体验: </div>
+        <div id="star-experience"></div>
+      </div>
+      <div class="intro-text-count clearfix ">
+        <div >产品满意度: </div>
+        <div id="star-production"></div>
+      </div>
+      <div class="intro-text-count clearfix ">
+        <div >摄影满意度: </div>
+        <div id="star-photography"></div>
+      </div>
+    </div>
+    <br>
+    <div class="form-group">
+      <%= f.input :body, label: "内容", input_html: { class: "form-control"} %>
+    </div>
+    <div class="form-actions">
+      <%= f.submit "提交", disable_with: "Submiting..." %>
+    </div>
+  <% end %>
+</div>
+
+
+<script>
+  $('.star-experience').raty({
+        path: '/assets/',
+            readOnly: true,
+            score: function() {
+          return $(this).attr('data-score');
+        }
+  });
+  $('.star-production').raty({
+        path: '/assets/',
+            readOnly: true,
+            score: function() {
+          return $(this).attr('data-score');
+        }
+  });
+  $('.star-photography').raty({
+        path: '/assets/',
+            readOnly: true,
+            score: function() {
+          return $(this).attr('data-score');
+        }
+  });
+
+  $('#star-experience').raty({
+  path: '/assets/',
+  scoreName: 'review[experience]'
+  });
+
+  $('#star-production').raty({
+  path: '/assets/',
+  scoreName: 'review[production]'
+  });
+
+  $('#star-photography').raty({
+      path: '/assets/',
+      scoreName: 'review[photography]'
+  });
+
+
+<!-- 必须要选一颗星 -->
+  $('#star-experience img').eq(0).trigger('click')
+  $('#star-production img').eq(0).trigger('click')
+  $('#star-photography img').eq(0).trigger('click')
+
+</script>
