@@ -1,4 +1,4 @@
-<div class="product-page">
+<!-- <div class="product-page">
   <div class="product-header">
     <div class="container">
       <div class="row">
@@ -35,9 +35,9 @@
 <div class="profile-page">
   <div class="container">
     <div class="row">
-      <div class="profile-tabs">
+      <div class="profile-tabs"> -->
         <!--==小目录==-->
-        <ul class="nav nav-pills nav-pills-info" role="tablist">
+        <!-- <ul class="nav nav-pills nav-pills-info" role="tablist">
           <li class="active">
             <a href="#intro" role="tab" data-toggle="tab">
               <i class="material-icons">dashboard</i>
@@ -56,15 +56,15 @@
               讲师
             </a>
           </li>
-        </ul>
+        </ul> -->
 
         <!--==下半部分的具体内容==-->
 
-        <div class="tab-content gallery">
+        <!-- <div class="tab-content gallery"> -->
 
           <!-- 课程介绍 -->
 
-          <div class="tab-pane active" id="intro">
+          <!-- <div class="tab-pane active" id="intro">
             <div class="section">
               <div class="container ">
                 <div class="row">
@@ -75,9 +75,9 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- 课程目录 -->
-          <div class="tab-pane" id="catalog">
+          <!-- <div class="tab-pane" id="catalog">
             <div class="section">
               <div class="container ">
                 <div class="row">
@@ -87,27 +87,112 @@
                 </div>
               </div>
             </div>
-          </div>
-                    <!-- 讲师介绍 -->
-                    <div class="tab-pane" id="teacher">
-                      <div class="profile">
-                        <div class="avatar" style="margin-top: 150px;">
-                          <img src="http://ooz9ucbbf.bkt.clouddn.com/%E6%88%91%EF%BC%88%E6%AD%A3%E6%96%B9%E5%BD%A2%EF%BC%892.jpg" alt="千古流传" class="img-circle img-responsive img-raised">
-                        </div>
-                        <div class="name">
-                          <h3 class="title">千古刘传</h3>
-                          <h6>Designer</h6>
-                        </div>
-                      </div>
-                      <div class="container">
-                        <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 text-center">
-                          <h5 class="text">创业者，3年营销策划，脑洞文案。玩过乐队写过歌。跆拳道黑带一段|教练，健身成瘾者。追求认知升级，自创认知学习法。创业，为了财富自由。写字，为了思想自由。健身，为了身体自由。以上，写于离开疯人院前_(:3 」∠)_</h5>
-                        </div>
-                      </div>
-                    </div>
+          </div> -->
+          <!-- 讲师介绍 -->
+          <!-- <div class="tab-pane" id="catalog">
+            <div class="section">
+              <div class="container ">
+                <div class="row">
+                  <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 text-center">
+
+
                   </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div> -->
+
+<script>
+  $('.star-freshness').raty({
+        path: '/assets/',
+            readOnly: true,
+            score: function() {
+          return $(this).attr('data-score');
+        }
+  });
+  $('.star-look').raty({
+        path: '/assets/',
+            readOnly: true,
+            score: function() {
+          return $(this).attr('data-score');
+        }
+  });
+  $('.star-price').raty({
+        path: '/assets/',
+            readOnly: true,
+            score: function() {
+          return $(this).attr('data-score');
+        }
+  });
+
+  $('#star-freshness').raty({
+  path: '/assets/',
+  scoreName: 'review[freshness]'
+  });
+
+  $('#star-look').raty({
+  path: '/assets/',
+  scoreName: 'review[look]'
+  });
+
+  $('#star-price').raty({
+      path: '/assets/',
+      scoreName: 'review[price]'
+  });
+
+
+<!-- 必须要选一颗星 -->
+  $('#star-freshness img').eq(0).trigger('click')
+  $('#star-look img').eq(0).trigger('click')
+  $('#star-price img').eq(0).trigger('click')
+
+</script>
+
+<div class="text-center">
+  <h3>综合评价</h3>
+  新鲜： <div class="star-freshness" data-score= <%= @avg_review %> ></div>
+  外观： <div class="star-look" data-score= <%= @avg_look %> ></div>
+  价格： <div class="star-price" data-score= <%= @avg_price %> ></div>
+</div>
+
+<div class="container">
+  <!--对商品评论以及评星-->
+  <div class="row review">
+    <div class="col-sm-12 col-md-10">
+      <h3 class="reviews_title">
+        <%= @product.reviews.count %> Reviews
+      </h3>
+      <hr>
+      <div id="reivews">
+        <div class="reviews_wrapper clearfix">
+            <div class="pull-left">
+              <% @reviews.each do |review| %>
+                新鲜： <div class="star-freshness" data-score= <%= review.freshness %> ></div>
+                外观： <div class="star-look" data-score= <%= review.look %> ></div>
+                价格： <div class="star-price" data-score= <%= review.price %> ></div>
+                <p>
+                    <small>Submitted
+                        <strong><%= time_ago_in_words(review.created_at) %>
+                            ago</strong>
+                        by <%= review.user.email %></small>
+                </p>
+                <div>
+                  <% if review.user == current_user %>
+                     <%= link_to("Delete", product_review_path(@product, review), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-sm pull-right") %>
+                  <% end %>
+                </div>
+                <% end %>
+          </div>
+        </div>
+        <hr>
+        <%= link_to("评价",new_product_review_path(@product), :class => "btn btn-lg btn-info") %>
+      </div>
+    </div>
   </div>
 </div>

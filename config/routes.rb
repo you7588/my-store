@@ -16,12 +16,15 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :products do
+    resources :reviews
     member do
       post :add_to_cart
     end
   end
 
+
   resources :feedbacks
+
 
   resources :carts do
     collection do

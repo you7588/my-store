@@ -1,0 +1,71 @@
+<div class="col-md-4 col-md-offset-4">
+  <%= simple_form_for([@product, @product.reviews.build]) do |f|%>
+    <div class="productDetail-evaluation ">
+      <div class="intro-text-count clearfix ">
+        <div >新鲜: </div>
+        <div id="star-freshness"></div>
+      </div>
+      <div class="intro-text-count clearfix ">
+        <div >外观: </div>
+        <div id="star-look"></div>
+      </div>
+      <div class="intro-text-count clearfix ">
+        <div >价格: </div>
+        <div id="star-price"></div>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.input :body, label: "内容", input_html: { class: "form-control"} %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit "提交", disable_with: "Submiting..." %>
+    </div>
+  <% end %>
+</div>
+
+<script>
+  $('.star-freshness').raty({
+        path: '/assets/',
+            readOnly: true,
+            score: function() {
+          return $(this).attr('data-score');
+        }
+  });
+  $('.star-look').raty({
+        path: '/assets/',
+            readOnly: true,
+            score: function() {
+          return $(this).attr('data-score');
+        }
+  });
+  $('.star-price').raty({
+        path: '/assets/',
+            readOnly: true,
+            score: function() {
+          return $(this).attr('data-score');
+        }
+  });
+
+  $('#star-freshness').raty({
+  path: '/assets/',
+  scoreName: 'review[freshness]'
+  });
+
+  $('#star-look').raty({
+  path: '/assets/',
+  scoreName: 'review[look]'
+  });
+
+  $('#star-price').raty({
+      path: '/assets/',
+      scoreName: 'review[price]'
+  });
+
+
+<!-- 必须要选一颗星 -->
+  $('#star-freshness img').eq(0).trigger('click')
+  $('#star-look img').eq(0).trigger('click')
+  $('#star-price img').eq(0).trigger('click')
+
+</script>
