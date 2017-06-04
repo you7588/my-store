@@ -78,8 +78,9 @@
 
  //=====================================navbar
  .navbar-default {
-    background-color: white;  //navbar背景颜色
-    background-color: rgba(255,255,255,0.8);
+    // background-color: white;  //navbar背景颜色
+    border-color: #010E05; //边框色
+    background-color: #010E05;
     margin-bottom: 0; //底部 margin 不撑开距离
     height: 52px;
     padding: 0 52px;
@@ -168,29 +169,36 @@ img {
 
  .footer-default {
    background-color: white;
-   background-color: rgba(255,255,255,0.8);
+   background-color: rgba(1,14,5,0.8);
    width: 100%;
-    position: fixed;
+    // position: fixed;
     left: 0;
     bottom: 0;
     overflow: hidden;
-    height: 58px;
-    padding: 0 52px;
+    height: 80px;
+    padding: 80px;
     font-size: 14px;
-    line-height: 58px;
+    line-height: 80px;
     color: #999;
     font-family: HelveticaNeue, Arial;
 
-    // .logo {
-    //   padding-left: 17px;
-    //   line-height: 16px;
-    //   height: 16px;
-    //   border: none;
-    //   position: relative;
-    //   img{
-    //   width: 25px;
-    //   }
-    // }
- }
+    .logo {
+      padding-left: 17px;
+      line-height: 16px;
+      height: 16px;
+      border: none;
+      position: relative;
+      letter-spacing: 8px;
+      img{
+      width: 30px;
+      }
+
+      p {
+        color: #fff;
+        margin-top: 10px;
+        letter-spacing: 4px;
+      }
+    }
+   }
 
  //*****footer*****//
