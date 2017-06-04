@@ -109,21 +109,21 @@
 </div> -->
 
 <script>
-  $('.star-freshness').raty({
+  $('.star-experience').raty({
         path: '/assets/',
             readOnly: true,
             score: function() {
           return $(this).attr('data-score');
         }
   });
-  $('.star-look').raty({
+  $('.star-production').raty({
         path: '/assets/',
             readOnly: true,
             score: function() {
           return $(this).attr('data-score');
         }
   });
-  $('.star-price').raty({
+  $('.star-photography').raty({
         path: '/assets/',
             readOnly: true,
             score: function() {
@@ -131,68 +131,70 @@
         }
   });
 
-  $('#star-freshness').raty({
+  $('#star-experience').raty({
   path: '/assets/',
-  scoreName: 'review[freshness]'
+  scoreName: 'review[experience]'
   });
 
-  $('#star-look').raty({
+  $('#star-production').raty({
   path: '/assets/',
-  scoreName: 'review[look]'
+  scoreName: 'review[production]'
   });
 
-  $('#star-price').raty({
+  $('#star-photography').raty({
       path: '/assets/',
-      scoreName: 'review[price]'
+      scoreName: 'review[photography]'
   });
 
 
 <!-- 必须要选一颗星 -->
-  $('#star-freshness img').eq(0).trigger('click')
-  $('#star-look img').eq(0).trigger('click')
-  $('#star-price img').eq(0).trigger('click')
+  $('#star-experience img').eq(0).trigger('click')
+  $('#star-production img').eq(0).trigger('click')
+  $('#star-photography img').eq(0).trigger('click')
 
 </script>
 
+
 <div class="text-center">
   <h3>综合评价</h3>
-  新鲜： <div class="star-freshness" data-score= <%= @avg_review %> ></div>
-  外观： <div class="star-look" data-score= <%= @avg_look %> ></div>
-  价格： <div class="star-price" data-score= <%= @avg_price %> ></div>
+  陶艺体验： <div class="star-experience" data-score= <%= @avg_experience %> ></div>
+  作品满意度： <div class="star-production" data-score= <%= @avg_production %> ></div>
+  摄影满意度： <div class="star-photography" data-score= <%= @avg_photography %> ></div>
 </div>
 
 <div class="container">
   <!--对商品评论以及评星-->
   <div class="row review">
-    <div class="col-sm-12 col-md-10">
-      <h3 class="reviews_title">
-        <%= @product.reviews.count %> Reviews
-      </h3>
-      <hr>
-      <div id="reivews">
-        <div class="reviews_wrapper clearfix">
+    <div class="col-sm-6 col-md-6 col-md-offset-3 col-sm-offset-3">
+      <h3 class="reviews_title"><%= @product.reviews.count %> 铁粉说</h3>
+        <hr>
+        <div id="reivews">
+          <div class="reviews_wrapper clearfix">
             <div class="pull-left">
               <% @reviews.each do |review| %>
-                新鲜： <div class="star-freshness" data-score= <%= review.freshness %> ></div>
-                外观： <div class="star-look" data-score= <%= review.look %> ></div>
-                价格： <div class="star-price" data-score= <%= review.price %> ></div>
-                <p>
-                    <small>Submitted
-                        <strong><%= time_ago_in_words(review.created_at) %>
-                            ago</strong>
-                        by <%= review.user.email %></small>
-                </p>
-                <div>
+                  陶艺体验：
+                  <div class="star-experience" data-score= <%= review.experience %> ></div>
+                  作品满意度：
+                  <div class="star-production" data-score= <%= review.production %> ></div>
+                  摄影满意度：
+                  <div class="star-photography" data-score= <%= review.photography %> ></div>
+                  <p><%= review.body %></p>
+                  <p>
+                  <small>Submitted
+                  <strong><%= time_ago_in_words(review.created_at) %>ago</strong>
+                  by <%= review.user.email %></small>
+                  </p>
+                  <div>
                   <% if review.user == current_user %>
-                     <%= link_to("Delete", product_review_path(@product, review), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-sm pull-right") %>
+                       <%= link_to("Delete", product_review_path(@product, review), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-sm pull-right") %>
+                    <% end %>
+                  </div>
                   <% end %>
-                </div>
-                <% end %>
+            </div>
           </div>
+          <hr>
+          <%= link_to("评价",new_product_review_path(@product), :class => "btn btn-lg btn-info") %>
         </div>
-        <hr>
-        <%= link_to("评价",new_product_review_path(@product), :class => "btn btn-lg btn-info") %>
       </div>
     </div>
-  </div>
 </div>

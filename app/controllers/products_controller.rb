@@ -7,13 +7,13 @@ class ProductsController < ApplicationController
       @product = Product.find(params[:id])
       @reviews = @product.reviews
       if @reviews.blank?
-          @avg_review = 0
-          @avg_look = 0
-          @avg_price = 0
+          @avg_experience = 0
+          @avg_production = 0
+          @avg_photography = 0
         else
-          @avg_review = @reviews.average(:freshness).round(2)
-          @avg_look = @reviews.average(:look).round(2)
-          @avg_price = @reviews.average(:price).round(2)
+          @avg_experience = @reviews.average(:experience).round(2)
+          @avg_production = @reviews.average(:production).round(2)
+          @avg_photography = @reviews.average(:photography).round(2)
         end
     end
 

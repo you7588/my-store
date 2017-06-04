@@ -2,44 +2,45 @@
   <%= simple_form_for([@product, @product.reviews.build]) do |f|%>
     <div class="productDetail-evaluation ">
       <div class="intro-text-count clearfix ">
-        <div >新鲜: </div>
-        <div id="star-freshness"></div>
+        <div >陶艺体验: </div>
+        <div id="star-experience"></div>
       </div>
       <div class="intro-text-count clearfix ">
-        <div >外观: </div>
-        <div id="star-look"></div>
+        <div >产品满意度: </div>
+        <div id="star-production"></div>
       </div>
       <div class="intro-text-count clearfix ">
-        <div >价格: </div>
-        <div id="star-price"></div>
+        <div >摄影满意度: </div>
+        <div id="star-photography"></div>
       </div>
     </div>
+    <br>
     <div class="form-group">
       <%= f.input :body, label: "内容", input_html: { class: "form-control"} %>
     </div>
-
     <div class="form-actions">
       <%= f.submit "提交", disable_with: "Submiting..." %>
     </div>
   <% end %>
 </div>
 
+
 <script>
-  $('.star-freshness').raty({
+  $('.star-experience').raty({
         path: '/assets/',
             readOnly: true,
             score: function() {
           return $(this).attr('data-score');
         }
   });
-  $('.star-look').raty({
+  $('.star-production').raty({
         path: '/assets/',
             readOnly: true,
             score: function() {
           return $(this).attr('data-score');
         }
   });
-  $('.star-price').raty({
+  $('.star-photography').raty({
         path: '/assets/',
             readOnly: true,
             score: function() {
@@ -47,25 +48,25 @@
         }
   });
 
-  $('#star-freshness').raty({
+  $('#star-experience').raty({
   path: '/assets/',
-  scoreName: 'review[freshness]'
+  scoreName: 'review[experience]'
   });
 
-  $('#star-look').raty({
+  $('#star-production').raty({
   path: '/assets/',
-  scoreName: 'review[look]'
+  scoreName: 'review[production]'
   });
 
-  $('#star-price').raty({
+  $('#star-photography').raty({
       path: '/assets/',
-      scoreName: 'review[price]'
+      scoreName: 'review[photography]'
   });
 
 
 <!-- 必须要选一颗星 -->
-  $('#star-freshness img').eq(0).trigger('click')
-  $('#star-look img').eq(0).trigger('click')
-  $('#star-price img').eq(0).trigger('click')
+  $('#star-experience img').eq(0).trigger('click')
+  $('#star-production img').eq(0).trigger('click')
+  $('#star-photography img').eq(0).trigger('click')
 
 </script>

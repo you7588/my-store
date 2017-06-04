@@ -15,23 +15,7 @@ class ReviewsController < ApplicationController
     if @review.save
       redirect_to product_path(@product), notice: 'Review was successfully created.'
     else
-      redirect_to product_path(@product), notice: 'You have to write some words.'
-    end
-  end
-
-  def edit
-    @product = Product.find(params[:product_id])
-    @review = Review.find(params[:id])
-  end
-
-  def update
-    @product = Product.find(params[:product_id])
-    @review = Review.find(params[:id])
-
-    if @review.update(review_params)
-      redirect_to product_path(@product), notice: "Update successfully"
-    else
-      render :edit
+      render :new, notice: 'You have to write some words.'
     end
   end
 
@@ -44,6 +28,6 @@ class ReviewsController < ApplicationController
 
   private
   def review_params
-    params.require(:review).permit(:body, :freshness, :look, :price)
+    params.require(:review).permit(:body, :experience, :production, :photography)
   end
 end

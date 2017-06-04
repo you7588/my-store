@@ -80,11 +80,11 @@ ActiveRecord::Schema.define(version: 20170604024509) do
     t.integer  "product_id"
     t.integer  "user_id"
     t.text     "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "look"
-    t.integer  "freshness"
-    t.integer  "price"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.integer  "experience"
+    t.integer  "production"
+    t.integer  "photography"
   end
 
   create_table "users", force: :cascade do |t|
