@@ -5,7 +5,7 @@ class ProductsController < ApplicationController
 
   def show
       @product = Product.find(params[:id])
-      @reviews = @product.reviews.order("created_at DESC")
+      @reviews = @product.reviews.recent
       if @reviews.blank?
           @avg_experience = 0
           @avg_production = 0
