@@ -87,6 +87,7 @@
 //   font-size: 7em;
 //   top: 1.7em;
 // }
+
 .intro-content02 > h1 {                     //海报01字体
     color: white;
     font-size: 85px;
@@ -539,35 +540,8 @@ a .material-icons, a:hover .material-icons, a:focus .material-icons {
 
 
 // 下半部分的具体内容
-.profile {
-    text-align: center;
-    img {
-        max-width: 160px;
-        margin: -80px auto 0;
-    }
-}
-
-.profile-page .gallery {
-    margin-top: 45px;
-    padding-bottom: 50px;
-
-    img {
-        width: 100%;
-        margin-bottom: 30px;
-    }
-}
 
 
-.img-raised {
-    box-shadow: 0 16px 38px -12px rgba(0,0,0,0.56), 0 4px 25px 0px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.2);
-}
-
-.img-circle {
-    border-radius: 50%;
-}
-
-.img-responsive {
-    display: block;
-    max-width: 100%;
-    height: auto;
+.reviews {
+  padding-top: 10em;
 }
