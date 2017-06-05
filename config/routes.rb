@@ -30,10 +30,15 @@ Rails.application.routes.draw do
     collection do
       delete :clean
       post :checkout
+      post :pay_with_alipay
+      post :pay_with_wechat
     end
   end
 
   resources :orders do
+    collection do
+      post :order_create
+    end
     member do
       post :pay_with_alipay
       post :pay_with_wechat

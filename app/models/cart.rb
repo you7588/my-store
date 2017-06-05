@@ -1,6 +1,7 @@
 class Cart < ApplicationRecord
   has_many :cart_items
   has_many :products, through: :cart_items, source: :product
+  before_create :generate_token
 
   def add_product_to_cart(product)
     ci = cart_items.build
@@ -9,11 +10,23 @@ class Cart < ApplicationRecord
     ci.save
   end
 
+  def generate_token
+    self.token = SecureRandom.uuid
+  end
+
+   def set_payment_with!(method)
+   self.update_columns(payment_method: method )
+ end
+
+ def pay!
+   self.update_columns(is_paid: true )
+ end
+
   def total_price
     sum = 0
     cart_items.each do |cart_item|
       if cart_item.product.price.present?
-        sum += cart_item.quantity * cart_item.product.price
+        sum = cart_item.quantity * cart_item.product.price
       end
     end
     sum
@@ -32,7 +45,7 @@ class Cart < ApplicationRecord
     cart_item = cart_items.build
   end
   cart_item.product = product
-  cart_item.quantity += quantity
+  cart_item.quantity = quantity
   cart_item.save
 end
 end

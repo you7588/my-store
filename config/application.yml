@@ -27,7 +27,7 @@
    qiniu_secret_key: 5RuROIl_oTEdU3Z7e0mUOJTJqhJsH_afMsYRN4Xr  # 你的 qiniu SecretKey
    qiniu_bucket: jdstore-demo  # 你的 qiniu bucket
    qiniu_bucket_domain: ops9eqy9m.bkt.clouddn.com  # 你的 qiniu bucket domain
-   SEND_CLOUD_USER_NAME: "yo7588_test_gsylEb" # 你的 API_USER
-   SEND_CLOUD_USER_KEY: "tmjYBoIgTN1eyp4N" # 你的 API_KEY
+  #  SEND_CLOUD_USER_NAME: "yo7588_test_gsylEb" # 你的 API_USER
+  #  SEND_CLOUD_USER_KEY: "tmjYBoIgTN1eyp4N" # 你的 API_KEY
    PROJECT_ID: "144696"
    PROJECT_KEY: "759cd4f664387aa78bd3023c3d95584a"

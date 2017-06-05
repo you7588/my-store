@@ -2,12 +2,11 @@ class OrdersController < ApplicationController
   before_action :authenticate_user!, only: [:create]
 
   def create
-    @order = Order.new(order_params)
+    @order = Order.new
     @order.user = current_user
     @order.total = current_cart.total_price
 
     if @order.save
-
       current_cart.cart_items.each do |cart_item|
         product_list = ProductList.new
         product_list.order = @order
@@ -18,11 +17,27 @@ class OrdersController < ApplicationController
       end
       current_cart.clean!
       OrderMailer.notify_order_placed(@order).deliver!
-
       redirect_to order_path(@order.token)
     else
       render 'carts/checkout'
     end
+  end
+
+  def order_create
+    product = Product.find(params[:product_id])
+    order = Order.new
+    order.user = current_user
+    order.total = product.price
+
+    if order.save
+      product_list = ProductList.new
+      product_list.order_id = order.id
+      product_list.product_name = product.title
+      product_list.product_price = product.price
+      product_list.quantity = 1
+      product_list.save
+    end
+      redirect_to order_path(id: order.id), notice: "订单已生成，请尽快付款。。。"
   end
 
   def show
@@ -53,9 +68,5 @@ class OrdersController < ApplicationController
     redirect_to :back
   end
 
-  private
 
-  def order_params
-    params.require(:order).permit(:billing_name, :billing_address, :shipping_name, :shipping_address)
-  end
 end
