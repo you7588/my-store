@@ -21,8 +21,11 @@ ActiveRecord::Schema.define(version: 20170605002137) do
   end
 
   create_table "carts", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.string   "token"
+    t.boolean  "is_paid",        default: false
+    t.string   "payment_method"
   end
 
   create_table "categories", force: :cascade do |t|

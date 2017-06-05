@@ -6,14 +6,14 @@ class CartsController < ApplicationController
   end
 
   def checkout
-    @cart = cart.new
+    @order = Order.new
   end
 
   def show
     @cart = Cart.find(params[:id])
     # @cart = Cart.find_by_token(params[:id])
   end
-
+  
   def pay_with_alipay
     # @cart = Cart.find_by_token(params[:id])
     @cart = Cart.find(params[:id])

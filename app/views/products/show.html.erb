@@ -30,12 +30,15 @@
               <button type="submit" class="btn btn-warning <%= @product.quantity == 0 ? 'disabled' : '' %>">
                <%= fa_icon("cart-arrow-down", text: "加入购物车") %>
               </button>
+              <%= link_to "快捷一键下单", order_create_orders_path(product_id: @product.id),method: :post, class: "btn btn-success" %>
              <% end %>
           </div>
         </div>
       </div>
     </div>
   </div>
+
+
 
 <div class="profile-page">
   <div class="container">
