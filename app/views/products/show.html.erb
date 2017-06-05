@@ -30,15 +30,13 @@
               <button type="submit" class="btn btn-warning <%= @product.quantity == 0 ? 'disabled' : '' %>">
                <%= fa_icon("cart-arrow-down", text: "加入购物车") %>
               </button>
-              <%= link_to "快捷一键下单", order_create_orders_path(product_id: @product.id),method: :post, class: "btn btn-success" %>
+              <%= link_to "快捷一键下单", "#",method: :post, class: "btn btn-success" %>
              <% end %>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-
 
 <div class="profile-page">
   <div class="container">
@@ -72,7 +70,7 @@
 
           <!-- 活动详情 -->
 
-          <!-- <div class="tab-pane active" id="introduction">
+          <div class="tab-pane active" id="introduction">
             <div class="section">
               <div class="container ">
                 <div class="row">
@@ -83,9 +81,9 @@
                 </div>
               </div>
             </div>
-          </div> -->
+          </div>
           <!-- 费用说明 -->
-          <!-- <div class="tab-pane" id="cost">
+          <div class="tab-pane" id="cost">
             <div class="section">
               <div class="container ">
                 <div class="row">
@@ -95,7 +93,7 @@
                 </div>
               </div>
             </div>
-          </div> -->
+          </div>
           <!-- 往期评价 -->
           <div class="tab-pane reviews" id="reviews">
             <div class="section">
@@ -146,8 +144,6 @@
                   </div>
                 </div>
               </div>
-
-
             </div>
           </div>
         </div>
@@ -156,17 +152,7 @@
   </div>
 </div>
 </div>
-
-
 </div>
-
-
-
-
-
-
-
-
 
 
 
