@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-/*=========================================== cdy网站头贴 ======================================*/
+//=========================================== cdy 网站头贴 ======================================*/
 .intro-product{
     height: 50em;
     background-image: url('https://ws3.sinaimg.cn/large/006tNc79gy1fga8z4z3d4j31kw0w012m.jpg');
@@ -15,12 +15,12 @@
 //==============字体
   .intro-content02 > h1{
     color: #fff;
-    font-size: 6em;
-    font-family: 'Vibur', cursive;
-    margin: 2.6em 0 0.2em 0;
+    font-size: 5em;
+    font-family: 'Barrio', cursive;
+    margin: 6em 0 0 0;  //字体放置的高度位置
     margin-bottom: 20px;
   }
-  .intro-content01 > p{
+  .intro-content02 > p{
     color: #fff;
     font-size: 1em; //字体大小
     letter-spacing: 0.3em; //字体间隔
@@ -33,7 +33,7 @@
     fill: #ffffff; //颜色设置
   }
 //=====================锯齿
-/*=========================================== cdy网站头贴 ======================================*/
+//=========================================== cdy 网站头贴 ======================================*/
 
 /*=========================================== cdy 活动产品 ======================================*/
 .pro{
@@ -62,6 +62,7 @@
 }
 
 /*=========================================== cdy 活动产品 ======================================*/
+
 /*=========================================== cdy 分割图 =====================================*/
 .decor-top8{
   height: 6em;
@@ -71,7 +72,7 @@
 
 .middle-photo2{
     height: 16em;
-    background-image: url('https://ws4.sinaimg.cn/large/006tNc79gy1fgaar4drh9j31hc0m8qa5.jpg');
+    background-image: url('https://ws1.sinaimg.cn/large/006tNc79gy1fgamqf96kdj31hc0m87ap.jpg');
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -85,247 +86,120 @@
   }
 /*=========================================== cdy 分割图 =====================================*/
 
+/*=================================== cdy 活动展示 ==================================*/
 
-
-
-
-
-/*============波浪分割线====*/
-.decor-top2 {
-  height: 6em;
-  margin-bottom: -84px;
-  fill: #ffffff;
-}
-
-
-.decor-bottom2 {
-  height: 7em;
-  margin-top: -7em;
-  fill: #f6f3e1;
-}
-
-.decor-bottom1 {
-  height: 7em;
-  margin-top: -20em;
-  fill: black;
-}
-
-
-.decor-top5{
-  height: 6em;
-  margin-bottom: -84px;
-  fill: #f6f3e1;
-}
-/*================波浪分割线==============*/
-
-/*===== 1.网站头贴 ====*/
-
-
-.welcome-top{
-    background-color: #f6f3e1;
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-top: -1.4em;
-}
-
-.carousel-caption {
-  padding: 0;
-  // margin: 2px -120px 10px 0;
-}
-
-.carousel-control {
-  text-shadow: 0 0 0 #999;
-  width: 0;
-  height: 0;
-}
-.carousel-control span:hover {
-  color: #2dbe60;
-}
-#myCarousel {
-  margin: 20px auto 20px auto;
-  width: 100%;
-}
-.carousel-inner img {
-  background: cover;
-  position: center;
-}
-.carousel-indicators li {
-  background-color: #fa9e81;
-  border: none;
-}
-.carousel-indicators .active {
-  background-color: #e8e8e8;
-}
-.carousel-indicators {
-  bottom: 2em;
-}
-// #myCarousel .left span {
-//   position: relative;
-//   color: #e8e8e8;
-//   font-size: 7em;
-//   top: 1.7em;
-// }
-// #myCarousel .right span {
-//   position: relative;
-//   color: #e8e8e8;
-//   font-size: 7em;
-//   top: 1.7em;
-// }
-.intro-content02 > h1 {                     //海报01字体
-    color: white;
-    font-size: 85px;
-    letter-spacing: 1px;
-    font-family: 'Clicker Script', cursive;
-    color: #ffffff;
-    margin: 1em 0 1em 0;
-}
-
-.intro-content02 > p {
-    color: #fff;
-    font-size: 2em;
-    letter-spacing: 0.5em;
-    margin-top: 2em;
-    text-align: center;
-}
-
-.intro-content03 > h1 {                     //海报02字体
-    color: white;
-    font-size: 85px;
-    letter-spacing: 1px;
-    font-family: 'Clicker Script', cursive;
-    color: #ffffff;
-    margin: 1em 0 1em 0;
-}
-
-.intro-content03 > p {
-    color: #fff;
-    font-size: 2em;
-    letter-spacing: 0em;
-    margin-top: 2em;
-    text-align: center;
-}
-
-.intro-content04 > h1 {                     //海报01字体
-    color: white;
-    font-size: 65px;
-    letter-spacing: 1px;
-    font-family: 'Clicker Script', cursive;
-    color: #ffffff;
-    margin: 1em 0 1em 0;
-}
-
-.intro-content04 > p {
-    color: #fff;
-    font-size: 1.5em;
-//     letter-spacing: 0.5em;
-    margin-top: 1em;
-//     text-align: center;
-}
-/*============================= end 1.网站头贴 ============================*/
-
-/*==================================== 2.铁粉说 ==============================*/
-.say{
-  background-color: #f6f3e1;
-  padding-bottom: 6em;  }
-
-  .box {
-    background:#fff;
-    transition:all 0.2s ease;
-    border:2px dashed #dadada;
-    margin-top: 10px;
-    box-sizing: border-box;
-    background-clip: padding-box;
-    padding:0 20px 20px 20px;
-    min-height: 50em;
-    padding: 3em 0.7em;
-    border-radius: 1em;
-    box-shadow: 0.4em 0.3em 0.3em #666;
-    width: auto;
+// @import url(//fonts.googleapis.com/css?family=Lato:400,900);
+// @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+  //   body {
+	// 	padding: 60px 0px;
+	// }
+  .gui{
+    width: 10%;
+    border-color: #ececec;
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 20%;
   }
+	.animate {
+		-webkit-transition: all 0.3s ease-in-out;
+		-moz-transition: all 0.3s ease-in-out;
+		-o-transition: all 0.3s ease-in-out;
+		-ms-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+	}
+	.info-card {
+		width: 100%;
+		border: 1px solid rgb(215, 215, 215);
+		position: relative;
+		font-family: 'Lato', sans-serif;
+		margin-bottom: 20px;
+		overflow: hidden;
+	}
 
-  .box:hover {
-    border:0.2em solid #525C7A;
-  }
-  .box .box-content {
-    padding: 16px;
-    border-radius: 0 0 2px 2px;
-    background-clip: padding-box;
-    box-sizing: border-box;
-  }
-  .box .box-content p {
-    color:#666;
-    text-transform:none;
-  }
-  .tag-title {
-      color: #666;
-      font-size: 1.5em;
-      text-transform: uppercase;
-    }
-  .box .small{
-    width: 80%;
-  }
+	.info-card > img {
+		width: 1000px; //图片宽度
+		margin-bottom: 80px; //模块整体高度
+	}
+	.info-card .info-card-details,
+	.info-card .info-card-details .info-card-header  {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		bottom: -100%;
+		left: 0;
+		padding: 0 15px;
+		background: rgba(255, 255, 255, 0.5);
+		text-align: center;
+	}
+	.info-card .info-card-details::-webkit-scrollbar {
+		width: 8px;
+	}
+	.info-card .info-card-details::-webkit-scrollbar-button {
+		width: 8px;
+		height: 0px;
+	}
+	.info-card .info-card-details::-webkit-scrollbar-track {
+		background: transparent;
+	}
+	.info-card .info-card-details::-webkit-scrollbar-thumb {
+		background: rgb(160, 160, 160);
+	}
+	.info-card .info-card-details::-webkit-scrollbar-thumb:hover {
+		background: rgb(130, 130, 130);
+	}
 
-  .button1{
-    -webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
-    -moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
-    -ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
-    -o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
-    transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
-    display: block;
-    margin: 10px auto;
-    max-width: 8em;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 15px;
-    padding: 10px;
-    color: rgba(250, 250, 250, 0.6);
-    box-shadow: rgba(250, 250, 250, 0.6) 0 0px 0px 2px inset;
-    // font-family: 'Open Sans', sans-serif;
-    font-size: 2rem;
-  }
-  .button1:hover,
-  .button1:focus {
-    color: rgba(255, 84, 0, 1);
-    box-shadow: rgba(255, 84, 0, 0.5) 0 0px 0px 4em inset;
-    text-decoration: none;
-  }
+	.info-card .info-card-details .info-card-header {
+		height: auto;
+		bottom: 100%;
+		padding: 10px 5px;
+	}
+	.info-card:hover .info-card-details {
+		bottom: 0px;
+		overflow: auto;
+		padding-bottom: 25px;
+	}
+	.info-card:hover .info-card-details .info-card-header {
+		position: relative;
+		bottom: 0px;
+		padding-top: 45px;
+		padding-bottom: 25px;
+	}
+	.info-card .info-card-details .info-card-header h1,
+	.info-card .info-card-details .info-card-header h3 {
+		color: rgb(62, 62, 62);
+		font-size: 22px;
+		font-weight: 900;
+		text-transform: uppercase;
+		margin: 0 ;
+		padding: 0 ;
+	}
+	.info-card .info-card-details .info-card-header h3 {
+		color: rgb(142, 182, 52);
+		font-size: 15px;
+		font-weight: 400;
+		margin-top: 5px;
+	}
+	.info-card .info-card-details .info-card-detail .social {
+		list-style: none;
+		padding: 0px;
+		margin-top: 25px;
+		text-align: center;
+	}
+	.info-card .info-card-details .info-card-detail .social a {
+		position: relative;
+		display: inline-block;
+		min-width: 40px;
+		padding: 10px 0px;
+		margin: 0px 5px;
+		overflow: hidden;
+		text-align: center;
+		background-color: rgb(215, 215, 215);
+		border-radius: 40px;
+	}
 
+/*=================================== cdy 活动展示 ==================================*/
 
-/*=============================  end 2. 服务块  ============================*/
-.decor-top3 {
-  height: 6em;
-  margin-top: -6px;
-  fill: #fff;
-}
-/*==================================== 3.产品块 ======================================*/
-
-// .boxx {
-//   background:#fff;
-//   transition:all 0.2s ease;
-//   border:2px dashed #dadada;
-//   margin-top: 10px;
-//   box-sizing: border-box;
-//   background-clip: padding-box;
-//   min-height:340px;
-//   align: center;
-//   padding: 0.8em 0.7em;
-//   border-radius: 0 0 2px 2px;
-// }
-//
-// .boxx:hover {
-//   border:6px solid #525C7A;
-// }
-//
-// .boxx .boxx-title {
-//     color: #666;
-//     font-size: 1.2em;
-//     text-transform: uppercase;
-// }
-/*======================================= end 3.产品块 =====================================*/
-
-/*=========================================== 分割图 =====================================*/
-
-/*=========================================  4.摄影区  ========================================*/
+/*=========================================  cdy 摄影区  ========================================*/
 
 // body{
 // 	background-image: radial-gradient(mintcream 0%, lightgray 100%);
@@ -400,175 +274,225 @@ img{
 		transform: rotateY(360deg);
 	}
 }
-/*=================================== end 4.摄影区 =====================================*/
-
-/*=================================== 5.铁粉说 ==================================*/
-// .say{
-//   background-color: #d7dbcc;
-//   // padding: 1em;
-//   .do-box{
-//     img{
-//       margin-bottom: 2em;
-//       width: 10em;
-//     }
-//   }
-//
-//   .say{
-//     text-align: center;
-//     background-color: #d7dbcc;
-//     background-size: cover;
-//     padding-left: 50px;
-//     padding-right: 50px;
-//   }
-// }
-
-/*=================================== 5.铁粉说 ==================================*/
+/*=================================== cdy 摄影区 =====================================*/
 
 
-// @import url(//fonts.googleapis.com/css?family=Lato:400,900);
-// @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
-  //   body {
-	// 	padding: 60px 0px;
-	// }
-  .gui{
-    width: 10%;
-    border-color: #ececec;
-    border-width: 3px;
-    border-style: solid;
-    border-radius: 20%;
+//=========================== footer锯齿
+  .decor-top2 {
+    height: 6em;
+    margin-bottom: -84px;
+    fill: #ffffff;
   }
-	.animate {
-		-webkit-transition: all 0.3s ease-in-out;
-		-moz-transition: all 0.3s ease-in-out;
-		-o-transition: all 0.3s ease-in-out;
-		-ms-transition: all 0.3s ease-in-out;
-		transition: all 0.3s ease-in-out;
-	}
-	.info-card {
-		width: 100%;
-		border: 1px solid rgb(215, 215, 215);
-		position: relative;
-		font-family: 'Lato', sans-serif;
-		margin-bottom: 20px;
-		overflow: hidden;
-	}
+//=========================== footer锯齿
 
-	.info-card > img {
-		width: 1000px; //图片宽度
-		margin-bottom: 80px; //模块整体高度
-	}
-	.info-card .info-card-details,
-	.info-card .info-card-details .info-card-header  {
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		bottom: -100%;
-		left: 0;
-		padding: 0 15px;
-		background: rgba(255, 255, 255, 0.6);
-		text-align: center;
-	}
-	.info-card .info-card-details::-webkit-scrollbar {
-		width: 8px;
-	}
-	.info-card .info-card-details::-webkit-scrollbar-button {
-		width: 8px;
-		height: 0px;
-	}
-	.info-card .info-card-details::-webkit-scrollbar-track {
-		background: transparent;
-	}
-	.info-card .info-card-details::-webkit-scrollbar-thumb {
-		background: rgb(160, 160, 160);
-	}
-	.info-card .info-card-details::-webkit-scrollbar-thumb:hover {
-		background: rgb(130, 130, 130);
-	}
+  /*============================================ product#show ===================================================*/
 
-	.info-card .info-card-details .info-card-header {
-		height: auto;
-		bottom: 100%;
-		padding: 10px 5px;
-	}
-	.info-card:hover .info-card-details {
-		bottom: 0px;
-		overflow: auto;
-		padding-bottom: 25px;
-	}
-	.info-card:hover .info-card-details .info-card-header {
-		position: relative;
-		bottom: 0px;
-		padding-top: 45px;
-		padding-bottom: 25px;
-	}
-	.info-card .info-card-details .info-card-header h1,
-	.info-card .info-card-details .info-card-header h3 {
-		color: rgb(62, 62, 62);
-		font-size: 22px;
-		font-weight: 900;
-		text-transform: uppercase;
-		margin: 0 ;
-		padding: 0 ;
-	}
-	.info-card .info-card-details .info-card-header h3 {
-		color: rgb(142, 182, 52);
-		font-size: 15px;
-		font-weight: 400;
-		margin-top: 5px;
-	}
-	.info-card .info-card-details .info-card-detail .social {
-		list-style: none;
-		padding: 0px;
-		margin-top: 25px;
-		text-align: center;
-	}
-	.info-card .info-card-details .info-card-detail .social a {
-		position: relative;
-		display: inline-block;
-		min-width: 40px;
-		padding: 10px 0px;
-		margin: 0px 5px;
-		overflow: hidden;
-		text-align: center;
-		background-color: rgb(215, 215, 215);
-		border-radius: 40px;
-	}
 
-	a.social-icon {
-		text-decoration: none ;
-		box-shadow: 0px 0px 1px rgb(51, 51, 51);
-		box-shadow: 0px 0px 1px rgba(51, 51, 51, 0.7);
-	}
-	a.social-icon:hover {
-		color: rgb(255, 255, 255) ;
-	}
-	a.facebook {
-		color: rgb(59, 90, 154) ;
-	}
-	a.facebook:hover {
-		background-color: rgb(59, 90, 154) ;
-	}
-	a.twitter {
-		color: rgb(45, 168, 225) ;
-	}
-	a.twitter:hover {
-		background-color: rgb(45, 168, 225) ;
-	}
-	a.github {
-		color: rgb(51, 51, 51) ;
-	}
-	a.github:hover {
-		background-color: rgb(51, 51, 51) ;
-	}
-	a.google-plus {
-		color: rgb(244, 94, 75) ;
-	}
-	a.google-plus:hover {
-		background-color: rgb(244, 94, 75) ;
-	}
-	a.linkedin {
-		color: rgb(1, 116, 179) ;
-	}
-	a.linkedin:hover {
-		background-color: rgb(1, 116, 179) ;
-	}
+  // **********************************整个页面
+  .product-page {
+    margin-bottom: 60px;
+  }
+
+
+  .product-page .tab-content .tab-pane .text {
+    letter-spacing: 2px;
+    line-height: 26px;
+  }
+
+  .product-page .product .description {
+    height: 260px;
+    overflow: hidden;
+    display: block;
+    border-bottom: 1px solid #999;
+    padding: 0 10px;
+  }
+
+  .product-page .product .description.in {
+    height: auto;
+    border-bottom-color: transparent;
+  }
+
+
+  // **********************************上半页
+
+  //上半页总体
+  .product-header {
+    background-image: url('http://ooz9ucbbf.bkt.clouddn.com/product%20background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 200px 0;
+
+  //产品首图
+  .product-image img {
+      width: 90%;
+      box-shadow: 0 29px 32px -20px rgba(0,0,0,0.5);
+      margin: 20px auto;
+      position: relative;
+      z-index: 2;
+      overflow: hidden;
+      border-radius: 20px;
+    }
+  }
+
+  //付款模块的字体等
+  .pay-area {
+    .product-name {
+      margin-bottom: 0;
+      padding-bottom: 15px;
+      color: #FFFFFF;
+      font-size: 50px;
+      font-weight: 300;
+      letter-spacing: 2px;
+    }
+
+    .tagline {
+      color: #d3e8ff;
+      text-transform: uppercase;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      margin-top: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+
+     h5.tagline {
+      font-size: 16px;
+    }
+
+    .product-price {
+      font-size: 2.5em;
+      color: #d13636;
+      font-weight: bold;
+
+     .tab-content {
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .tab-content>.active {
+        display: block;
+    }
+    }
+  }
+
+  // **********************************下半页
+
+  .profile-page {
+      margin: -60px 30px 0px;
+      border-radius: 6px;
+      box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.2);
+      background: #FFFFFF;
+      position: relative;
+      z-index: 3;
+  }
+
+  .profile-tabs {
+      margin-top: 60px;
+      padding:70px 0;
+  }
+
+
+
+  //小目录
+
+  .nav-pills.nav-pills-info>li.active>a, .nav-pills.nav-pills-info>li.active>a:focus, .nav-pills.nav-pills-info>li.active>a:hover {
+      background-color: #03a9f4;
+      box-shadow: 0 16px 26px -10px rgba(3,169,244,0.56), 0 4px 25px 0px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(3,169,244,0.2);
+  }
+
+  .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+      background-color: #9c27b0;
+      color: #FFFFFF;
+      box-shadow: 0 16px 26px -10px rgba(156,39,176,0.56), 0 4px 25px 0px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(156,39,176,0.2);
+  }
+
+  .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+      color: #fff;
+      background-color: #337ab7;
+  }
+
+  .nav-pills>li>a {
+      line-height: 24px;
+      text-transform: uppercase;
+      font-size: 12px;
+      font-weight: 500;
+      min-width: 100px;
+      text-align: center;
+      color: #555555;
+      transition: all 0.3s;
+      text-align: -webkit-center;
+  }
+
+
+  .nav-pills>li i {
+      display: block;
+      font-size: 30px;
+      padding: 15px 0;
+      margin-bottom: 25px;
+  }
+  //
+  .nav-pills>li i {
+      display: block;
+      font-size: 30px;
+      padding: 15px 0;
+  }
+
+  a .material-icons, a:hover .material-icons, a:focus .material-icons {
+      vertical-align: middle;
+  }
+
+  // .material-icons, .mi {
+  //     font-family: 'Material Icons';
+  //     font-weight: normal;
+  //     font-style: normal;
+  //     font-size: 24px;
+  //     display: inline-block;
+  //     width: 1em;
+  //     height: 1em;
+  //     line-height: 1;
+  //     text-transform: none;
+  //     -webkit-font-smoothing: antialiased;
+  //     text-rendering: optimizeLegibility;
+  //     -moz-osx-font-smoothing: grayscale;
+  //     font-feature-settings: 'liga';
+  // }
+
+
+
+  // 下半部分的具体内容
+  .profile {
+      text-align: center;
+      img {
+          max-width: 160px;
+          margin: -80px auto 0;
+      }
+  }
+
+  .profile-page .gallery {
+      margin-top: 45px;
+      padding-bottom: 50px;
+
+      img {
+          width: 100%;
+          margin-bottom: 30px;
+      }
+  }
+
+
+  .img-raised {
+      box-shadow: 0 16px 38px -12px rgba(0,0,0,0.56), 0 4px 25px 0px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.2);
+  }
+
+  .img-circle {
+      border-radius: 50%;
+  }
+
+  .img-responsive {
+      display: block;
+      max-width: 100%;
+      height: auto;
+  }
