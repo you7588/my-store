@@ -20,6 +20,15 @@
               本期剩余名额 :
               <span><%= @product.quantity == 0 ? '已报满' : @product.quantity %></span>
             </div>
+
+            <div>
+              <%= link_to("-", "", id: "quantity-minus", class: "quantity-minus btn btn-default disabled") %>
+              <input type="text" name="quantity" value="1" id="quantity-input" class="quantity-input">
+              <%= link_to("+", "", id: "quantity-plus", class: "quantity-plus btn btn-default #{@product.quantity <= 1 ? 'disabled' : ''}") %>
+            </div>
+
+            <br>
+
             <span>
               <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-warning ") %>
             </span>
