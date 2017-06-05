@@ -15,8 +15,8 @@ class OrdersController < ApplicationController
         product_list.quantity = cart_item.quantity
         product_list.save
       end
-      current_cart.clean!
-      OrderMailer.notify_order_placed(@order).deliver!
+      # current_cart.clean!
+      # OrderMailer.notify_order_placed(@order).deliver!
       redirect_to order_path(@order.token)
     else
       render 'carts/checkout'
@@ -63,7 +63,7 @@ class OrdersController < ApplicationController
 
   def apply_to_cancel
     @order = Order.find(params[:id])
-    OrderMailer.apply_cancel(@order).deliver!
+    # OrderMailer.apply_cancel(@order).deliver!
     flash[:notice] = "已提交申请"
     redirect_to :back
   end
