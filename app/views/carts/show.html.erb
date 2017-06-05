@@ -1,0 +1,39 @@
+<div class="row carts">
+  <div class="col-md-10 col-md-offset-1 carts-box text-center">
+    <div class="col-md-4">
+      <a class="our-logo" href="/"><img src='<%= image_url 'logo02.png' %>' ></a>
+    </div>
+    <div class="flow col-md-6 text-center">
+      <table class="tb">
+        <tr>
+          <th>1.提交订单</th>
+          <th class="moment">2.选择付款方式</th>
+          <th>3.购买成功</th>
+        </tr>
+      </table>
+    </div>
+
+    <table class="table" align="center">
+      <thead class="little">
+        <tr>
+          <th>商品资讯</th>
+          <th>应付金额</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% current_cart.cart_items.each do |cart_item| %>
+        <tr>
+          <td>
+            <%= link_to(cart_item.product.title, product_path(cart_item.product)) %>
+          </td>
+          <td>
+            ￥ <%= render_cart_total_price(current_cart) %> 
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+  </div>
+</div>

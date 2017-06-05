@@ -4,15 +4,26 @@
                 method: :delete , class: "pull-right",
                 style: "text-decoration: underline;",
                 data: { confirm: "你确定要清空整个购物车吗？"} )%> -->
+ <div class="col-md-4">
+     <a class="our-logo" href="/"><img src='<%= image_url 'logo02.png' %>' ></a>
+ </div>
+<div class="flow col-md-6 text-center">
+  <table class="tb">
+      <tr>
+        <th class="moment">1.提交订单</th>
+        <th>2.选择付款方式</th>
+        <th>3.购买成功</th>
+      </tr>
+  </table>
 
-    <h2>购物车</h2>
+</div>
     <table class="table" align="center">
-      <thead>
+      <thead class="little">
         <tr>
-          <th colspan="2">商品资讯</th>
+          <th>项目</th>
           <th>单价</th>
           <th>数量</th>
-          <th>操作选项</th>
+          <th>考虑考虑</th>
         </tr>
       </thead>
 
@@ -27,12 +38,10 @@
             <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
             <% end %>
             <% end %>
+            <%= cart_item.product.title %>
           </td>
           <td>
-            <%= link_to(cart_item.product.title, product_path(cart_item.product)) %>
-          </td>
-          <td>
-            <%= cart_item.product.price %>
+            ￥<%= cart_item.product.price %>
           </td>
           <td>
           <div class="count-input">
@@ -54,15 +63,13 @@
     <div class="total clearfix">
       <span class="pull-right">
         <span>
-          总计 <%= render_cart_total_price(current_cart) %>  RMB
+          应付金额  ￥ <%= render_cart_total_price(current_cart) %>
         </span>
       </span>
     </div>
-
     <hr>
-
     <div class="checkout clearfix">
-      <%= link_to("确认结账", checkout_carts_path, method: :post, class: "btn btn-lg btn-danger pull-right") %>
+      <%= link_to("提交订单", checkout_carts_path, method: :post, class: "btn btn-lg btn-danger pull-right") %>
     </div>
   </div>
 </div>

@@ -8,6 +8,10 @@ class CartsController < ApplicationController
   def checkout
     @order = Order.new
   end
-  
+
+  def show
+    @cart = Cart.find(params[:id])
+  end
+
 
 end
