@@ -545,3 +545,18 @@ a .material-icons, a:hover .material-icons, a:focus .material-icons {
 .reviews {
   padding-top: 10em;
 }
+
+
+// 数量输入框
+.product-page .quantity-input {
+  color: #333;
+  text-align: center;
+  width: 60px;
+  font-weight: bold;
+  border-radius: 3px;
+  border: 1px solid #FFF;
+}
+
+.buy-quantity {
+  padding: 2em;
+}
