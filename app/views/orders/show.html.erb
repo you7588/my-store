@@ -1,55 +1,119 @@
-<div class="row">
-  <div class="col-md-12">
+<div class="row carts">
+  <div class="col-md-10 col-md-offset-1 carts-box">
+ <div class="col-md-2">
+     <a class="our-logo" href="/"><img src='<%= image_url 'logo02.png' %>' ></a>
+ </div>
 
-    <h2>订单明细</h2>
 
-    <table class="table table-bordered">
-      <thead>
-        <tr>
-          <th width="80%">商品明细</th>
-          <th>单价</th>
-        </tr>
-      </thead>
-      <tbody>
-
-        <% @product_lists.each do |product_list| %>
-        <tr>
-          <td>
-            <%= product_list.product_name %>
-          </td>
-          <td>
-            <%= product_list.product_price %>
-          </td>
-        </tr>
-
+<div class="flow col-md-8 col-md-offset-2 text-center">
+  <table class="tb">
+      <tr>
+        <th>1.购物车</th>
+        <th>2.提交订单</th>
+        <% if !@order.is_paid? %>
+        <th class="moment">3.选择付款方式</th>
+        <th>4.购买成功</th>
+        <% else %>
+        <th>3.选择付款方式</th>
+        <th class="moment">4.购买成功</th>
         <% end %>
+      </tr>
+  </table>
+</div>
 
-      </tbody>
+
+<% if !@order.is_paid? %>
+  <table class="table">
+      <tr>
+        <th width="70%">
+          项目：
+          <% @product_lists.each do |product_list| %>
+          《 <%= product_list.product_name %>》
+          <% end %>
+        </th>
+        <th>
+        应付金额：<%= @order.total %>
+      </th>
+      </tr>
+  </table>
+  <% else %>
+
+
+  <table class="table" align="center">
+    <thead class="little">
+      <tr>
+        <th>活动券</th>
+      </tr>
+    </thead>
+  </table>
+<table class="table" align="center">
+    <thead class="little">
+      <tr>
+        <th colspan="2">订单信息</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          订单编号:
+        </td>
+        <td>
+          下单时间:<%= (@order.created_at) %>
+        </td>
+      </tr>
+    </tbody>
     </table>
+    <table class="table" align="center">
+    <thead class="little">
+      <tr>
+        <th colspan="10">团购信息</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>项目</th>
+        <th>单价</th>
+        <th></th>
+        <th>数量</th>
+        <th></th>
+        <th>支付金额</th>
+      </tr>
+      <tr>
+        <% @product_lists.each do |product_list| %>
+        <td><%= product_list.product_name %></td>
+        <td><%= product_list.product_price %></td>
+        <td>x</td>
+        <td><%= product_list.quantity %></td>
+        <% end %>
+        <td>=</td>
+        <td><%= @order.total %></td>
+      </tr>
+    </tbody>
 
-    <div class="total clearfix">
-      <span class="pull-right">
-      总计 <%= @order.total %> CNY
-      </span>
-    </div>
+      </table>
+
+
+  <% end %>
+
+
 
     <hr>
 
-
-    <div class="pull-left">
+    <div class="pull-right">
       <% if @order.order_placed? || @order.paid? %>
       <%= link_to("申请取消订单", apply_to_cancel_order_path(@order), method: :post, class: "btn btn-info") %>
       <% end %>
     </div>
 
     <% if !@order.is_paid? %>
-    <div class="group pull-right">
+    <div class="group pull-left">
       <%= link_to("以支付宝支付", pay_with_alipay_order_path(@order.token), :method => :post, :class => "btn btn-danger") %>
       <%= link_to("以微信支付", pay_with_wechat_order_path(@order.token), :method => :post, :class => "btn btn-danger") %>
     </div>
     <% else %>
-    <p class="text-center">此订单已完成付款</p>
+    <p class="text-center"></p>
     <% end %>
     </div>
   </div>
 </div>
+  </div>
