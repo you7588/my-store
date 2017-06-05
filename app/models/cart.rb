@@ -1,12 +1,17 @@
 class Cart < ApplicationRecord
   has_many :cart_items
   has_many :products, through: :cart_items, source: :product
+  before_create :generate_token
 
   def add_product_to_cart(product)
     ci = cart_items.build
     ci.product = product
     ci.quantity = 1
     ci.save
+  end
+
+  def generate_token
+    self.token = SecureRandom.uuid
   end
 
   def total_price
