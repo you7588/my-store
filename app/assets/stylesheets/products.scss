@@ -118,7 +118,7 @@
 
 	.info-card > img {
 		width: 1000px; //图片宽度
-		margin-bottom: 80px; //模块整体高度
+		margin-bottom: 90px; //模块整体高度
 	}
 	.info-card .info-card-details,
 	.info-card .info-card-details .info-card-header  {
@@ -182,7 +182,7 @@
 	.info-card .info-card-details .info-card-detail .social {
 		list-style: none;
 		padding: 0px;
-		margin-top: 25px;
+		margin-top: 10px;
 		text-align: center;
 	}
 	.info-card .info-card-details .info-card-detail .social a {
@@ -194,7 +194,7 @@
 		overflow: hidden;
 		text-align: center;
 		background-color: rgb(215, 215, 215);
-		border-radius: 40px;
+		border-radius: 10px;
 	}
 
 /*=================================== cdy 活动展示 ==================================*/
@@ -508,7 +508,7 @@ img{
           width: 100%;
           margin-bottom: 30px;
       }
-  
+
 
 
 
@@ -558,4 +558,3 @@ img{
 .little {
   background-color:#a7dcfe;
 }
-
