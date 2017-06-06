@@ -15,7 +15,7 @@
           <div class="pay-area text-center">
             <h1 class="product-name"><%= @product.title %></h1>
             <h5 class="tagline"><%= @product.description %></h5>
-            <h4 class="product-price">￥</h4>
+            <h4 class="product-price">￥<%= @product.price %></h4>
             <div class="tagline">
               本期剩余名额 :
               <span><%= @product.quantity == 0 ? '已报满' : @product.quantity %></span>
