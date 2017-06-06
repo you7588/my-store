@@ -121,7 +121,8 @@
               <div class="container">
                 <div class="row">
                   <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 ">
-                    <div class="row text-center">
+                    <!--综合-->
+                    <!-- <div class="row text-center">
                       <div class="col-md-4 pull-left">
                         <h3>综合评价</h3>
                         <p class="reviews_title pull-left">（共<%= @product.reviews.count %>人）</p></div>
@@ -131,16 +132,15 @@
                           摄影满意度： <div class="star star-photography" data-score= <%= @avg_photography %> ></div>
                         </div>
                       </div>
-                      <hr>
+                      <hr> -->
                       <!--对商品评论以及评星-->
-
                       <div class="row">
                         <% @reviews.each do |review| %>
-                        陶艺体验：
+                        <div class="col-md-3">陶艺体验: </div>
                         <div class="star star-experience" data-score= <%= review.experience %> ></div>
-                        作品满意度：
+                        <div class="col-md-3">产品满意度: </div>
                         <div class="star star-production" data-score= <%= review.production %> ></div>
-                        摄影满意度：
+                        <div class="col-md-3">摄影满意度: </div>
                         <div class="star star-photography" data-score= <%= review.photography %> ></div>
                         <p><%= review.body %></p>
                         <p>
@@ -156,10 +156,37 @@
                           <% end %>
                           <hr>
                           <!--分页显示-->
-                          <!-- <div class="text-center">
+                          <div class="text-center">
                           <%= will_paginate @reviews %>
-                        </div> -->
-                        <%= link_to("评价",new_product_review_path(@product), :class => "btn btn-lg btn-info pull-right") %>
+                        </div>
+
+                        <!--写评论-->
+
+
+                          <%= simple_form_for([@product, @product.reviews.build]) do |f|%>
+                            <div class="productDetail-evaluation ">
+                              <div class="intro-text-count clearfix ">
+                                <div class="col-md-3">陶艺体验: </div>
+                                <div id="star-experience" class="star"></div>
+                              </div>
+                              <div class="intro-text-count clearfix ">
+                                <div class="col-md-3">产品满意度: </div>
+                                <div id="star-production" class="star"></div>
+                              </div>
+                              <div class="intro-text-count clearfix ">
+                                <div class="col-md-3">摄影满意度: </div>
+                                <div id="star-photography" class="star"></div>
+                              </div>
+                            </div>
+                            <br>
+                            <div class="form-group">
+                              <%= f.input :body, label: "内容", input_html: { class: "form-control"} %>
+                            </div>
+                            <div class="form-actions">
+                              <%= f.submit "提交", disable_with: "Submiting..." %>
+                            </div>
+                          <% end %>
+                        <!-- <%= link_to("评价",new_product_review_path(@product), :class => "btn btn-lg btn-info pull-right") %> -->
                       </div>
                     </div>
                   </div>

@@ -48,6 +48,10 @@
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 40px;
+  img {
+      width: 100%;
+      margin-bottom: 30px;
+  }
 }
 
 .section-title1{
@@ -485,7 +489,7 @@ img{
 
 
 .reviews {
-  padding-top: 10em;
+  padding-top: 5em;
 }
 
 
@@ -502,15 +506,6 @@ img{
 .buy-quantity {
   padding: 2em;
 }
-
-
-      img {
-          width: 100%;
-          margin-bottom: 30px;
-      }
-
-
-
 
   .img-raised {
       box-shadow: 0 16px 38px -12px rgba(0,0,0,0.56), 0 4px 25px 0px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.2);
@@ -529,7 +524,6 @@ img{
 
 
 .our-logo {
-
   img {
       width: 48px; //定制图片宽度
       height: 48px; //定制图片高度
@@ -565,5 +559,12 @@ img{
   img {
     overflow:hidden;
     width: 1.3em;
+  }
+}
+
+#introduction {
+  img {
+      width: 100%;
+      margin-bottom: 30px;
   }
 }
