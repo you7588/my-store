@@ -20,12 +20,18 @@
               本期剩余名额 :
               <span><%= @product.quantity == 0 ? '已报满' : @product.quantity %></span>
             </div>
-            <span>
-              <%= link_to("加入购物车", add_to_cart_product_path(@product), :method => :post, :class => "btn btn-warning ") %>
-            </span>
-            <button type="submit" name="commit" value="order_now" class="btn btn-danger <%= @product.quantity == 0 ? 'disabled' : '' %>">
-              立刻下单
-            </button>
+
+              <%= simple_form_for @product, method: :post, url: add_to_cart_product_path(@product) do |f| %>
+              <div class="buy-quantity">
+               <%= link_to("-", "", id: "quantity-minus", class: "quantity-minus btn btn-default disabled") %>
+               <%= f.input_field "", name: "quantity", value: '1', id: "quantity-input", class: "quantity-input" %>
+               <%= link_to("+", "", id: "quantity-plus", class: "quantity-plus btn btn-default #{@product.quantity <= 1 ? 'disabled' : ''}") %>
+              </div>
+              <button type="submit" class="btn btn-warning <%= @product.quantity == 0 ? 'disabled' : '' %>">
+               <%= fa_icon("cart-arrow-down", text: "加入购物车") %>
+              </button>
+              <!-- <%= link_to "快捷一键下单", "#",method: :post, class: "btn btn-success" %> -->
+             <% end %>
           </div>
         </div>
       </div>
@@ -39,21 +45,21 @@
         <!--==小目录==-->
         <ul class="nav nav-pills nav-pills-info" role="tablist">
           <li class="active">
-            <a href="#intro" role="tab" data-toggle="tab">
-              <i class="material-icons">dashboard</i>
-              活动介绍
+            <a href="#introduction" role="tab" data-toggle="tab">
+              <i class="material-icons">introduction</i>
+              活动详情
             </a>
           </li>
           <li>
-            <a href="#catalog" role="tab" data-toggle="tab">
-              <i class="material-icons">schedule</i>
-              目录
+            <a href="#cost" role="tab" data-toggle="tab">
+              <i class="material-icons">cost</i>
+              费用说明
             </a>
           </li>
           <li>
-            <a href="#teacher" role="tab" data-toggle="tab">
-              <i class="material-icons">list</i>
-              讲师
+            <a href="#reviews" role="tab" data-toggle="tab">
+              <i class="material-icons">reviews</i>
+              往期评价
             </a>
           </li>
         </ul>
@@ -62,9 +68,9 @@
 
         <div class="tab-content gallery">
 
-          <!-- 课程介绍 -->
+          <!-- 活动详情 -->
 
-          <div class="tab-pane active" id="intro">
+          <div class="tab-pane active" id="introduction">
             <div class="section">
               <div class="container ">
                 <div class="row">
@@ -76,8 +82,8 @@
               </div>
             </div>
           </div>
-          <!-- 课程目录 -->
-          <div class="tab-pane" id="catalog">
+          <!-- 费用说明 -->
+          <div class="tab-pane" id="cost">
             <div class="section">
               <div class="container ">
                 <div class="row">
@@ -88,26 +94,110 @@
               </div>
             </div>
           </div>
-                    <!-- 讲师介绍 -->
-                    <div class="tab-pane" id="teacher">
-                      <div class="profile">
-                        <div class="avatar" style="margin-top: 150px;">
-                          <img src="http://ooz9ucbbf.bkt.clouddn.com/%E6%88%91%EF%BC%88%E6%AD%A3%E6%96%B9%E5%BD%A2%EF%BC%892.jpg" alt="千古流传" class="img-circle img-responsive img-raised">
-                        </div>
-                        <div class="name">
-                          <h3 class="title">千古刘传</h3>
-                          <h6>Designer</h6>
+          <!-- 往期评价 -->
+          <div class="tab-pane reviews" id="reviews">
+            <div class="section">
+              <div class="container">
+                <div class="row">
+                  <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 ">
+                    <div class="row text-center">
+                      <div class="col-md-4 pull-left">
+                        <h3>综合评价</h3>
+                        <p class="reviews_title pull-left">（共<%= @product.reviews.count %>人）</p></div>
+                        <div class="col-md-4">
+                          陶艺体验： <div class="star-experience" data-score= <%= @avg_experience %> ></div>
+                          作品满意度： <div class="star-production" data-score= <%= @avg_production %> ></div>
+                          摄影满意度： <div class="star-photography" data-score= <%= @avg_photography %> ></div>
                         </div>
                       </div>
-                      <div class="container">
-                        <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 text-center">
-                          <h5 class="text">创业者，3年营销策划，脑洞文案。玩过乐队写过歌。跆拳道黑带一段|教练，健身成瘾者。追求认知升级，自创认知学习法。创业，为了财富自由。写字，为了思想自由。健身，为了身体自由。以上，写于离开疯人院前_(:3 」∠)_</h5>
-                        </div>
+                      <hr>
+                      <!--对商品评论以及评星-->
+
+                      <div class="row">
+                        <% @reviews.each do |review| %>
+                        陶艺体验：
+                        <div class="star-experience" data-score= <%= review.experience %> ></div>
+                        作品满意度：
+                        <div class="star-production" data-score= <%= review.production %> ></div>
+                        摄影满意度：
+                        <div class="star-photography" data-score= <%= review.photography %> ></div>
+                        <p><%= review.body %></p>
+                        <p>
+                          <small>Submitted
+                            <strong><%= time_ago_in_words(review.created_at) %>ago</strong>
+                            by <%= review.user.email %></small>
+                          </p>
+                          <div>
+                            <% if review.user == current_user %>
+                            <%= link_to("删除", product_review_path(@product, review), method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-sm pull-right") %>
+                            <% end %>
+                          </div>
+                          <% end %>
+                          <hr>
+                          <!--分页显示-->
+                          <!-- <div class="text-center">
+                          <%= will_paginate @reviews %>
+                        </div> -->
+                        <%= link_to("评价",new_product_review_path(@product), :class => "btn btn-lg btn-info pull-right") %>
                       </div>
                     </div>
                   </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
   </div>
 </div>
+</div>
+</div>
+
+
+
+<script>
+  $('.star-experience').raty({
+        path: '/assets/',
+            readOnly: true,
+            score: function() {
+          return $(this).attr('data-score');
+        }
+  });
+  $('.star-production').raty({
+        path: '/assets/',
+            readOnly: true,
+            score: function() {
+          return $(this).attr('data-score');
+        }
+  });
+  $('.star-photography').raty({
+        path: '/assets/',
+            readOnly: true,
+            score: function() {
+          return $(this).attr('data-score');
+        }
+  });
+
+  $('#star-experience').raty({
+  path: '/assets/',
+  scoreName: 'review[experience]'
+  });
+
+  $('#star-production').raty({
+  path: '/assets/',
+  scoreName: 'review[production]'
+  });
+
+  $('#star-photography').raty({
+      path: '/assets/',
+      scoreName: 'review[photography]'
+  });
+
+
+<!-- 必须要选一颗星 -->
+  $('#star-experience img').eq(0).trigger('click')
+  $('#star-production img').eq(0).trigger('click')
+  $('#star-photography img').eq(0).trigger('click')
+
+</script>

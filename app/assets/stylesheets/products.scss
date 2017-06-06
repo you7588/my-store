@@ -444,6 +444,7 @@ img{
       padding: 15px 0;
   }
 
+
   a .material-icons, a:hover .material-icons, a:focus .material-icons {
       vertical-align: middle;
   }
@@ -478,12 +479,37 @@ img{
   .profile-page .gallery {
       margin-top: 45px;
       padding-bottom: 50px;
+    }
+
+// 下半部分的具体内容
+
+
+.reviews {
+  padding-top: 10em;
+}
+
+
+// 数量输入框
+.product-page .quantity-input {
+  color: #333;
+  text-align: center;
+  width: 60px;
+  font-weight: bold;
+  border-radius: 3px;
+  border: 1px solid #FFF;
+}
+
+.buy-quantity {
+  padding: 2em;
+}
+
 
       img {
           width: 100%;
           margin-bottom: 30px;
       }
-  }
+  
+
 
 
   .img-raised {
@@ -499,3 +525,37 @@ img{
       max-width: 100%;
       height: auto;
   }
+
+
+
+.our-logo {
+
+  img {
+      width: 48px; //定制图片宽度
+      height: 48px; //定制图片高度
+  }
+}
+
+.flow {
+  padding: 3em;
+}
+
+//三步骤的设置
+.tb {
+  th {
+    padding:1em 2em;
+    border-bottom-style:solid;
+    border-color: #a7dcfe;
+  }
+  //提交订单的设置
+  .moment {
+    border-color:black;
+    border-bottom-style:solid;
+}
+}
+
+//标题栏的设置
+.little {
+  background-color:#a7dcfe;
+}
+

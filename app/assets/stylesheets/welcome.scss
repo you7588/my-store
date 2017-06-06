@@ -1,13 +1,13 @@
-// Place all the styles related to the products controller here.
+// Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
 
 /*=========================================== 1.网站头贴 ======================================*/
 .intro{
     height: 50em;
     background-image: url('https://ws4.sinaimg.cn/large/006tKfTcgy1ffxrkrr206j31kw0w0dps.jpg');
     background-size: cover;
+
     background-attachment: fixed; //固定海报背景
     background-repeat: no-repeat;
     background-position: center;
@@ -61,6 +61,7 @@
 /*=========================================== 1.网站头贴 ======================================*/
 
 //=========================================== 2.服务优势 =======================================*/
+
 .service{
   text-align: center;
   background-color: #f6f3e1;
@@ -77,7 +78,9 @@
 
 .service .do-box{
     img{
+
       margin-top: 60px;
+
       margin-bottom: -35px;
       width: 200px;
       border-color: #3a4120;   //服务块圆形颜色
@@ -99,6 +102,7 @@
         margin: 25px 20px 40px 20px;
     }
 }
+
 //=========================================== end 2.服务优势 =======================================*/
 
 //============================================分割图
@@ -108,10 +112,12 @@
   fill: #f6f3e1;
 }
 
+
 .middle-photo{
     height: 16em;
     background-image: url('http://ww2.sinaimg.cn/large/006tNbRwly1ffop4373gwj31kw0w0kjo.jpg');
     background-size: cover;
+
     background-attachment: fixed; //固定底图
   }
 
@@ -148,6 +154,7 @@
 }
 
 //============================================分割图
+
 
 /*=================================== 关于我们 2 ====================================*/
 .wm{
@@ -409,6 +416,7 @@
 }
 // /*=================================== 关于我们 2 ====================================*/
 
+
 //================================== 锯齿
 .decor-top002{
   height: 6em;
@@ -416,3 +424,4 @@
   fill: #f6f3e1;
 }
 //================================== 锯齿
+
