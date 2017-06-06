@@ -558,3 +558,12 @@ img{
 .little {
   background-color:#a7dcfe;
 }
+
+//所有星星的大小
+.star {
+  margin:0 auto;
+  img {
+    overflow:hidden;
+    width: 1.3em;
+  }
+}

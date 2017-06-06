@@ -105,9 +105,9 @@
                         <h3>综合评价</h3>
                         <p class="reviews_title pull-left">（共<%= @product.reviews.count %>人）</p></div>
                         <div class="col-md-4">
-                          陶艺体验： <div class="star-experience" data-score= <%= @avg_experience %> ></div>
-                          作品满意度： <div class="star-production" data-score= <%= @avg_production %> ></div>
-                          摄影满意度： <div class="star-photography" data-score= <%= @avg_photography %> ></div>
+                          陶艺体验： <div class="star star-experience" data-score= <%= @avg_experience %> ></div>
+                          作品满意度： <div class="star star-production" data-score= <%= @avg_production %> ></div>
+                          摄影满意度： <div class="star star-photography" data-score= <%= @avg_photography %> ></div>
                         </div>
                       </div>
                       <hr>
@@ -116,11 +116,11 @@
                       <div class="row">
                         <% @reviews.each do |review| %>
                         陶艺体验：
-                        <div class="star-experience" data-score= <%= review.experience %> ></div>
+                        <div class="star star-experience" data-score= <%= review.experience %> ></div>
                         作品满意度：
-                        <div class="star-production" data-score= <%= review.production %> ></div>
+                        <div class="star star-production" data-score= <%= review.production %> ></div>
                         摄影满意度：
-                        <div class="star-photography" data-score= <%= review.photography %> ></div>
+                        <div class="star star-photography" data-score= <%= review.photography %> ></div>
                         <p><%= review.body %></p>
                         <p>
                           <small>Submitted
