@@ -1,11 +1,7 @@
 <div class="row carts">
-  <div class="col-md-10 col-md-offset-1 carts-box">
- <div class="col-md-2">
-     <a class="our-logo" href="/"><img src='<%= image_url 'logo02.png' %>' ></a>
- </div>
+  <div class="col-md-10 col-md-offset-1 carts-box text-center">
 
-
-<div class="flow col-md-8 col-md-offset-2 text-center">
+<div class="flow pull-right">
   <table class="tb">
       <tr>
         <th>1.购物车</th>
@@ -24,6 +20,7 @@
 
 <% if !@order.is_paid? %>
   <table class="table">
+    <thead class="little">
       <tr>
         <th width="70%">
           项目：
@@ -35,6 +32,7 @@
         应付金额：<%= @order.total %>
       </th>
       </tr>
+    </thead>
   </table>
   <% else %>
 
@@ -63,10 +61,10 @@
       </tr>
     </tbody>
     </table>
-    <table class="table" align="center">
+    <table class="table">
     <thead class="little">
       <tr>
-        <th colspan="10">团购信息</th>
+        <th colspan="8">团购信息</th>
       </tr>
     </thead>
     <tbody>
@@ -89,15 +87,11 @@
         <td><%= @order.total %></td>
       </tr>
     </tbody>
-
       </table>
 
 
   <% end %>
 
-
-
-    <hr>
 
     <div class="pull-right">
       <% if @order.order_placed? || @order.paid? %>

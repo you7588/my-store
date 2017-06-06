@@ -522,37 +522,6 @@ img{
   }
 
 
-
-.our-logo {
-  img {
-      width: 48px; //定制图片宽度
-      height: 48px; //定制图片高度
-  }
-}
-
-.flow {
-  padding: 3em;
-}
-
-//三步骤的设置
-.tb {
-  th {
-    padding:1em 2em;
-    border-bottom-style:solid;
-    border-color: #a7dcfe;
-  }
-  //提交订单的设置
-  .moment {
-    border-color:black;
-    border-bottom-style:solid;
-}
-}
-
-//标题栏的设置
-.little {
-  background-color:#a7dcfe;
-}
-
 //所有星星的大小
 .star {
   margin:0 auto;

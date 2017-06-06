@@ -1,11 +1,8 @@
 
 
 <div class="row carts">
-  <div class="col-md-10 col-md-offset-1 carts-box">
- <div class="col-md-2">
-     <a class="our-logo" href="/"><img src='<%= image_url 'logo02.png' %>' ></a>
- </div>
-<div class="flow col-md-8 col-md-offset-2 text-center">
+  <div class="col-md-10 col-md-offset-1 carts-box text-center">
+<div class="flow pull-right">
   <table class="tb">
       <tr>
         <th>1.购物车</th>
@@ -18,7 +15,7 @@
 
 
     <table class="table">
-    <thead>
+    <thead class="little">
       <tr>
         <th width="70%">商品明细</th>
         <th>单价</th>
@@ -26,7 +23,7 @@
       </tr>
     </thead>
 
-    <tbody>
+    <tbody class="table-middle">
       <% current_cart.cart_items.each do |cart_item| %>
       <tr>
         <td>
@@ -43,6 +40,8 @@
 
     </tbody>
     </table>
+
+    <hr>
 
     <div class="total clearfix">
       <span class="pull-right">
