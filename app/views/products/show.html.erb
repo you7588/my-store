@@ -182,8 +182,8 @@
                             <div class="form-group">
                               <%= f.input :body, label: "内容", input_html: { class: "form-control"} %>
                             </div>
-                            <div class="form-actions">
-                              <%= f.submit "提交", disable_with: "Submiting..." %>
+                            <div class="form-actions"><a href="#reviews">
+                              <%= f.submit "提交", disable_with: "Submiting..." %></a>
                             </div>
                           <% end %>
                         <!-- <%= link_to("评价",new_product_review_path(@product), :class => "btn btn-lg btn-info pull-right") %> -->
