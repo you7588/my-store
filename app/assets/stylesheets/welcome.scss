@@ -2,69 +2,66 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-//=============================================海报上的字体
-.intro-content > h1 {
-    color: white;
-    font-size: 85px;
-    letter-spacing: 2px;
-    font-family: 'Clicker Script', cursive;
-    color: #ffffff;
-    margin: 2.6em 0 0.2em 0;
-}
-
-.intro-content > p {
-    color: #fff;
-    font-size: 2.5em;
-    letter-spacing: 0.1em;
-    margin-top: 1em;
-    text-align: center;
-}
-//=============================================海报上的字体
-
-
 /*=========================================== 1.网站头贴 ======================================*/
 .intro{
     height: 50em;
     background-image: url('https://ws4.sinaimg.cn/large/006tKfTcgy1ffxrkrr206j31kw0w0dps.jpg');
     background-size: cover;
-    background-attachment: fixed;
+
+    background-attachment: fixed; //固定海报背景
     background-repeat: no-repeat;
     background-position: center;
   }
+//==========================按钮
+  .button1{
+    -webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    display: block;
+    margin: 10px auto;
+    max-width: 8em;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 15px;
+    padding: 10px;
+    color: rgba(250, 250, 250, 0.6);
+    box-shadow: rgba(250, 250, 250, 0.6) 0 0px 0px 2px inset;
+    // font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+  }
+  .button1:hover,
+  .button1:focus {
+    color: rgba(255, 84, 0, 1);
+    box-shadow: rgba(255, 84, 0, 0.5) 0 0px 0px 4em inset;
+    text-decoration: none;
+  }
+//==========================按钮
+//==============字体
+  .intro-content01 > h1{
+    color: #fff;
+    font-size: 6em;
+    font-family: 'Vibur', cursive;
+    margin: 2.6em 0 0.2em 0;
+  }
+  .intro-content01 > p{
+    color: #fff;
+    font-size: 1.5em; //字体大小
+    letter-spacing: 0.3em; //字体间隔
+  }
+//==============字体
+//=====================锯齿
+  .decor-bottom {
+    height: 7em;
+    margin-top: -6.9em;
+    fill: #f6f3e1; //颜色设置
+  }
+//=====================锯齿
+/*=========================================== 1.网站头贴 ======================================*/
 
+//=========================================== 2.服务优势 =======================================*/
 
-//==========按钮
-.button1{
-  -webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
-  -moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
-  -ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
-  -o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
-  transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
-  display: block;
-  margin: 10px auto;
-  max-width: 8em;
-  text-decoration: none;
-  text-align: center;
-  border-radius: 15px;
-  padding: 10px;
-  color: rgba(250, 250, 250, 0.6);
-  box-shadow: rgba(250, 250, 250, 0.6) 0 0px 0px 2px inset;
-  // font-family: 'Open Sans', sans-serif;
-  font-size: 2rem;
-}
-.button1:hover,
-.button1:focus {
-  color: rgba(255, 84, 0, 1);
-  box-shadow: rgba(255, 84, 0, 0.5) 0 0px 0px 4em inset;
-  text-decoration: none;
-}
-//===================按钮
-
-
-/*=========================================== end 1.网站头贴 ==========================================*/
-
-/*=========================================== 2.服务优势 ==========================================*/
 .service{
   text-align: center;
   background-color: #f6f3e1;
@@ -81,7 +78,9 @@
 
 .service .do-box{
     img{
-      margin-top: 20px;
+
+      margin-top: 60px;
+
       margin-bottom: -35px;
       width: 200px;
       border-color: #3a4120;   //服务块圆形颜色
@@ -104,43 +103,57 @@
     }
 }
 
-/*=========================================== end 2.服务优势 ==========================================*/
+//=========================================== end 2.服务优势 =======================================*/
 
-/*=================================== 分割图 ====================================*/
+//============================================分割图
+.decor-top001{
+  height: 6em;
+  margin-bottom: -84px;
+  fill: #f6f3e1;
+}
+
 
 .middle-photo{
     height: 16em;
     background-image: url('http://ww2.sinaimg.cn/large/006tNbRwly1ffop4373gwj31kw0w0kjo.jpg');
     background-size: cover;
-    background-attachment: fixed;
+
+    background-attachment: fixed; //固定底图
+  }
+
+  .decor-bottom001 {
+    height: 7em;
+    margin-top: -6.9em;
+    fill: #f6f3e1; //颜色设置
   }
 
   .button2{
-    -webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
-    -moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
-    -ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
-    -o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
-    transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
-    display: block;
-    margin: 1px auto;
-    max-width: 120em;
-    // max-height: 60em;
-    text-decoration: none;
-    text-align: center;
-    border-radius: 25px;
-    color: rgba(250, 250, 250, 0.6);
-    box-shadow: rgba(250, 250, 250, 0.6) 0 0px 0px 2px inset;
-    // font-family: 'Open Sans', sans-serif;
-    font-size: 2rem;
-    padding: 5em;
-  }
-  .button2:hover,
-  .button2:focus {
-    color: rgba(255, 84, 0, 1);
-    box-shadow: rgba(53, 53, 53, 0.7) 0 0px 0px 6em inset;
-    text-decoration: none;
-  }
-/*=================================== 分割图 ====================================*/
+  -webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+  -moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+  -ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+  -o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+  transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+  display: block;
+  margin: 1px auto;
+  max-width: 120em;
+  // max-height: 60em;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 25px;
+  color: rgba(250, 250, 250, 0.6);
+  box-shadow: rgba(250, 250, 250, 0.6) 0 0px 0px 2px inset;
+  // font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  padding: 5em;
+}
+.button2:hover,
+.button2:focus {
+  color: rgba(255, 84, 0, 1);
+  box-shadow: rgba(53, 53, 53, 0.7) 0 0px 0px 6em inset;
+  text-decoration: none;
+}
+
+//============================================分割图
 
 
 /*=================================== 关于我们 2 ====================================*/
@@ -402,3 +415,13 @@
   }
 }
 // /*=================================== 关于我们 2 ====================================*/
+
+
+//================================== 锯齿
+.decor-top002{
+  height: 6em;
+  margin-bottom: -84px;
+  fill: #f6f3e1;
+}
+//================================== 锯齿
+
