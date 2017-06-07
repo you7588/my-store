@@ -304,6 +304,7 @@ img{
   .product-page .tab-content .tab-pane .text {
     letter-spacing: 2px;
     line-height: 26px;
+    padding-left: 3em;
   }
 
   .product-page .product .description {
@@ -404,7 +405,7 @@ img{
   }
 
   .profile-tabs {
-      margin-top: 60px;
+      margin: 4em -10em;
       padding:70px 0;
   }
 
@@ -527,16 +528,28 @@ img{
   }
 }
 
-#introduction {
-  img {
-      width: 100%;
-      margin-bottom: 30px;
-  }
-}
+// #introduction {
+//   img {
+//       width: 100%;
+//       margin-bottom: 30px;
+//   }
+// }
 
 .decor-top22 {
 height: 6em;
 margin-top: 1em;
 margin-bottom: 0.05em;
 fill: rgba(1, 14, 5, 0.8);
+}
+
+
+//活动详情无脸男
+.face {
+  margin-top: 15em;
+  background-color: #f0ad4e;
+  img {
+    width: 15em;
+    margin: -5em 3em 2em 1em;
+    box-shadow: 0 16px 38px -12px rgba(240, 173, 78, 0.36), 0 4px 25px 0px #345, 0 8px 10px -5px rgb(0, 0, 0);
+  }
 }
