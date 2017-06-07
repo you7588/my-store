@@ -396,8 +396,14 @@ img{
       border-radius: 0.2em;
       box-shadow: 0 16px 38px -12px rgba(240, 173, 78, 0.36), 0 4px 25px 0px #345, 0 8px 10px -5px black;
      opacity: 0.8;
-
   }
+  .social-share-button {
+  .ssb-icon {
+    background-size: 24px;
+    height: 24px;
+    width: 24px;
+  }
+}
 }
   .decor-top21 {
   height: 6em;
