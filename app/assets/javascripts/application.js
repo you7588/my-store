@@ -17,9 +17,10 @@
 //= require bootstrap/dropdown
 //= require bootstrap/modal
 //= require bootstrap-sprockets
-//= require_tree .
 //= require social-share-button
 //= require social-share-button/wechat
+//= require_tree .
+
 
 
 $(document).on('turbolinks:load', function() {
