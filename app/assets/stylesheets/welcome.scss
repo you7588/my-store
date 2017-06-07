@@ -4,8 +4,8 @@
 
 /*=========================================== 1.网站头贴 ======================================*/
 .intro{
-    height: 50em;
-    background-image: url('https://ws2.sinaimg.cn/large/006tNbRwgy1fgctoy0krkj31kw0x17wm.jpg');
+    height: 55em;
+    background-image: url('https://ws1.sinaimg.cn/large/006tNbRwgy1fgd3pb574ij31kw0w04as.jpg');
     background-size: cover;
 
     background-attachment: fixed; //固定海报背景
@@ -44,13 +44,13 @@ width: 100%;
 //==============字体
   .intro-content01 > h1{
     color: #fff;
-    font-size: 6em;
-    font-family: 'Vibur', cursive;
-    margin: 2.6em 0 0.2em 0;
+    font-size: 4em;
+    font-family: 'Satisfy', cursive;
+    margin: 8em 0 0.2em 0;
   }
   .intro-content01 > p{
     color: #fff;
-    font-size: 1.5em; //字体大小
+    font-size: 2em; //字体大小
     letter-spacing: 0.3em; //字体间隔
   }
 //==============字体
