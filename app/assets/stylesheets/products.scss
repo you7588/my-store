@@ -6,7 +6,7 @@
 //=========================================== cdy 网站头贴 ======================================*/
 .intro-product{
     height: 50em;
-    background-image: url('https://ws3.sinaimg.cn/large/006tNc79gy1fga8z4z3d4j31kw0w012m.jpg');
+    background-image: url('https://ws4.sinaimg.cn/large/006tNbRwgy1fgctpag6ttj31kw11x1l4.jpg');
     background-size: cover;
     background-attachment: fixed; //固定海报背景
     background-repeat: no-repeat;
@@ -48,6 +48,10 @@
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 40px;
+  img {
+      width: 100%;
+      margin-bottom: 30px;
+  }
 }
 
 .section-title1{
@@ -118,7 +122,7 @@
 
 	.info-card > img {
 		width: 1000px; //图片宽度
-		margin-bottom: 80px; //模块整体高度
+		margin-bottom: 90px; //模块整体高度
 	}
 	.info-card .info-card-details,
 	.info-card .info-card-details .info-card-header  {
@@ -182,7 +186,7 @@
 	.info-card .info-card-details .info-card-detail .social {
 		list-style: none;
 		padding: 0px;
-		margin-top: 25px;
+		margin-top: 10px;
 		text-align: center;
 	}
 	.info-card .info-card-details .info-card-detail .social a {
@@ -194,7 +198,7 @@
 		overflow: hidden;
 		text-align: center;
 		background-color: rgb(215, 215, 215);
-		border-radius: 40px;
+		border-radius: 10px;
 	}
 
 /*=================================== cdy 活动展示 ==================================*/
@@ -300,6 +304,7 @@ img{
   .product-page .tab-content .tab-pane .text {
     letter-spacing: 2px;
     line-height: 26px;
+    padding-left: 3em;
   }
 
   .product-page .product .description {
@@ -379,8 +384,32 @@ img{
     .tab-content>.active {
         display: block;
     }
-    }
   }
+    .all-share {
+      background-color: white;
+      display: inline-block;
+      font-size: 1.2em;
+      color: grey;
+      margin-top: 1.2em;
+      width: 50%;
+      padding: 1%;
+      border-radius: 0.2em;
+      box-shadow: 0 16px 38px -12px rgba(240, 173, 78, 0.36), 0 4px 25px 0px #345, 0 8px 10px -5px black;
+     opacity: 0.8;
+  }
+  .social-share-button {
+  .ssb-icon {
+    background-size: 24px;
+    height: 24px;
+    width: 24px;
+  }
+}
+}
+  .decor-top21 {
+  height: 6em;
+  margin-top: -4.5em;
+  fill: white;
+}
 
   // **********************************下半页
 
@@ -394,55 +423,45 @@ img{
   }
 
   .profile-tabs {
-      margin-top: 60px;
+      margin: 4em -10em;
       padding:70px 0;
   }
 
 
 
   //小目录
+  .nav-pills-info {
+    margin-top: -15em;
+    background-color: white;
+    box-shadow: 0 16px 26px -10px rgba(144, 144, 144, 0.56), 0 4px 25px 0px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(175, 174, 173,0.2);
+    border-radius: 0.5em;
+  }
 
   .nav-pills.nav-pills-info>li.active>a, .nav-pills.nav-pills-info>li.active>a:focus, .nav-pills.nav-pills-info>li.active>a:hover {
-      background-color: #03a9f4;
-      box-shadow: 0 16px 26px -10px rgba(3,169,244,0.56), 0 4px 25px 0px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(3,169,244,0.2);
-  }
-
-  .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
-      background-color: #9c27b0;
-      color: #FFFFFF;
-      box-shadow: 0 16px 26px -10px rgba(156,39,176,0.56), 0 4px 25px 0px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(156,39,176,0.2);
-  }
-
-  .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
-      color: #fff;
-      background-color: #337ab7;
+      background-color: #f0ad4e;
+      box-shadow: 0 16px 26px -10px rgba(240, 173, 78, 0.56), 0 4px 25px 0px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(240, 173, 78,0.2);
   }
 
   .nav-pills>li>a {
-      line-height: 24px;
+      line-height: 20px;
       text-transform: uppercase;
-      font-size: 12px;
+      font-size: 10px;
       font-weight: 500;
-      min-width: 100px;
+      // min-width: 100px;
       text-align: center;
       color: #555555;
       transition: all 0.3s;
-      text-align: -webkit-center;
+      // text-align: -webkit-center;
   }
 
 
   .nav-pills>li i {
+      padding: 1.3em 0.1em;
+      margin-bottom: 0.1em;
       display: block;
-      font-size: 30px;
-      padding: 15px 0;
-      margin-bottom: 25px;
+      font-size: 25px;
   }
-  //
-  .nav-pills>li i {
-      display: block;
-      font-size: 30px;
-      padding: 15px 0;
-  }
+
 
 
   a .material-icons, a:hover .material-icons, a:focus .material-icons {
@@ -485,7 +504,7 @@ img{
 
 
 .reviews {
-  padding-top: 10em;
+  padding-top: 5em;
 }
 
 
@@ -503,15 +522,6 @@ img{
   padding: 2em;
 }
 
-
-      img {
-          width: 100%;
-          margin-bottom: 30px;
-      }
-  
-
-
-
   .img-raised {
       box-shadow: 0 16px 38px -12px rgba(0,0,0,0.56), 0 4px 25px 0px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.2);
   }
@@ -527,35 +537,37 @@ img{
   }
 
 
-
-.our-logo {
-
+//所有星星的大小
+.star {
+  margin:0 auto;
   img {
-      width: 48px; //定制图片宽度
-      height: 48px; //定制图片高度
+    overflow:hidden;
+    width: 1.3em;
   }
 }
 
-.flow {
-  padding: 3em;
+// #introduction {
+//   img {
+//       width: 100%;
+//       margin-bottom: 30px;
+//   }
+// }
+
+.decor-top22 {
+height: 6em;
+margin-top: 1em;
+margin-bottom: 0.05em;
+fill: rgba(1, 14, 5, 0.8);
 }
 
-//三步骤的设置
-.tb {
-  th {
-    padding:1em 2em;
-    border-bottom-style:solid;
-    border-color: #a7dcfe;
+
+//活动详情无脸男
+.face {
+  margin-top: 15em;
+  background-color: #f0ad4e;
+  img {
+    width: 15em;
+    margin: -5em 3em 2em 1em;
+    box-shadow: 0 16px 38px -12px rgba(240, 173, 78, 0.36), 0 4px 25px 0px #345, 0 8px 10px -5px rgb(0, 0, 0);
   }
-  //提交订单的设置
-  .moment {
-    border-color:black;
-    border-bottom-style:solid;
 }
-}
-
-//标题栏的设置
-.little {
-  background-color:#a7dcfe;
-}
-

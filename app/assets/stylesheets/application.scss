@@ -12,11 +12,12 @@
  *
  *= require_tree .
  *= require_self
+ *= require social-share-button
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "font-awesome";
-
+@import "social-share-button";
 
 
  /*====================================波浪分割线============================*/
@@ -118,23 +119,20 @@
     width: 100%;
 }
 
+
 .navbar-brand {                     //logo的设置
   position: absolute;
-  left: 0;
-  top: 0;
   width: 100%;
-  height: 52px;
   font-weight: bold;
   font-size: 14px;
-  line-height: 52px;
   color: #999;
   text-align: center;
 
 img {
     display: inline-block; //图片和链接文字显示在同一行
-    margin-right: 10px; //图片和链接文字拉开一点距离
+    margin-right: 15px; //图片和链接文字拉开一点距离
     width: 32px; //定制图片宽度
-    height: 32px; //定制图片高度
+    vertical-align: top;
 }
 }
 
@@ -271,3 +269,16 @@ img {
 
 
   /*===== common ====*/
+
+
+
+
+  // 固定位置的消息通知
+.alert {
+  position: fixed; // 这个属性防止将内容挤下去
+  top: 51px; // 让消息在导航条下面，不挡住导航，根据自己导航navbar的高度调整
+  left: 0px;
+  width: 100%;
+  z-index: 10; // 让消息显示在最上面
+  border-radius: 0px;
+}

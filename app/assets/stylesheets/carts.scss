@@ -3,24 +3,64 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .carts {
-  background-color: #a7dcfe;
-  position: relative;
+  // background-color: #a7dcfe;
+  // position: relative;
   // min-height: 70em;
   padding: 8em 4em;
   width:100%;
 }
 
 .carts-box {
-  background-color: white;
-  box-shadow: 0.3em 0.3em 0.3em #666;
-  border-radius: 0.8em;
-  padding: 4em;
-  border-left: none;
-  position: relative;
-
+  box-shadow: 0.05em 0.05em 2em 0.2em #666;
+  border-radius: 0.7em;
+  padding-bottom: 3em;
+  padding-top: 2em;
   img {
     margin: 2em;
-    box-shadow: 0.1em 0.1em 0.1em #666;
+  }
+  hr {
+    border: 1px grey solid;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
   }
 
 }
+
+.flow {
+  padding: 1.8em;
+  //三步骤的设置
+  .tb{
+      color: #666;
+
+    th {
+      padding: 0.7em 1em;
+      border-bottom-style:solid;
+      border-color: #f9dc98;
+    }
+
+    //提交订单的设置
+    .moment {
+      border-color: #d89829;
+      border-bottom-style:solid;
+      }
+  }
+}
+
+//标题栏的设置
+.little {
+  background-color: #f9dc98;
+  color: #666;
+  letter-spacing: 3px;
+}
+
+.table-middle {
+  text-align: left;
+}
+
+//================================== 锯齿
+.decor-top007{
+  height: 6em;
+  margin-bottom: -84px;
+  fill: white;
+}
+//================================== 锯齿
