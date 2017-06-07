@@ -12,11 +12,12 @@
  *
  *= require_tree .
  *= require_self
+ *= require social-share-button
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "font-awesome";
-
+@import "social-share-button";
 
 
  /*====================================波浪分割线============================*/
