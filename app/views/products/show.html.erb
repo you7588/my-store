@@ -36,6 +36,7 @@
         </div>
       </div>
     </div>
+
   </div>
 
 <div class="profile-page">
@@ -69,20 +70,26 @@
         <div class="tab-content gallery">
 
           <!-- 活动详情 -->
-
           <div class="tab-pane active" id="introduction">
-            <div class="section">
-              <div class="container ">
-                <div class="row">
-                  <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 text-left">
-                    <div class="col-md-3"><h2>陶艺</h2></div>
-                    <div class="col-md-7"><a href="/"><img src="https://ws2.sinaimg.cn/large/006tNbRwgy1fgbk3vobzfg30jy0ap1l6.gif" alt=""></a></div>
-                    <div class="col-md-3"><h2>产品</h2></div>
-                    <div class="col-md-7"><a href="/"><img src="http://ww2.sinaimg.cn/large/006tKfTcgy1ffu4gh0vbhj31kw0w01l1.jpg" alt=""></a></div>
-                    <div class="col-md-3"><h2>摄影</h2></div>
-                    <div class="col-md-7"><a href="/"><img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fgbk6u6440j31kw0w0kjo.jpg" alt=""></a></div>
+            <div class="row ">
+              <div class="col-xs-10 col-xs-offset-1 col-md-12 text-center">
+                <div class="col-md-3"><img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fgcqro7clhj30i80fyjsf.jpg" alt=""></div>
+                <div class="col-md-7"><p>里面大概有十几个转盘，现场有几个师傅会亲自指导。
+                  <br>只要学会一些技巧以及注意自己的手势，并不会很难。
+                  <br>若是走样了，师傅也会尽量帮你恢复原样，定型。
+                  <br>所以不用怕失敗啦...
+                </p>
+                <img src="https://ws2.sinaimg.cn/large/006tNbRwgy1fgcr4sgp59j30hs0bvjw8.jpg" alt="">
                   </div>
-                </div>
+                <div class="col-md-3"><img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fgcqroyhndj30go0g0ab5.jpg" alt=""></div>
+                <div class="col-md-7">
+                  <p>陶瓷进窑越3到7天，即可看到你的成品。</p>
+                  <img src="https://ws2.sinaimg.cn/large/006tNbRwgy1fgcr50l9ozj30hs0bvdiu.jpg" alt=""></div>
+                <div class="col-md-3"><img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fgcqrozgumj30gk0gedgr.jpg" alt=""></div>
+                <div class="col-md-7">
+                  <p>完成产品后，即可预约三天以后的任何时间段。
+                    <br>这里有专业的摄影师，带领你拍出趣味的作品集。
+                  </p><img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fgbk6u6440j31kw0w0kjo.jpg" alt=""></div>
               </div>
             </div>
           </div>
@@ -93,14 +100,12 @@
                 <div class="row">
                   <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 ">
                     <p><h4>活动费用：</h4>
-                      108元／人（适合所有年龄的人）
+                      ▪ 玩陶每人 100 元
+                      <br>▪ 烧窑成品, 一件 150 元
+                      <br>▪ 摄影，一组 80 元
+
+
                       <hr>
-                       <h4>费用包含：</h4>
-                       <br>1.原材料
-                       <br>2.辅助材料和人员
-                       <br>3.摄影人员
-                       <br>4.摄影场地
-                       <hr>
 
                        <h4>服务约定：</h4>
                        <br>1.支付活动费后即报名成功，名单请看顶部
@@ -122,17 +127,17 @@
                 <div class="row">
                   <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 ">
                     <!--综合-->
-                    <!-- <div class="row text-center">
+                    <div class="row text-center">
                       <div class="col-md-4 pull-left">
-                        <h3>综合评价</h3>
-                        <p class="reviews_title pull-left">（共<%= @product.reviews.count %>人）</p></div>
-                        <div class="col-md-4">
+                        <!-- <h3>综合评价</h3> -->
+                        <p class="reviews_title pull-left">共<%= @product.reviews.count %>人评价</p></div>
+                        <!-- <div class="col-md-4">
                           陶艺体验： <div class="star star-experience" data-score= <%= @avg_experience %> ></div>
                           作品满意度： <div class="star star-production" data-score= <%= @avg_production %> ></div>
                           摄影满意度： <div class="star star-photography" data-score= <%= @avg_photography %> ></div>
-                        </div>
+                        </div> -->
                       </div>
-                      <hr> -->
+                      <hr>
                       <!--对商品评论以及评星-->
                       <div class="row">
                         <% @reviews.each do |review| %>
