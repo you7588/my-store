@@ -405,48 +405,38 @@ img{
 
 
   //小目录
+  .nav-pills-info {
+    margin-top: -15em;
+    background-color: white;
+    box-shadow: 0 16px 26px -10px rgba(144, 144, 144, 0.56), 0 4px 25px 0px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(175, 174, 173,0.2);
+    border-radius: 0.5em;
+  }
 
   .nav-pills.nav-pills-info>li.active>a, .nav-pills.nav-pills-info>li.active>a:focus, .nav-pills.nav-pills-info>li.active>a:hover {
-      background-color: #03a9f4;
-      box-shadow: 0 16px 26px -10px rgba(3,169,244,0.56), 0 4px 25px 0px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(3,169,244,0.2);
-  }
-
-  .nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
-      background-color: #9c27b0;
-      color: #FFFFFF;
-      box-shadow: 0 16px 26px -10px rgba(156,39,176,0.56), 0 4px 25px 0px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(156,39,176,0.2);
-  }
-
-  .nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
-      color: #fff;
-      background-color: #337ab7;
+      background-color: #f0ad4e;
+      box-shadow: 0 16px 26px -10px rgba(240, 173, 78, 0.56), 0 4px 25px 0px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(240, 173, 78,0.2);
   }
 
   .nav-pills>li>a {
-      line-height: 24px;
+      line-height: 20px;
       text-transform: uppercase;
-      font-size: 12px;
+      font-size: 10px;
       font-weight: 500;
-      min-width: 100px;
+      // min-width: 100px;
       text-align: center;
       color: #555555;
       transition: all 0.3s;
-      text-align: -webkit-center;
+      // text-align: -webkit-center;
   }
 
 
   .nav-pills>li i {
+      padding: 1.3em 0.1em;
+      margin-bottom: 0.1em;
       display: block;
-      font-size: 30px;
-      padding: 15px 0;
-      margin-bottom: 25px;
+      font-size: 25px;
   }
-  //
-  .nav-pills>li i {
-      display: block;
-      font-size: 30px;
-      padding: 15px 0;
-  }
+
 
 
   a .material-icons, a:hover .material-icons, a:focus .material-icons {
