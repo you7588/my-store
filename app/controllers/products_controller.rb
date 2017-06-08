@@ -7,15 +7,15 @@ class ProductsController < ApplicationController
       @product = Product.find(params[:id])
       @reviews = @product.reviews.recent.paginate(:page => params[:page], :per_page => 5)
       @product.increment
-      # if @reviews.blank?
-      #     @avg_experience = 0
-      #     @avg_production = 0
-      #     @avg_photography = 0
-      #   else
-      #     @avg_experience = @reviews.average(:experience).round(2)
-      #     @avg_production = @reviews.average(:production).round(2)
-      #     @avg_photography = @reviews.average(:photography).round(2)
-      #   end
+      if @reviews.blank?
+          @avg_experience = 0
+          @avg_production = 0
+          @avg_photography = 0
+        else
+          @avg_experience = @reviews.average(:experience).round(2)
+          @avg_production = @reviews.average(:production).round(2)
+          @avg_photography = @reviews.average(:photography).round(2)
+        end
     end
 
     def add_to_cart
