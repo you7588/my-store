@@ -22,7 +22,6 @@
 //= require_tree .
 
 
-
 $(document).on('turbolinks:load', function() {
   /*增加数量*/
   $("#quantity-plus").click(function(e) {
@@ -46,6 +45,8 @@ $(document).on('turbolinks:load', function() {
   });
 });
 
+
+//navbar 向下滑动自行变透明
 $(window).scroll(function () {
     if ($(this).scrollTop() > 125) {
         $('#navbar').addClass('show_bgcolor')
