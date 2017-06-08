@@ -288,4 +288,25 @@ img {
   z-index: 10; // 让消息显示在最上面
   border-radius: 0px;
   background-color: rgba(223, 240, 216,0.7);
+
 }
+
+.animated {
+          -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+          -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+       }
+
+       @keyframes flash {
+          0%, 50%, 100% {
+             opacity: 1;
+          }
+          25%, 75% {
+             opacity: 0;
+          }
+       }
+
+       .flash {
+          animation-name: flash;
+       }
