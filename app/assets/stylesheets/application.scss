@@ -20,6 +20,7 @@
 @import "social-share-button";
 
 
+
  /*====================================波浪分割线============================*/
  .decor-bottom {
    height: 6em;
@@ -106,17 +107,18 @@
 
  //=====================================navbar
  .navbar-default {
-    // background-color: white;  //navbar背景颜色
-    border-color: #010E05; //边框色
-    background-color: #010E05;
+    border: none; //没有边框
     margin-bottom: 0; //底部 margin 不撑开距离
     height: 52px;
     padding: 0 52px;
     font-size: 13px;
     line-height: 52px;
     font-family: Century Gothic, Arial;
-    // position: fixed;
     width: 100%;
+    background: rgba(1,14,5,0.9);
+    &.show_bgcolor {
+      background-color: rgba(1,14,5,0.7);
+    }
 }
 
 
@@ -219,6 +221,8 @@ img {
     }
    }
 
+
+
  //*****footer*****//
 
  //*****common*****//
@@ -226,6 +230,7 @@ img {
     float: none;
     margin: 0 auto;
   }
+
 
   // .section{
   //     padding-top: 80px;
@@ -253,11 +258,6 @@ img {
       text-align: center;
   }
 
-  .fenge {
-    height: 1.5px;
-    background-color: #999;
-  }
-
 
 //所有小字体的设置
   p {
@@ -281,4 +281,26 @@ img {
   width: 100%;
   z-index: 10; // 让消息显示在最上面
   border-radius: 0px;
+  background-color: rgba(223, 240, 216,0.6);
+
 }
+
+.animated {
+          -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+          -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+       }
+
+       @keyframes flash {
+          0%, 50%, 100% {
+             opacity: 1;
+          }
+          25%, 75% {
+             opacity: 0;
+          }
+       }
+
+       .flash {
+          animation-name: flash;
+       }

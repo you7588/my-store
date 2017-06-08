@@ -57,6 +57,7 @@
     <div class="row">
       <div class="profile-tabs">
         <!--==小目录==-->
+        <div class="col-md-12">
         <ul class="nav nav-pills nav-pills-info pull-right" role="tablist">
           <li class="active">
             <a href="#introduction" role="tab" data-toggle="tab">
@@ -77,7 +78,7 @@
             </a>
           </li>
         </ul>
-
+      </div>
         <!--==下半部分的具体内容==-->
 
         <div class="tab-content gallery">
@@ -144,11 +145,11 @@
                       <div class="col-md-4 pull-left">
                         <!-- <h3>综合评价</h3> -->
                         <p class="reviews_title pull-left">共<%= @product.reviews.count %>人评价</p></div>
-                        <!-- <div class="col-md-4">
+                        <div class="col-md-4">
                           陶艺体验： <div class="star star-experience" data-score= <%= @avg_experience %> ></div>
                           作品满意度： <div class="star star-production" data-score= <%= @avg_production %> ></div>
                           摄影满意度： <div class="star star-photography" data-score= <%= @avg_photography %> ></div>
-                        </div> -->
+                        </div>
                       </div>
                       <hr>
                       <!--对商品评论以及评星-->
@@ -174,13 +175,11 @@
                           <% end %>
                           <hr>
                           <!--分页显示-->
-                          <div class="text-center">
+                          <!-- <div class="text-center">
                           <%= will_paginate @reviews %>
-                        </div>
+                        </div> -->
 
                         <!--写评论-->
-
-
                           <%= simple_form_for([@product, @product.reviews.build]) do |f|%>
                             <div class="productDetail-evaluation ">
                               <div class="intro-text-count clearfix ">
@@ -200,8 +199,8 @@
                             <div class="form-group">
                               <%= f.input :body, label: "内容", input_html: { class: "form-control"} %>
                             </div>
-                            <div class="form-actions"><a href="#reviews">
-                              <%= f.submit "提交", disable_with: "Submiting..." %></a>
+                            <div class="form-actions">
+                              <%= f.submit "提交", disable_with: "Submiting..." %>
                             </div>
                           <% end %>
                         <!-- <%= link_to("评价",new_product_review_path(@product), :class => "btn btn-lg btn-info pull-right") %> -->

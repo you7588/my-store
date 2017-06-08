@@ -17,9 +17,9 @@
 //= require bootstrap/dropdown
 //= require bootstrap/modal
 //= require bootstrap-sprockets
-//= require_tree .
 //= require social-share-button
 //= require social-share-button/wechat
+//= require_tree .
 
 
 $(document).on('turbolinks:load', function() {
@@ -44,3 +44,13 @@ $(document).on('turbolinks:load', function() {
     e.preventDefault();
   });
 });
+
+
+//navbar 向下滑动自行变透明
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 125) {
+        $('#navbar').addClass('show_bgcolor')
+    } else {
+        $('#navbar').removeClass('show_bgcolor')
+    }
+})
