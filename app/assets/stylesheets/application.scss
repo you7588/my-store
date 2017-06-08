@@ -20,6 +20,7 @@
 @import "social-share-button";
 
 
+
  /*====================================波浪分割线============================*/
  .decor-bottom {
    height: 6em;
@@ -107,8 +108,9 @@
  //=====================================navbar
  .navbar-default {
     // background-color: white;  //navbar背景颜色
-    border-color: #010E05; //边框色
-    background-color: #010E05;
+    // border-color: #010E05; //边框色
+    // background-color: #010E05;
+    border: none; //没有边框
     margin-bottom: 0; //底部 margin 不撑开距离
     height: 52px;
     padding: 0 52px;
@@ -117,6 +119,10 @@
     font-family: Century Gothic, Arial;
     // position: fixed;
     width: 100%;
+    background: rgba(1,14,5,0.9);
+    &.show_bgcolor {
+      background-color: rgba(1,14,5,0.7);
+    }
 }
 
 

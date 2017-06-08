@@ -45,3 +45,11 @@ $(document).on('turbolinks:load', function() {
     e.preventDefault();
   });
 });
+
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 125) {
+        $('#navbar').addClass('show_bgcolor')
+    } else {
+        $('#navbar').removeClass('show_bgcolor')
+    }
+})
