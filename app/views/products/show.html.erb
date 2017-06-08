@@ -2,6 +2,7 @@
   <div class="product-header">
     <div class="container">
       <div class="row">
+        <div class="upper-content">
         <div class="col-md-6">
           <div class="product-image">
             <% if @product.image.present? %>
@@ -30,9 +31,6 @@
                 <%= fa_icon("cart-arrow-down", text: "加入购物车") %>
                </button>
               </div>
-
-
-
               <!-- <%= link_to "快捷一键下单", "#",method: :post, class: "btn btn-success" %> -->
              <% end %>
              <div class="all-share">
@@ -43,6 +41,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
     <div class="decor-top21">
    <svg class="decor-p" height="100%" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%" >
