@@ -435,7 +435,8 @@ img{
 
   //小目录
   .nav-pills-info {
-    margin-top: -15em;
+    margin-top: -5em;
+    margin-right:-12em;
     background-color: white;
     box-shadow: 0 16px 26px -10px rgba(144, 144, 144, 0.56), 0 4px 25px 0px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(175, 174, 173,0.2);
     border-radius: 0.5em;
@@ -595,4 +596,9 @@ fill: rgba(1, 14, 5, 0.8);
     margin-top: -3em;
     // margin-left: -20em;
     // padding-bottom: 50px;
+  }
+
+  .pills-position {
+    margin-top: -10em;
+    margin-right: 15em;
   }
