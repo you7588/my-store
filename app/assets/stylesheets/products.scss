@@ -300,6 +300,8 @@ img{
     margin-bottom: 60px;
   }
 
+
+
   // .product-page .tab-content .tab-pane .text {
   //   letter-spacing: 2px;
   //   line-height: 26px;
@@ -419,17 +421,13 @@ img{
       z-index: 3;
   }
 
+  //小目录
   .profile-tabs {
-      margin: 4em -10em;
-      padding:70px 0;
+      margin: 0 10em; //小目录的位置
+      padding: 8em 0;
   }
 
-
-
-  //小目录
   .nav-pills-info {
-    margin-top: -5em;
-    margin-right:15em;
     background-color: white;
     box-shadow: 0 16px 26px -10px rgba(144, 144, 144, 0.56), 0 4px 25px 0px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(175, 174, 173,0.2);
     border-radius: 0.5em;
@@ -452,7 +450,6 @@ img{
       // text-align: -webkit-center;
   }
 
-
   .nav-pills>li i {
       padding: 1.3em 0.1em;
       margin-bottom: 0.1em;
@@ -460,45 +457,54 @@ img{
       font-size: 25px;
   }
 
-
-
-  a .material-icons, a:hover .material-icons, a:focus .material-icons {
-      vertical-align: middle;
-  }
-
-  // .material-icons, .mi {
-  //     font-family: 'Material Icons';
-  //     font-weight: normal;
-  //     font-style: normal;
-  //     font-size: 24px;
-  //     display: inline-block;
-  //     width: 1em;
-  //     height: 1em;
-  //     line-height: 1;
-  //     text-transform: none;
-  //     -webkit-font-smoothing: antialiased;
-  //     text-rendering: optimizeLegibility;
-  //     -moz-osx-font-smoothing: grayscale;
-  //     font-feature-settings: 'liga';
-  // }
-
-
-
   // 下半部分的具体内容
-  .profile {
-      text-align: center;
-      img {
-          max-width: 160px;
-          margin: -80px auto 0;
-      }
+
+  // .tab-pane {
+  //   padding: 10em;
+  // }
+.gallery {
+  margin-top: 45px;
+  padding-bottom: 50px;
+}
+
+#introduction {
+  img {
+    width: 100%;
   }
+}
+.face-detail {
+  width: 40%;
+  padding: 2em;
+}
 
-  .profile-page .gallery {
-      margin-top: 45px;
-      padding-bottom: 50px;
-    }
+//活动详情无脸男
+.face {
+  margin-top: 15em;
+  margin-right: 8em;
+  background-color: #f0ad4e;
+  img {
+    width: 50%;
+    margin: -5em 3em 2em 1em;
+    box-shadow: 0 16px 38px -12px rgba(240, 173, 78, 0.36), 0 4px 25px 0px #345, 0 8px 10px -5px black;
+ }
+}
 
-// 下半部分的具体内容
+//所有星星的大小
+.star {
+  margin:0 auto;
+  img {
+    overflow:hidden;
+    width: 1.3em;
+  }
+}
+
+.decor-top22 {
+  height: 6em;
+  margin-top: 1em;
+  fill: rgba(1, 14, 5, 0.8);
+}
+
+
 
 
 
@@ -513,49 +519,22 @@ img{
 // }
 //
 
-
-  .img-raised {
-      box-shadow: 0 16px 38px -12px rgba(0,0,0,0.56), 0 4px 25px 0px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.2);
-  }
-
-  .img-circle {
-      border-radius: 50%;
-  }
-
-  .img-responsive {
-      display: block;
-      max-width: 100%;
-      height: auto;
-  }
-
-
-//所有星星的大小
-.star {
-  margin:0 auto;
-  img {
-    overflow:hidden;
-    width: 1.3em;
-  }
-}
+  // .img-raised {
+  //     box-shadow: 0 16px 38px -12px rgba(0,0,0,0.56), 0 4px 25px 0px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.2);
+  // }
+  //
+  // .img-circle {
+  //     border-radius: 50%;
+  // }
+  //
+  // .img-responsive {
+  //     display: block;
+  //     max-width: 100%;
+  //     height: auto;
+  // }
 
 
-.decor-top22 {
-height: 6em;
-margin-top: 1em;
-fill: rgba(1, 14, 5, 0.8);
-}
 
-
-//活动详情无脸男
-.face {
-  margin-top: 15em;
-  background-color: #f0ad4e;
-  img {
-    width: 15em;
-    margin: -5em 3em 2em 1em;
-    box-shadow: 0 16px 38px -12px rgba(240, 173, 78, 0.36), 0 4px 25px 0px #345, 0 8px 10px -5px rgb(0, 0, 0);
-  }
-}
 
 ///////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////===========// feedbacks //===========///////////////////////

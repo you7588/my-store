@@ -41,92 +41,83 @@
 </div>
 
 <div class="profile-page">
+  <div class="row">
+    <!--==小目录==-->
+    <div class="profile-tabs">
+      <div class="col-md-12">
+      <ul class="nav nav-pills nav-pills-info pull-right" role="tablist">
+        <li class="active">
+          <a href="#introduction" role="tab" data-toggle="tab">
+            <i>活动详情</i>detail
+          </a>
+        </li>
+        <li>
+          <a href="#cost" role="tab" data-toggle="tab">
+            <i>活动说明</i>introduction
+          </a>
+        </li>
+        <li>
+          <a href="#reviews" role="tab" data-toggle="tab">
+            <i>往期评价</i>comments
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
+<!--==下半部分的具体内容==-->
+<div class="tab-content gallery">
+
+  <!-- 活动详情 -->
+  <div class="tab-pane active" id="introduction">
+    <div class="row ">
+      <div class="col-md-10 col-centered">
+        <img src="https://ws4.sinaimg.cn/large/006tNbRwgy1fgdoiddc72j31jk0ryte6.jpg" alt="/">
+        <img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fgdpy2k92nj31jk0hyn3l.jpg" alt="/">
+        <img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fgdpz3spspj31jk0h5q6o.jpg" alt="/">
+      </div>
+    </div>
+  </div>
+
+  <!-- 费用说明 -->
+  <div class="tab-pane" id="cost">
     <div class="row">
-      <div class="profile-tabs">
-        <!--==小目录==-->
-        <div class="col-md-12">
-
-        <ul class="nav nav-pills nav-pills-info pull-right" role="tablist">
-          <li class="active">
-            <a href="#introduction" role="tab" data-toggle="tab">
-              <i class="material-icons">活动详情</i>
-              detail
-            </a>
-          </li>
-          <li>
-            <a href="#cost" role="tab" data-toggle="tab">
-              <i class="material-icons">活动说明</i>
-              cost
-            </a>
-          </li>
-          <li>
-            <a href="#reviews" role="tab" data-toggle="tab">
-              <i class="material-icons">往期评价</i>
-              comments
-            </a>
-          </li>
-        </ul>
-      </div>
-      </div>
-        <!--==下半部分的具体内容==-->
-
-        <div class="tab-content gallery">
-
-          <!-- 活动详情 -->
-          <div class="tab-pane active" id="introduction">
-            <div class="row ">
-              <div class="col-xs-10 col-xs-offset-1 col-md-12 text-center">
-                <img class="huodong" src="https://ws4.sinaimg.cn/large/006tNbRwgy1fgdoiddc72j31jk0ryte6.jpg" alt="/">
-                <img class="huodong" src="https://ws3.sinaimg.cn/large/006tNbRwgy1fgdpy2k92nj31jk0hyn3l.jpg" alt="/">
-                <img class="huodong" src="https://ws3.sinaimg.cn/large/006tNbRwgy1fgdpz3spspj31jk0h5q6o.jpg" alt="/">
-              </div>
+      <div class="col-md-10 col-centered">
+        <div class="row">
+        <div class="col-md-4 pull-left face">
+            <img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fggbhk4telj30910b43z8.jpg" alt="">
+          </div>
+        <div class="col-md-6 pull-right face-detail">
+          <p>里面大概有十几个转盘，现场有几个师傅会亲自指导。
+          <br>只要学会一些技巧以及注意自己的手势，并不会很难。
+          <br>若是走样了，师傅也会尽量帮你恢复原样，定型。
+          <br>所以不用怕失敗啦...</p>
+            <img src="https://ws2.sinaimg.cn/large/006tNbRwgy1fgcr4sgp59j30hs0bvjw8.jpg" width="85%" alt="">
+          </div>
+          </div>
+          <div class="row">
+        <div class="col-md-6 pull-left face-detail">
+          <p>陶瓷进窑越3到7天，即可看到你的成品。</p>
+            <img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fggc0nf0pfj30hs0bvdiu.jpg" width="85%" alt="">
+          </div>
+          <div class="col-md-4 pull-right face">
+              <img src="https://ws1.sinaimg.cn/large/006tNbRwgy1fggbhkcyekj30910b4t94.jpg" alt="">
             </div>
           </div>
-          <!-- 费用说明 -->
-          <div class="tab-pane" id="cost">
-            <div class="section">
-              <div class="container ">
-                <div class="row">
-                  <div class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2 ">
-                    <div class="col-md-3 face"><%= image_tag("face11.png") %></div>
-                    <div class="col-md-7"><p>里面大概有十几个转盘，现场有几个师傅会亲自指导。
-                      <br>只要学会一些技巧以及注意自己的手势，并不会很难。
-                      <br>若是走样了，师傅也会尽量帮你恢复原样，定型。
-                      <br>所以不用怕失敗啦...
-                    </p>
-                    <img src="https://ws2.sinaimg.cn/large/006tNbRwgy1fgcr4sgp59j30hs0bvjw8.jpg" alt="">
-                      </div>
-                    <div class="col-md-3 face"><%= image_tag("face12.png") %></div>
-                    <div class="col-md-7">
-                      <p>陶瓷进窑越3到7天，即可看到你的成品。</p>
-                      <img src="https://ws2.sinaimg.cn/large/006tNbRwgy1fgcr50l9ozj30hs0bvdiu.jpg" alt=""></div>
-                    <div class="col-md-3 face"><%= image_tag("face13.png") %></div>
-                    <div class="col-md-7">
-                      <p>完成产品后，即可预约三天以后的任何时间段。
-                        <br>这里有专业的摄影师，带领你拍出趣味的作品集。
-                      </p><img src="https://ws3.sinaimg.cn/large/006tNc79gy1fgcyd70jtyj30zk0no79g.jpg" alt="" width="80%"></div>
-                    <p><h4>活动费用：</h4>
-                      ▪ 玩陶每人 100 元
-                      <br>▪ 烧窑成品, 一件 150 元
-                      <br>▪ 摄影，一组 80 元
-
-
-                      <hr>
-
-                       <h4>服务约定：</h4>
-                       <br>1.支付活动费后即报名成功，名单请看顶部
-                       <br>2.报名后推出活动的退款规则：
-                       <br>  2017年06月11日00时00分前退出活动，活动费退100%
-                       <br>  2017年06月12日00时00分前退出活动，活动费退80%
-                       <br>  2017年06月12日00时00分后退出活动，活动费用不退还
-                       <br>由于个人原因退出活动的，代金券不退还。
-                       </p>
-                     </div>
-                </div>
-              </div>
-            </div>
+          <div class="row">
+        <div class="col-md-4 pull-left face">
+            <img src="https://ws2.sinaimg.cn/large/006tNbRwgy1fggbhjm1bkj30910b43yz.jpg" alt="">
           </div>
+        <div class="col-md-6 pull-right face-detail">
+          <p>完成产品后，即可预约三天以后的任何时间段。
+            <br>这里有专业的摄影师，带领你拍出趣味的作品集。</p>
+            <img src="https://ws3.sinaimg.cn/large/006tNbRwgy1fggc0y1x7ej31kw11xu0y.jpg" width="85%" alt="">
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
           <!-- 往期评价 -->
           <div class="tab-pane reviews" id="reviews">
             <div class="section">
@@ -266,3 +257,24 @@
   $('#star-photography img').eq(0).trigger('click')
 
 </script>
+
+
+           <!-- <p><h4>活动费用：</h4>
+             ▪ 玩陶每人 100 元
+             <br>▪ 烧窑成品, 一件 150 元
+             <br>▪ 摄影，一组 80 元
+
+             <hr>
+              <h4>服务约定：</h4>
+              <br>1.支付活动费后即报名成功，名单请看顶部
+              <br>2.报名后推出活动的退款规则：
+              <br>  2017年06月11日00时00分前退出活动，活动费退100%
+              <br>  2017年06月12日00时00分前退出活动，活动费退80%
+              <br>  2017年06月12日00时00分后退出活动，活动费用不退还
+              <br>由于个人原因退出活动的，代金券不退还。
+              </p>
+              <p>里面大概有十几个转盘，现场有几个师傅会亲自指导。
+              <br>只要学会一些技巧以及注意自己的手势，并不会很难。
+              <br>若是走样了，师傅也会尽量帮你恢复原样，定型。
+              <br>所以不用怕失敗啦...
+            </p> -->
