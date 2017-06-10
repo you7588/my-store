@@ -329,14 +329,14 @@ img{
 
   //上半页总体
   .product-header {
-    background-image: url('https://ws1.sinaimg.cn/large/006tNc79gy1fgar2yvzklj31jk0tetk8.jpg');
+    background-image: url('https://ws1.sinaimg.cn/large/006tNbRwgy1fgg71o41kbj31kw0w1e87.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     padding: 50px 0;
 
   //产品首图
   .product-image img {
-      width: 90%;
+      width: 70%;
       box-shadow: 0 29px 32px -20px rgba(0,0,0,0.5);
       margin: 20px auto;
       position: relative;
@@ -377,8 +377,16 @@ img{
 
     .product-price {
       font-size: 2.5em;
-      color: #d13636;
+      color: white;
       font-weight: bold;
+      background-color: rgba(255,255,255,0.38);
+      display: inline-block;
+      margin-top: 0.8em;
+      width: 70%;
+      padding: 1%;
+      border-radius: 0.2em;
+    //   box-shadow: 0 16px 38px -12px rgba(240, 173, 78, 0.1), 0 4px 25px 0px #345, 0 8px 10px -5px black;
+    //  opacity: 0.8;
 
      .tab-content {
       max-width: 420px;
@@ -390,16 +398,16 @@ img{
     }
   }
     .all-share {
-      background-color: white;
       display: inline-block;
-      font-size: 1.2em;
-      color: grey;
-      margin-top: 1.2em;
-      width: 50%;
+      font-size: 1.8em;
+      color: white;
+      margin-top: 0.1em;
+      width: 70%;
       padding: 1%;
       border-radius: 0.2em;
-      box-shadow: 0 16px 38px -12px rgba(240, 173, 78, 0.36), 0 4px 25px 0px #345, 0 8px 10px -5px black;
-     opacity: 0.8;
+      /* box-shadow: 0 16px 38px -12px rgba(240, 173, 78, 0.36), 0 4px 25px 0px #345, 0 8px 10px -5px black; */
+      /* opacity: 0.8; */
+      background-color: rgba(255, 255, 255, 0.38);
   }
   .social-share-button {
   .ssb-icon {
