@@ -300,29 +300,24 @@ img{
     margin-bottom: 60px;
   }
 
-  .upper-content {
-    padding: 4em 0;
-  }
+  // .product-page .tab-content .tab-pane .text {
+  //   letter-spacing: 2px;
+  //   line-height: 26px;
+  //   padding-left: 3em;
+  // }
 
-
-  .product-page .tab-content .tab-pane .text {
-    letter-spacing: 2px;
-    line-height: 26px;
-    padding-left: 3em;
-  }
-
-  .product-page .product .description {
-    height: 260px;
-    overflow: hidden;
-    display: block;
-    border-bottom: 1px solid #999;
-    padding: 0 10px;
-  }
-
-  .product-page .product .description.in {
-    height: auto;
-    border-bottom-color: transparent;
-  }
+  // .product-page .product .description {
+  //   height: 260px;
+  //   overflow: hidden;
+  //   display: block;
+  //   border-bottom: 1px solid #999;
+  //   padding: 0 10px;
+  // }
+  //
+  // .product-page .product .description.in {
+  //   height: auto;
+  //   border-bottom-color: transparent;
+  // }
 
 
   // **********************************上半页
@@ -332,94 +327,84 @@ img{
     background-image: url('https://ws1.sinaimg.cn/large/006tNbRwgy1fgg71o41kbj31kw0w1e87.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 50px 0;
+    padding: 40px 0;
+    letter-spacing: 2px;  //所有文字的间隙
+
 
   //产品首图
   .product-image img {
-      width: 70%;
-      box-shadow: 0 29px 32px -20px rgba(0,0,0,0.5);
-      margin: 20px auto;
-      position: relative;
-      z-index: 2;
-      overflow: hidden;
-      border-radius: 20px;
+    width: 50%;
+    box-shadow: 0 29px 32px -20px rgba(255, 255, 255, 0.5);
+    margin: 20px auto;
+    border-radius: 20px;
     }
   }
 
   //付款模块的字体等
-  .pay-area {
-    .product-name {
-      margin-bottom: 0;
-      padding-bottom: 15px;
-      color: #FFFFFF;
-      font-size: 50px;
-      font-weight: 300;
-      letter-spacing: 2px;
-    }
-
-    .tagline {
-      color: #d3e8ff;
-      text-transform: uppercase;
-      font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 20px;
-      margin-top: 0;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 1;
-      -webkit-box-orient: vertical;
-    }
-
-     h5.tagline {
-      font-size: 16px;
-    }
-
-    .product-price {
-      font-size: 2.5em;
-      color: white;
-      font-weight: bold;
-      background-color: rgba(255,255,255,0.38);
-      display: inline-block;
-      margin-top: 0.8em;
-      width: 70%;
-      padding: 1%;
-      border-radius: 0.2em;
-    //   box-shadow: 0 16px 38px -12px rgba(240, 173, 78, 0.1), 0 4px 25px 0px #345, 0 8px 10px -5px black;
-    //  opacity: 0.8;
-
-     .tab-content {
-      max-width: 420px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .tab-content>.active {
-        display: block;
-    }
+.pay-area {
+  padding: 8em 0;
+  .product-name {
+    color: #FFFFFF;
+    font-size: 40px;
   }
-    .all-share {
-      display: inline-block;
-      font-size: 1.8em;
-      color: white;
-      margin-top: 0.1em;
-      width: 70%;
-      padding: 1%;
-      border-radius: 0.2em;
-      /* box-shadow: 0 16px 38px -12px rgba(240, 173, 78, 0.36), 0 4px 25px 0px #345, 0 8px 10px -5px black; */
-      /* opacity: 0.8; */
-      background-color: rgba(255, 255, 255, 0.38);
+
+  .tagline {
+    color: white;
+    margin-top: 1.8em;
+    font-size: 20px;
   }
-  .social-share-button {
-  .ssb-icon {
-    background-size: 24px;
-    height: 24px;
-    width: 24px;
+
+  .product-price {
+    font-size: 2em;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.38);
+    display: inline-block;
+    margin-top: 0.5em;
+    width: 50%;
+    padding: 0.8%;
+    border-radius: 0.2em;
+  //   box-shadow: 0 16px 38px -12px rgba(240, 173, 78, 0.1), 0 4px 25px 0px #345, 0 8px 10px -5px black;
   }
+  .all-share {
+    display: inline-block;
+    font-size: 1.8em;
+    color: white;
+    margin-top: 0.1em;
+    width: 50%;
+    padding: 0.8%;
+    border-radius: 0.2em;
+    /* box-shadow: 0 16px 38px -12px rgba(240, 173, 78, 0.36), 0 4px 25px 0px #345, 0 8px 10px -5px black; */
+    /* opacity: 0.8; */
+    background-color: rgba(255, 255, 255, 0.38);
+  }
+   .social-share-button {
+   .ssb-icon {
+     background-size: 1.3em;
+     height: 1.3em;
+     width: 1.3em;
+   }
+ }
+ .buy-quantity {
+   padding: 2em;
+   .btn {
+     padding: 0.5em 3em;
+   }
+ }
 }
-}
+
+
+// .tab-content {
+//  max-width: 420px;
+//  margin-left: auto;
+//  margin-right: auto;
+// }
+// .tab-content>.active {
+//    display: block;
+// }
   .decor-top21 {
   height: 6em;
-  margin-top: -3.6em;
+  margin-top: -6em;
   fill: white;
 }
 
@@ -444,7 +429,7 @@ img{
   //小目录
   .nav-pills-info {
     margin-top: -5em;
-    margin-right:-12em;
+    margin-right:15em;
     background-color: white;
     box-shadow: 0 16px 26px -10px rgba(144, 144, 144, 0.56), 0 4px 25px 0px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(175, 174, 173,0.2);
     border-radius: 0.5em;
@@ -516,24 +501,18 @@ img{
 // 下半部分的具体内容
 
 
-.reviews {
-  padding-top: 5em;
-}
-
 
 // 数量输入框
-.product-page .quantity-input {
-  color: #333;
-  text-align: center;
-  width: 60px;
-  font-weight: bold;
-  border-radius: 3px;
-  border: 1px solid #FFF;
-}
+// .product-page .quantity-input {
+//   color: #333;
+//   text-align: center;
+//   width: 60px;
+//   font-weight: bold;
+//   border-radius: 3px;
+//   border: 1px solid #FFF;
+// }
+//
 
-.buy-quantity {
-  padding: 2em;
-}
 
   .img-raised {
       box-shadow: 0 16px 38px -12px rgba(0,0,0,0.56), 0 4px 25px 0px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.2);
@@ -559,12 +538,6 @@ img{
   }
 }
 
-// #introduction {
-//   img {
-//       width: 100%;
-//       margin-bottom: 30px;
-//   }
-// }
 
 .decor-top22 {
 height: 6em;
