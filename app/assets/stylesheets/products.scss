@@ -300,62 +300,35 @@ img{
     margin-bottom: 60px;
   }
 
-
-
-  // .product-page .tab-content .tab-pane .text {
-  //   letter-spacing: 2px;
-  //   line-height: 26px;
-  //   padding-left: 3em;
-  // }
-
-  // .product-page .product .description {
-  //   height: 260px;
-  //   overflow: hidden;
-  //   display: block;
-  //   border-bottom: 1px solid #999;
-  //   padding: 0 10px;
-  // }
-  //
-  // .product-page .product .description.in {
-  //   height: auto;
-  //   border-bottom-color: transparent;
-  // }
-
-
   // **********************************上半页
 
-  //上半页总体
+  //上半页背景图
   .product-header {
     background-image: url('https://ws1.sinaimg.cn/large/006tNbRwgy1fgg71o41kbj31kw0w1e87.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     padding: 40px 0;
     letter-spacing: 2px;  //所有文字的间隙
-
-
-  //产品首图
-  .product-image img {
-    width: 50%;
-    box-shadow: 0 29px 32px -20px rgba(255, 255, 255, 0.5);
-    margin: 20px auto;
-    border-radius: 20px;
-    }
   }
 
-  //付款模块的字体等
+//付款模块的字体等
 .pay-area {
   padding: 8em 0;
+
+//产品名
   .product-name {
     color: #FFFFFF;
     font-size: 40px;
   }
 
+//产品内容
   .tagline {
     color: white;
     margin-top: 1.8em;
     font-size: 20px;
   }
 
+//产品价格
   .product-price {
     font-size: 2em;
     color: white;
@@ -368,6 +341,17 @@ img{
     border-radius: 0.2em;
   //   box-shadow: 0 16px 38px -12px rgba(240, 173, 78, 0.1), 0 4px 25px 0px #345, 0 8px 10px -5px black;
   }
+
+  //产品首图
+  .product-image img {
+    width: 50%;
+    box-shadow: 0 29px 32px -20px rgba(255, 255, 255, 0.5);
+    margin: 20px auto;
+    border-radius: 20px;
+    }
+
+
+  //分享按钮区域
   .all-share {
     display: inline-block;
     font-size: 1.8em;
@@ -387,6 +371,8 @@ img{
      width: 1.3em;
    }
  }
+
+//加入购物车按钮
  .buy-quantity {
    padding: 2em;
    .btn {
@@ -395,16 +381,8 @@ img{
  }
 }
 
-
-// .tab-content {
-//  max-width: 420px;
-//  margin-left: auto;
-//  margin-right: auto;
-// }
-// .tab-content>.active {
-//    display: block;
-// }
-  .decor-top21 {
+//波浪线
+.decor-top21 {
   height: 6em;
   margin-top: -6em;
   fill: white;
@@ -412,6 +390,7 @@ img{
 
   // **********************************下半页
 
+//下半页总体
   .profile-page {
       margin: 60px 30px 0px;
       border-radius: 6px;
@@ -425,7 +404,6 @@ img{
   .profile-tabs {
       margin: 0 10em; //小目录的位置
       padding: 8em 0;
-  }
 
   .nav-pills-info {
     background-color: white;
@@ -455,23 +433,27 @@ img{
       margin-bottom: 0.1em;
       display: block;
       font-size: 25px;
+    }
   }
 
-  // 下半部分的具体内容
 
-  // .tab-pane {
-  //   padding: 10em;
-  // }
+// 下半部分的具体内容
+
+//具体内容整体
 .gallery {
   margin-top: 45px;
   padding-bottom: 50px;
 }
 
+
+//目录一
 #introduction {
   img {
     width: 100%;
   }
 }
+
+//目录二
 .face-detail {
   width: 40%;
   padding: 2em;
@@ -540,25 +522,30 @@ img{
 ////////////////////////===========// feedbacks //===========///////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////
 
-.huodong{
-  width: 1000px;
-}
+//f活动页面总体
 .feed{
     margin: 10em 5em;
     border-radius: 6px;
-    padding: 5em;
     box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.2);
     background: #FFFFFF;
     position: relative;
     z-index: 3;
 }
-.feed .feedbackss{
-    margin-top: -3em;
-    // margin-left: -20em;
-    // padding-bottom: 50px;
-  }
 
-  .pills-position {
-    margin-top: -10em;
-    margin-right: 15em;
+
+
+
+//小目录位置
+.pills-position {
+  margin-top: -10em;
+  margin-right: -15em;
+}
+
+.feedback-content {
+  padding-top: 10em;
+  margin-left: -20em;
+  padding-bottom: 50px;
+  img {
+    width: 110%;
   }
+}
