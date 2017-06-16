@@ -300,119 +300,97 @@ img{
     margin-bottom: 60px;
   }
 
-
-  .product-page .tab-content .tab-pane .text {
-    letter-spacing: 2px;
-    line-height: 26px;
-    padding-left: 3em;
-  }
-
-  .product-page .product .description {
-    height: 260px;
-    overflow: hidden;
-    display: block;
-    border-bottom: 1px solid #999;
-    padding: 0 10px;
-  }
-
-  .product-page .product .description.in {
-    height: auto;
-    border-bottom-color: transparent;
-  }
-
-
   // **********************************上半页
 
-  //上半页总体
+  //上半页背景图
   .product-header {
-    background-image: url('https://ws1.sinaimg.cn/large/006tNc79gy1fgar2yvzklj31jk0tetk8.jpg');
+    background-image: url('https://ws1.sinaimg.cn/large/006tNbRwgy1fgg71o41kbj31kw0w1e87.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 50px 0;
+    padding: 40px 0;
+    letter-spacing: 2px;  //所有文字的间隙
+  }
+
+//付款模块的字体等
+.pay-area {
+  padding: 8em 0;
+
+//产品名
+  .product-name {
+    color: #FFFFFF;
+    font-size: 40px;
+  }
+
+//产品内容
+  .tagline {
+    color: white;
+    margin-top: 1.8em;
+    font-size: 20px;
+  }
+
+//产品价格
+  .product-price {
+    font-size: 2em;
+    color: white;
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.38);
+    display: inline-block;
+    margin-top: 0.5em;
+    width: 50%;
+    padding: 0.8%;
+    border-radius: 0.2em;
+  //   box-shadow: 0 16px 38px -12px rgba(240, 173, 78, 0.1), 0 4px 25px 0px #345, 0 8px 10px -5px black;
+  }
 
   //产品首图
   .product-image img {
-      width: 90%;
-      box-shadow: 0 29px 32px -20px rgba(0,0,0,0.5);
-      margin: 20px auto;
-      position: relative;
-      z-index: 2;
-      overflow: hidden;
-      border-radius: 20px;
+    width: 50%;
+    box-shadow: 0 29px 32px -20px rgba(255, 255, 255, 0.5);
+    margin: 20px auto;
+    border-radius: 20px;
     }
+
+
+  //分享按钮区域
+  .all-share {
+    display: inline-block;
+    font-size: 1.8em;
+    color: white;
+    margin-top: 0.1em;
+    width: 50%;
+    padding: 0.8%;
+    border-radius: 0.2em;
+    /* box-shadow: 0 16px 38px -12px rgba(240, 173, 78, 0.36), 0 4px 25px 0px #345, 0 8px 10px -5px black; */
+    /* opacity: 0.8; */
+    background-color: rgba(255, 255, 255, 0.38);
   }
+   .social-share-button {
+   .ssb-icon {
+     background-size: 1.3em;
+     height: 1.3em;
+     width: 1.3em;
+   }
+ }
 
-  //付款模块的字体等
-  .pay-area {
-    .product-name {
-      margin-bottom: 0;
-      padding-bottom: 15px;
-      color: #FFFFFF;
-      font-size: 50px;
-      font-weight: 300;
-      letter-spacing: 2px;
-    }
-
-    .tagline {
-      color: #d3e8ff;
-      text-transform: uppercase;
-      font-size: 13px;
-      font-weight: 600;
-      margin-bottom: 20px;
-      margin-top: 0;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      display: -webkit-box;
-      -webkit-line-clamp: 1;
-      -webkit-box-orient: vertical;
-    }
-
-     h5.tagline {
-      font-size: 16px;
-    }
-
-    .product-price {
-      font-size: 2.5em;
-      color: #d13636;
-      font-weight: bold;
-
-     .tab-content {
-      max-width: 420px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .tab-content>.active {
-        display: block;
-    }
-  }
-    .all-share {
-      background-color: white;
-      display: inline-block;
-      font-size: 1.2em;
-      color: grey;
-      margin-top: 1.2em;
-      width: 50%;
-      padding: 1%;
-      border-radius: 0.2em;
-      box-shadow: 0 16px 38px -12px rgba(240, 173, 78, 0.36), 0 4px 25px 0px #345, 0 8px 10px -5px black;
-     opacity: 0.8;
-  }
-  .social-share-button {
-  .ssb-icon {
-    background-size: 24px;
-    height: 24px;
-    width: 24px;
-  }
+//加入购物车按钮
+ .buy-quantity {
+   padding: 2em;
+   .btn {
+     padding: 0.5em 3em;
+   }
+ }
 }
-}
-  .decor-top21 {
+
+//波浪线
+.decor-top21 {
   height: 6em;
-  margin-top: -4.5em;
+  margin-top: -6em;
   fill: white;
 }
 
   // **********************************下半页
 
+//下半页总体
   .profile-page {
       margin: 60px 30px 0px;
       border-radius: 6px;
@@ -422,16 +400,12 @@ img{
       z-index: 3;
   }
 
-  .profile-tabs {
-      margin: 4em -10em;
-      padding:70px 0;
-  }
-
-
-
   //小目录
+  .profile-tabs {
+      margin: 0 10em; //小目录的位置
+      padding: 8em 0;
+
   .nav-pills-info {
-    margin-top: -15em;
     background-color: white;
     box-shadow: 0 16px 26px -10px rgba(144, 144, 144, 0.56), 0 4px 25px 0px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(175, 174, 173,0.2);
     border-radius: 0.5em;
@@ -454,88 +428,48 @@ img{
       // text-align: -webkit-center;
   }
 
-
   .nav-pills>li i {
       padding: 1.3em 0.1em;
       margin-bottom: 0.1em;
       display: block;
       font-size: 25px;
-  }
-
-
-
-  a .material-icons, a:hover .material-icons, a:focus .material-icons {
-      vertical-align: middle;
-  }
-
-  // .material-icons, .mi {
-  //     font-family: 'Material Icons';
-  //     font-weight: normal;
-  //     font-style: normal;
-  //     font-size: 24px;
-  //     display: inline-block;
-  //     width: 1em;
-  //     height: 1em;
-  //     line-height: 1;
-  //     text-transform: none;
-  //     -webkit-font-smoothing: antialiased;
-  //     text-rendering: optimizeLegibility;
-  //     -moz-osx-font-smoothing: grayscale;
-  //     font-feature-settings: 'liga';
-  // }
-
-
-
-  // 下半部分的具体内容
-  .profile {
-      text-align: center;
-      img {
-          max-width: 160px;
-          margin: -80px auto 0;
-      }
-  }
-
-  .profile-page .gallery {
-      margin-top: 45px;
-      padding-bottom: 50px;
     }
+  }
+
 
 // 下半部分的具体内容
 
-
-.reviews {
-  padding-top: 5em;
+//具体内容整体
+.gallery {
+  margin-top: 45px;
+  padding-bottom: 50px;
 }
 
 
-// 数量输入框
-.product-page .quantity-input {
-  color: #333;
-  text-align: center;
-  width: 60px;
-  font-weight: bold;
-  border-radius: 3px;
-  border: 1px solid #FFF;
+//目录一
+#introduction {
+  img {
+    width: 100%;
+  }
 }
 
-.buy-quantity {
+//目录二
+.face-detail {
+  width: 40%;
   padding: 2em;
 }
 
-  .img-raised {
-      box-shadow: 0 16px 38px -12px rgba(0,0,0,0.56), 0 4px 25px 0px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.2);
-  }
-
-  .img-circle {
-      border-radius: 50%;
-  }
-
-  .img-responsive {
-      display: block;
-      max-width: 100%;
-      height: auto;
-  }
-
+//活动详情无脸男
+.face {
+  margin-top: 15em;
+  margin-right: 8em;
+  background-color: #f0ad4e;
+  img {
+    width: 50%;
+    margin: -5em 3em 2em 1em;
+    box-shadow: 0 16px 38px -12px rgba(240, 173, 78, 0.36), 0 4px 25px 0px #345, 0 8px 10px -5px black;
+ }
+}
 
 //所有星星的大小
 .star {
@@ -546,36 +480,64 @@ img{
   }
 }
 
-// #introduction {
-//   img {
-//       width: 100%;
-//       margin-bottom: 30px;
-//   }
-// }
-
 .decor-top22 {
-height: 6em;
-margin-top: 1em;
-margin-bottom: 0.05em;
-fill: rgba(1, 14, 5, 0.8);
+  height: 6em;
+  margin-top: 1em;
+  fill: rgba(1, 14, 5, 0.8);
 }
 
 
-//活动详情无脸男
-.face {
-  margin-top: 15em;
-  background-color: #f0ad4e;
-  img {
-    width: 15em;
-    margin: -5em 3em 2em 1em;
-    box-shadow: 0 16px 38px -12px rgba(240, 173, 78, 0.36), 0 4px 25px 0px #345, 0 8px 10px -5px rgb(0, 0, 0);
-  }
-}
+
+
+
+// 数量输入框
+// .product-page .quantity-input {
+//   color: #333;
+//   text-align: center;
+//   width: 60px;
+//   font-weight: bold;
+//   border-radius: 3px;
+//   border: 1px solid #FFF;
+// }
+//
+
+  // .img-raised {
+  //     box-shadow: 0 16px 38px -12px rgba(0,0,0,0.56), 0 4px 25px 0px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.2);
+  // }
+  //
+  // .img-circle {
+  //     border-radius: 50%;
+  // }
+  //
+  // .img-responsive {
+  //     display: block;
+  //     max-width: 100%;
+  //     height: auto;
+  // }
+
+
+
 
 ///////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////===========// feedbacks //===========///////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////
 
-.huodong{
-  width: 1000px;
+//f活动页面总体
+.feed{
+    margin: 10em 5em;
+    border-radius: 6px;
+    box-shadow: 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12), 0 8px 10px -5px rgba(0,0,0,0.2);
+    background: #FFFFFF;
+    position: relative;
+    z-index: 3;
+}
+
+//小目录位置
+.pills-position {
+  margin-top: -10em;
+  margin-right: -15em;
+}
+
+.feedback-content {
+padding: 11em 0;
 }
