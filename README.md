@@ -1,8 +1,8 @@
 # [千与千寻主题创作](https://spirited-away-ticket.herokuapp.com/)
 
-## github地址
+**github地址https://github.com/you7588/my-store**
 
-https://github.com/you7588/my-store
+![](https://ws1.sinaimg.cn/large/006tKfTcgy1fks6xt1owkj30pk2gwakq.jpg)
 
 ## 项目描述：
 
@@ -44,4 +44,3 @@ https://github.com/you7588/my-store
 
       学会有所取舍，完成一个作品，要把握好主线，不能一味地追求炫酷的功能。
 
-![](https://ws1.sinaimg.cn/large/006tKfTcgy1fks6xt1owkj30pk2gwakq.jpg)
