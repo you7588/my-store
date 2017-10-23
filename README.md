@@ -43,3 +43,5 @@ https://github.com/you7588/my-store
       学会包装一个想法，并且实现出来。
 
       学会有所取舍，完成一个作品，要把握好主线，不能一味地追求炫酷的功能。
+
+![](https://ws1.sinaimg.cn/large/006tKfTcgy1fks6xt1owkj30pk2gwakq.jpg)
